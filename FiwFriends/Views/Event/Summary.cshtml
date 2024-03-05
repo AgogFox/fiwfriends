@@ -1,0 +1,176 @@
+﻿@model Event.Models.EventOBJ;
+@{
+    ViewData["Title"] = "Summary";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .auto-group-rqx5-mB5 {
+            background-color: #f6f2d2;
+            border-radius: 2rem;
+            box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: auto;
+            padding: 0% 10% 10% 5%;
+            row-gap: 1.4rem;
+            width: 90%;
+            .auto-group-yltq-3PV
+
+        {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: auto;
+            width: 70%;
+            .arrow-1-AU7
+
+        {
+            height: 0;
+            margin: 0% 1% 0.5% 0%;
+            object-fit: contain;
+            vertical-align: top;
+            width: 3%;
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1.5vw;
+            font-weight: 400;
+            padding-top: 1.5vw;
+            padding-bottom: 1.5vw;
+            white-space: nowrap;
+        }
+
+        }
+
+        .auto-group-rh8b-2FR {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            margin: 0% 33.8% 0% 3.7%;
+            width: 50%;
+            .youre-going-MYb
+
+        {
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 2vw;
+            font-weight: 700;
+            margin-right: 20%;
+            white-space: nowrap;
+        }
+
+        .title-UdD {
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 2vw;
+            font-weight: 700;
+            line-height: 1.495;
+            white-space: nowrap;
+            padding-left: 50%;
+        }
+
+        }
+
+        .auto-group-qrep-zbZ {
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            height: 30.4%;
+            margin: 0% 17.3% 0% 2.3%;
+            width: 80%;
+            .group-22-JMM
+
+        {
+            background: linear-gradient(180deg, #fd5c37 -0%, rgba(246, 242, 210, 0) 100%);
+            border-radius: 1rem;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            height: 100%;
+            margin-right: 9.7%;
+            padding: 10% 47.5% 10% 10%;
+        }
+
+        .auto-group-r9gb-7Jo {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            width: 24.1%;
+            .auto-group-tjz5-3TM
+
+        {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-sizing: border-box;
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1.5vw;
+            font-weight: 400;
+            height: 10.3%;
+            line-height: 1.495;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            padding: 0% 1.4%;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .auto-group-gucf-6Rd {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-sizing: border-box;
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1.5vw;
+            font-weight: 400;
+            height: 10.3%;
+            line-height: 1.495;
+            padding: 0% 1.4%;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        }
+        }
+        }
+    </style>
+    <title>test</title>
+</head>
+
+<body>
+    <div class="event-summary-Y47">
+        <div class="auto-group-rqx5-mB5">
+            <div class="auto-group-yltq-3PV">
+                <a class="arrow-1-AU7" id="74:149">← Back to event</a>
+            </div>
+            <div class="auto-group-rh8b-2FR" id="DYG9YmtPuJcqFRHJsArH8B">
+                <p class="youre-going-MYb" id="74:125">You’re going!</p>
+                <p class="title-UdD" id="74:148">@Model.title</p>
+            </div>
+            <div class="auto-group-qrep-zbZ" id="DYG9eSPdCWTFbVZVeAqREP">
+                <d class="group-22-JMM" id="74:119"></d>
+                <div class="auto-group-r9gb-7Jo" id="DYG9krNc3qppHHM7j4r9gB">
+                    <div class="auto-group-tjz5-3TM">
+                        <p>@Model.date_time</p>
+                        <p>eiei</p>
+                    </div>
+                    <div class="auto-group-gucf-6Rd">
+                        <p>@Model.location</p>
+                        <p>eiei</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
