@@ -13,4 +13,8 @@
     <None Remove="wwwroot\lib\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Event\Search.cshtml" />
+  </ItemGroup>
+
 </Project>

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\AgogFox\Documents\KMITL\Web Application Development\Project\FiwFriends
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Event/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
