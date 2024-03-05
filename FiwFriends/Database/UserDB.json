@@ -1,0 +1,127 @@
+[
+  {
+    "UserId": 1,
+    "Username": "JohnDoe",
+    "Password": "secret123",
+    "Picture": "profile.jpg",
+    "Location": null,
+    "Event": null,
+    "AboutMe": "I am a software engineer."
+  },
+  {
+    "UserId": 2,
+    "Username": "JaneSmith",
+    "Password": "password456",
+    "Picture": "avatar.png",
+    "Location": {
+      "ValueKind": 1
+    },
+    "Event": {
+      "ValueKind": 1
+    },
+    "AboutMe": "I love to travel."
+  },
+  {
+    "UserId": 3,
+    "Username": null,
+    "Password": "verysecret",
+    "Picture": "default.png",
+    "Location": null,
+    "Event": null,
+    "AboutMe": "I am a musician."
+  },
+  {
+    "UserId": 4,
+    "Username": "",
+    "Password": "qwerty",
+    "Picture": null,
+    "Location": {
+      "ValueKind": 1
+    },
+    "Event": {
+      "ValueKind": 1
+    },
+    "AboutMe": ""
+  },
+  {
+    "UserId": 5,
+    "Username": "Alice",
+    "Password": null,
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 6,
+    "Username": "hehe",
+    "Password": "hehe",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 7,
+    "Username": "hehe",
+    "Password": "h",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 8,
+    "Username": "Fittokung@gmail.com",
+    "Password": "wewewewew",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 9,
+    "Username": "heheheh",
+    "Password": "eieiei",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 10,
+    "Username": "mon",
+    "Password": "mon",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 11,
+    "Username": "ewewwewew",
+    "Password": "wowo",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 12,
+    "Username": "pearwa",
+    "Password": "eiei",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 12,
+    "Username": "tae",
+    "Password": "tae",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  }
+]
