@@ -1,45 +1,155 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FiwFriends</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FiwFriends.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <title>@ViewData["Title"]</title>
+    <style>
+            /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+    for details on configuring this project to bundle and minify static web assets. */
+    * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    body {
+        margin: 0%;
+    }
+
+    .container {
+        padding-top: 10vh;
+    }
+
+    button {
+        border: none;
+        background-color: white;
+    }
+
+        button:hover {
+            background-color: rgb(225, 230, 233);
+        }
+
+    .navigation {
+        display: flex;
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        border: 1px solid black
+    }
+
+    .item1 {
+        padding-top: 0.5%;
+        width: 30%;
+        justify-content: center;
+    }
+
+        .item1 a {
+            font-weight: bold;
+            font-size: 4vh;
+            color: #FD5C37;
+            text-shadow: 1px 6px 4px grey;
+            padding-left: 5%;
+        }
+
+    .item2 {
+        width: 40%;
+        display: flex;
+    }
+
+    .signup {
+        height: 100%;
+        padding: 0%;
+        font-weight: bold;
+    }
+
+    .item3 {
+        padding: 0%;
+        display: flex;
+        width: 30%;
+    }
+
+    .navitem {
+        width: 100%;
+        padding: 3%;
+        text-align: center;
+        font-size: 80%;
+    }
+
+        .navitem img {
+            object-fit: fill;
+            width: 2vh;
+        }
+
+    form {
+        margin-top: 0.5vh;
+    }
+
+    #search {
+        padding: 1vh;
+        padding-left: 4%;
+        margin-left: 10%;
+        margin-top: 1%;
+        border-radius: 20px;
+        height: fit-content;
+        font-size: 100%;
+    }
+
+    @@media screen and (max-width: 600px) {
+        form {
+            margin-top: 1vh;
+        }
+
+        .item1 {
+            padding-top: 2%;
+            width: 30%;
+            justify-content: center;
+        }
+    }
+
+
+
+    a {
+        color: #0077cc;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px;
+    }
+
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FiwFriends</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - FiwFriends - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <nav class="navigation">
+        <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
+        <div class="item3">
+            <form style="width: 100%;display:flex;" action="">
+                <input style="width: 60%; margin-right:1%;" type="text" name="" id="search" placeholder="Country,City">
+                <button style="width: 20%;"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
+            </form>
         </div>
-    </footer>
-    @await RenderSectionAsync("Scripts", required: false)
+        <div class="item2">
+            <button class="navitem">
+                <img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0">
+            </button>
+            <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
+            <button class="navitem signup">Sign Up</button>
+            <button class="navitem">
+                <a asp-controller="Editpage">
+                <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+                </a>
+        </div>
+        </button>
+        </div>
+    </nav>
+@RenderBody()
 </body>
 </html>

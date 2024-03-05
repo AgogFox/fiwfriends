@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        html,body{
+            justify-content:center;
+            align-items:center;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            display: flex;
+            padding: 20px 25%;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            border-radius: 15px;
+            cursor: pointer;
+            align-self:center;
+            margin:25px 0px;
+            background-color: #FFE4C4;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #FF7F50
+        }
+
+        .button:active {
+            background-color: #FF7F50;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a class="button" id="editProfileButton" asp-controller="Editpage" asp-action="EditProfile">Edit Profile</a>
+        <a class="button" id="editPasswordButton" asp-controller="Editpage" asp-action="EditPassword">Edit Password</a>
+        <a class="button" id="deleteProfileButton" asp-controller="Editpage" asp-action="DeleteProfile">Delete Profile</a>
+    </div>
+</body>
+</html>

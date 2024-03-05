@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\AgogFox\Documents\KMITL\Web Application Development\Project\FiwFriends
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Editpage/DeleteProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRGVsZXRlUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Editpage/EditPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRWRpdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Editpage/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Editpage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/AgogFox/Documents/KMITL/Web Application Development/Project/FiwFriends/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
