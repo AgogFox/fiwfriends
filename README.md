@@ -13,6 +13,17 @@
 
 https://www.meetup.com
 
+Color:
+
+- #F6F2D2 _primary_
+- #FD5C37 _secondary_
+- #369BE4
+
+Font:
+
+- [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- sans-serif
+
 ## Features
 
 - Landing page
