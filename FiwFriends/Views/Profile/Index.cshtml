@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WebApplication1.Models.Profile>;
+
+
+@foreach(var user in Model)
+{
+    @if (user.Islogin == true)
+    {
+        <div>
+        <img src=@user.Picture style="width : 300px;height :300px;object-fit: cover;border-radius:50%"></img>
+        <p>@user.Username</p>
+        <a href="https://www.google.com/maps/place/{@user.Location}"> @user.Location</a>
+        </div>
+    }
+    
+
+}
