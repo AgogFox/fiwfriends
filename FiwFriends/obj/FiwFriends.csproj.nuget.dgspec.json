@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AgogFox\\Documents\\KMITL\\Web Application Development\\Project\\FiwFriends\\FiwFriends.csproj": {}
+    "C:\\Users\\ADMIN\\source\\repos\\fiwfriends\\FiwFriends\\FiwFriends.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AgogFox\\Documents\\KMITL\\Web Application Development\\Project\\FiwFriends\\FiwFriends.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\fiwfriends\\FiwFriends\\FiwFriends.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AgogFox\\Documents\\KMITL\\Web Application Development\\Project\\FiwFriends\\FiwFriends.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\fiwfriends\\FiwFriends\\FiwFriends.csproj",
         "projectName": "FiwFriends",
-        "projectPath": "C:\\Users\\AgogFox\\Documents\\KMITL\\Web Application Development\\Project\\FiwFriends\\FiwFriends.csproj",
-        "packagesPath": "C:\\Users\\AgogFox\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AgogFox\\Documents\\KMITL\\Web Application Development\\Project\\FiwFriends\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\fiwfriends\\FiwFriends\\FiwFriends.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\fiwfriends\\FiwFriends\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AgogFox\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

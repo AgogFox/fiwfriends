@@ -1,17 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using static Test.Models.Event;
+using FiwFriends.Models;
 
-namespace Test.Controllers
+namespace FiwFriends.Controllers
 {
     public class EventController : Controller
     {
-        private string file = @"D:\Webapp\Test\Data\EventDB.json";
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        private readonly ILogger<EventController> _logger;
-
-        public EventController(ILogger<EventController> logger)
+        private string filePath;
+        public EventController(IWebHostEnvironment webHostEnvironment)
         {
-            _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
+            filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
+        }
+
+
+        public IActionResult Index()
+        {
+            return View();
+
         }
 
         private List<EventOBJ> GetEvents(string filepath)
@@ -40,7 +47,7 @@ namespace Test.Controllers
             {
                 return View();
             }
-            var eventdb = GetEvents(file);
+            var eventdb = GetEvents(filePath);
             var list = new List<EventOBJ>();
             foreach (var e in eventdb)
             {
