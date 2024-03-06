@@ -1,8 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IEnumerable<FiwFriends.Models.Usersystem>;
+<style>
+    .inline-li{
+    display:inline;    
+    }
+</style>
+
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    @foreach (var user in Model)
+    {
+        <ul>
+            <li class="inline-li">@user.Username</li>
+            <li class="inline-li">@user.Password</li>
+            <li class="inline-li">@user.Picture</li>
+            <li class="inline-li">@user.Location</li>
+            <li class="inline-li">@user.AboutMe</li>
+    </ul>
+    }
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

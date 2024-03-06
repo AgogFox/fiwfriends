@@ -1,0 +1,169 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model FiwFriends.Models.Usersystem;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    body{
+        background-color: #F6F2D2;
+    }
+    }
+    .container{
+        margin-top:4vh;
+    }
+    .container .rectangle h1 {
+        font-weight: 700;   
+        margin-left:6vw;
+    }
+
+    section {
+        display: inline-flex;
+        padding: 0%;
+    }
+
+    .container .rectangle {
+        width: 80vw;
+        height: 70vh;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px grey;
+        position: relative;
+    }
+
+    .input {
+        @*margin-top: 10vh;
+        margin-left: 15vw;*@
+        width:100%;
+        margin-left:12vw;
+        margin-top:10vh;
+
+    }
+
+    input {
+        margin-bottom: 4vh;
+        width:50%;
+        border-radius: 5px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .button {
+        width: 50%;
+        height: 20%;
+        text-align: center;
+        border: none;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        margin-top: 5%;
+    }
+
+    .button:hover {
+        color: white;
+        background-color: #FD5C37;
+        box-shadow: 2px 5px 2px grey;
+    }
+
+    .button:active {
+        background-color: #FD5C37;
+        box-shadow: 0 5px grey;
+        transform: translateY(4px);
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    .pic {
+        width: 35vw;
+        height: 70vh;
+        object-fit: scale-down;
+    }
+
+    @@media screen and (max-width: 600px) {
+        .container .rectangle h1 {
+            margin-left: 15%;
+        }
+
+        .input {
+            margin-left: 20vw;
+        }
+
+        input {
+            width: 50%;
+        }
+
+        .button {
+            margin-left: 0%;
+            width:50%
+        }
+        .pic{
+            display: none;
+        }
+        .column{
+            width: 100%;
+        }
+        span{
+            
+        }
+
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="rectangle">
+            <div class="row">
+                <div class="column">
+                    <form class="input" method="post" asp-action="Login">
+                    <h1>Login</h1>
+                        <div style="margin-bottom:5vh;">
+                            <label for="username">Username :</label><br><span></span><br>
+                            <input type="text" id="username" name="username"><br>
+                            <label for="password">Password :</label><br>
+                            <input type="password" id="password" name="password" ><br>
+                            <button class="button" type="submit">Login</button><br>
+                        </div>
+                        @if (ViewBag.error == "404")
+                        {
+                            <span style="color:red; margin-left:-5vh; font-size:80%;">Not Found ,Please Check your username and password again</span>
+                        }
+                    </form>
+                    @* <section class="signup">
+                        <p>Don't Have an account?</p>
+                    </section> *@
+                </div>
+                <div class="column">
+                    <img class="pic"
+                        src="https://img.freepik.com/free-vector/group-discussion-concept-illustration_114360-8632.jpg?t=st=1708968534~exp=1708972134~hmac=30e0cb38c22a17b2003be3b89b4a5edd7547989db229d44e36c76e274487db44&w=996"
+                        alt="meet up">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

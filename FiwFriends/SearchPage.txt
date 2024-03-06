@@ -1,0 +1,350 @@
+@{
+    ViewData["Title"] = "Search Page";
+    Layout = "";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+</head>
+<style>
+    /* Start of Navigation bar */
+        * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    body{
+        margin:0%;
+    }
+
+    .text-center {
+        padding-top:7vh;
+    }
+    button{
+        border: none;
+        background-color: white;
+    }
+    button:hover{
+        background-color: rgb(225, 230, 233);
+    }
+    .navigation{
+        display: flex;
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        margin:0%;
+        padding: 0%;
+        height: 7vh;
+    }
+    .item1{
+        padding-top: 0.5%;
+        width: 30%;
+        justify-content: center;
+    }
+    .item1 a{
+        font-weight: bold;
+        font-size: 4vh;
+        color: #FD5C37;
+        text-shadow: 1px 6px 4px grey;
+        padding-left: 5%;
+    }
+    .item2{
+        width: 40%;
+        display: flex;
+    }
+    .signup{
+        height: 100%;
+        padding:0%;
+        font-weight: bold;
+    }
+    .item3{
+        padding: 0%;
+        display: flex;
+        width: 30%;
+    }
+    .navitem{
+        width: 100%;
+        padding: 3%;
+        text-align: center;
+        font-size: 80%;
+    }
+    .navitem img{
+        object-fit:fill;
+        width: 2vh;
+    }
+    form{
+        margin-top: 0.5vh;
+        height:100%;
+    }
+    .search{
+        padding: 1vh;
+        padding-left: 4%;
+        margin-left: 10%;
+        margin-top: 1%;
+        border-radius: 20px;
+        height:fit-content;
+        font-size: 100%;
+    }
+    /* End of Navigation bar */
+    .header {
+        margin-top: 5vh;
+    }
+
+    b {
+        font-size: 3vh;
+    }
+
+    #main {
+        width: 75%;
+        height: 100%;
+        float: left;
+        border: 1px solid white; @*debugg here*@
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .flex-container {
+        display: flex;
+        background-color: white; @*debugg here*@
+        width: 100%;
+    }
+
+    .image {
+        width: 30%
+    }
+
+    .image img {
+        width: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .detail {
+        width: 60%
+    }
+
+    .flex-container>div {
+        background-color: white;
+        margin: 1%;
+        padding: 1%;
+        font-size: 2vh;
+    }
+
+    #ad {
+        width: 25%;
+        float: left;
+        height: 100%;
+        border: 1px solid white;
+        padding: 15px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .flex>div {
+        background-color: white;
+        width: 100%;
+        margin: 0%;
+    }
+
+    .flex img {
+        width: 100%;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .flex-column>div {
+        background-color: white;
+        width: 100%;
+        margin: 0%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .timeleft{
+        color: gray;
+        font-weight: bold;
+         font-size: 2vh;
+    }
+    .attendees{
+        font-weight: bold;
+        font-size: 2vh;
+        padding-top: 80%;
+    }
+
+    .close {
+        float: right;
+        margin-left: 100%;
+    }
+
+    @@media screen and (max-width: 600px) {
+        form{
+            margin-top: 1vh;
+        }
+        .item1{
+                padding-top: 2%;
+                width: 30%;
+                justify-content: center;
+        }
+        .header {
+            text-align: center;
+            justify-content: center;
+            font-size: 4vh;
+        }
+
+        #main {
+            width: 100%;
+            align-items: center;
+            margin-top: 3vh;
+        }
+
+        @*advisment*@
+        .flex {
+                display: flex;
+                flex-direction: column;
+                background-color: DodgerBlue;
+            }
+
+            .flex>div {
+                background-color: #f1f1f1;
+                width: 100px;
+                margin: 0%;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+
+        @*.flex-container{display:block;}.image{width:100%;}*@
+        .flex-container {
+                display: flex;
+                background-color: white;
+                width: 100%;
+            }
+
+            .image {
+                width: 40%
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .detail {
+                width: 60%
+            }
+
+            #ad {
+                display: none;
+            }
+    }
+</style>
+<body>
+    @*---------------------- Navigation bar ----------------------*@
+    <nav class="navigation">
+        <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
+        <div class="item3">
+        <form style="width: 100%;display:flex;" method="post" asp-controller="Event" class="container" asp-action="Search">
+            <input style="width: 60%; margin-right:1%;" type="text" id="word" name="word" placeholder="Country,City" class="search">
+                <button type="submit" style="width: 20%; height:100%"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
+            </form>
+        </div>
+        <div class="item2">
+            <button class="navitem">
+                <img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0">
+            </button>
+            <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
+            <button class="navitem signup">Sign Up</button>
+            <button class="navitem">
+                <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+        </div>
+        </div>
+    </nav>
+    @*---------------------- End Navigation bar here ----------------------*@
+
+    @*---------------------- this is main page ----------------------*@
+ @if (ViewContext.HttpContext.Request.Method == "POST")
+    {
+
+        <div class="text-center">
+            @if (@ViewBag.errormsg == "Can not found Event")
+            {
+                <h1>Can not found</h1>
+            }
+            else
+            {
+                 <div class="container">
+                    <div class="header">
+                        <b>Event near</b>
+                        <b>BKK ,TH</b>
+                    </div>
+                    <div id="main">
+                        @foreach(var e in Model)
+                        {
+                            <hr>
+                            <div class="flex-container" onclick="" href="/eiei" >
+                                <div class="image">
+                                    <img class="image"
+                                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="event concert">
+                                </div>
+                                <div class="detail">
+                                    <p>@e.date_time</p>
+                                    <h1>@e.title</h1>
+                                    <p style="display: inline;">Host by : @e.host_by</p>
+                                    <p style="display: inline;">Location : @e.location</p>
+                                    <p style="display: inline;">Info : @e.description</p>
+                                </div>
+                                <div class="flex-column">
+                                    <div class="timeleft">
+                                        <p style="display: inline;">Time left : 5 Days</p>
+                                    </div>
+                                    <div class="attendees">
+                                        <p style="display: inline;">5 Attendees</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        }
+                    </div>
+                    <div id="ad">
+                        <button onclick="Closead()" href="" class="close">x</button>
+                        <div class="flex">
+                            <div>
+                                <img src="https://i.ibb.co/G9RyqYy/IMG-8587.jpg" alt="panan2" border="0">
+                            </div>
+                            <div>
+                                <img src="https://iili.io/JMMQbMN.md.png" alt="panan1" border="0">
+                            </div>
+                            <div>
+                                <img src="https://i.ibb.co/0rtgr3L/images.jpg" alt="images" border="0">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>   
+            }
+
+         </div>  
+    }
+    @*---------------------- End main page here ----------------------*@
+</body>
+<script>
+    var m = document.getElementById('main');
+
+    function Closead() {
+        document.getElementById('ad').remove();
+
+    }
+</script>

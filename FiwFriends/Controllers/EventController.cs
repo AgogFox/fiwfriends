@@ -1,25 +1,27 @@
 ﻿using Event.Models;
 using Microsoft.AspNetCore.Mvc;
+using FiwFriends.Models;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace Event.Controllers
+namespace FiwFriends.Controllers
 {
     public class EventController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
+
         private string filePath;
         public EventController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
         }
+
+
         public IActionResult Index()
         {
-            var jsonData = System.IO.File.ReadAllText(filePath);
-            var event_list = JsonConvert.DeserializeObject<List<EventOBJ>>(jsonData);
+            return View();
 
-            return View(event_list);
         }
         public IActionResult AddEvent()
         {
@@ -50,25 +52,37 @@ namespace Event.Controllers
                 System.IO.File.WriteAllText(filePath, jsonData);
                 return RedirectToAction("Index");
         }
-        
-        public IActionResult ShowEvent(string? title)
+
+        public IActionResult Search()
         {
-            var jsonData = System.IO.File.ReadAllText(filePath);
-            var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
-            EventOBJ obj = new EventOBJ();
-            foreach(EventOBJ e in event_list)
+            return View();
+        }
+        
+            
+        [HttpPost]
+        public IActionResult Search(string word)
+        {
+            if (word == null)
             {
-                if (e.title == title)
+                return View();
+            }
+            var eventdb = GetEvents(filePath);
+            var list = new List<EventOBJ>();
+            foreach (var e in eventdb)
+            {
+                if (e.location.Contains(word) == true)
                 {
-                    obj = e;
-                    break;
+                    list.Add(e);
                 }
             }
-            return View(obj);
-        }
-        public IActionResult Summary(EventOBJ obj)
-        {
-            return View(obj);
+            if (list.Count() == 0)
+            {
+
+                ViewBag.errormsg = "Can not found";
+                return View();
+            }
+            ViewBag.word = word;
+            return View(list);
         }
     }
 }
