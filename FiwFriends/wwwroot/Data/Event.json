@@ -1,0 +1,36 @@
+[
+  {
+    "title": "test_picv2",
+    "host_by": "test_picv2",
+    "date_time": "2024-03-04T19:07:00",
+    "location": "test_picv2",
+    "picture": null,
+    "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
+    "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "close_form": "2024-03-27T09:21:00",
+    "attendees": [],
+    "tags": [
+      "test_picv2",
+      "eiei",
+      "test_3rd"
+    ],
+    "spots": 23,
+    "is_open": false
+  },
+  {
+    "title": "long",
+    "host_by": "tetae",
+    "date_time": "2024-03-19T19:01:00",
+    "location": "heere",
+    "picture": null,
+    "picture_url": null,
+    "description": "sadfagsss sssssssssssssssssss ssssssssssssssss sssssssssssssssssss ssssssssssssadfagsssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss ssssss sssssssssssss nsadfagssssssssssssssssssssssssssssss ssssssssssssssssss ssssssssssssssssss ssssssssssssssssssa dfagsssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssadfagsssssssssssssssssssssssssss sssssssssssss ssssssssssss ssssssss sssssssssssssssss ssssssssadfagsssssssssssssssssssss sssssssssssssssss sssssssss ssssssssssss sssssssssssss ssssssssssss sadfagsssssssssssssss sssssssssssss ssssssssssssssssssss sssssssssssssssss sssssssssss sssssssssssssssss ssssssssssd",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [
+      "asdf"
+    ],
+    "spots": 3,
+    "is_open": false
+  }
+]
