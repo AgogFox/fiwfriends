@@ -14,14 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Views\Event\AddEvent.cshtml" />
     <None Include="Views\Event\Index.cshtml" />
     <None Include="Views\Event\ShowEvent.cshtml" />
-    <None Include="Views\Event\Summary.cshtml" />
-=======
-    <None Include="Views\Event\Search.cshtml" />
->>>>>>> search-result-page
   </ItemGroup>
 
   <ItemGroup>

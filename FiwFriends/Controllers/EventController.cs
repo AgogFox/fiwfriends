@@ -1,6 +1,5 @@
-﻿using Event.Models;
+﻿using FiwFriends.Models;
 using Microsoft.AspNetCore.Mvc;
-using FiwFriends.Models;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
@@ -17,6 +16,19 @@ namespace FiwFriends.Controllers
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
         }
 
+        private List<EventOBJ> GetEvents(string filepath)
+        {
+            if (System.IO.File.Exists(filepath))
+            {
+                var json = System.IO.File.ReadAllText(filepath);
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventOBJ>>(json);
+            }
+            else
+            {
+                Console.WriteLine("File does not exist.");
+            }
+            return null;
+        }
 
         public IActionResult Index()
         {
@@ -51,15 +63,8 @@ namespace FiwFriends.Controllers
                 jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
                 System.IO.File.WriteAllText(filePath, jsonData);
                 return RedirectToAction("Index");
-        }
-
-        public IActionResult Search()
-        {
-            return View();
-        }
-        
+        }        
             
-        [HttpPost]
         public IActionResult Search(string word)
         {
             if (word == null)

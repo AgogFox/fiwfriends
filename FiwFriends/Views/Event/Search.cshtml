@@ -1,6 +1,5 @@
 ﻿@{
     ViewData["Title"] = "Search Page";
-    Layout = "";
 }
 <head>
     <meta charset="UTF-8">
@@ -12,81 +11,12 @@
 </head>
 <style>
     /* Start of Navigation bar */
-    body{
-        margin:0%;
-        padding:0%;
-    }
     * {
-        font-family: "Josefin Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color:black;
-    }
-    button{
-        border: none;
-        background-color: white;
-    }
-    button:hover{
-        background-color: rgb(225, 230, 233);
-    }
-    .navigation{
-        display: flex;
-        background-color: white;
-        width: 100%;
-        position: fixed;
-        margin:0%;
-        padding: 0%;
-        height: 7vh;
-    }
-    .item1{
-        padding-top: 0.5%;
-        width: 30%;
-        justify-content: center;
-    }
-    .item1 a{
-        font-weight: bold;
-        font-size: 4vh;
-        color: #FD5C37;
-        text-shadow: 1px 6px 4px grey;
-        padding-left: 5%;
-    }
-    .item2{
-        width: 40%;
-        display: flex;
-    }
-    .signup{
-        height: 100%;
-        padding:0%;
-        font-weight: bold;
-    }
-    .item3{
-        padding: 0%;
-        display: flex;
-        width: 30%;
-    }
-    .navitem{
-        width: 100%;
-        padding: 3%;
-        text-align: center;
-        font-size: 80%;
-    }
-    .navitem img{
-        object-fit:fill;
-        width: 2vh;
-    }
-    form{
-        margin-top: 0.5vh;
-        height:100%;
-    }
-    .search{
-        padding: 1vh;
-        padding-left: 4%;
-        margin-left: 10%;
-        margin-top: 1%;
-        border-radius: 20px;
-        height:fit-content;
-        font-size: 100%;
-    }
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+}
     /* End of Navigation bar */
     b {
         font-size: 3vh;
@@ -95,7 +25,7 @@
 
     .container{
             display:block;
-            padding:5%;
+            padding:4%;
     }
     .main-flex-container{
         display:flex;
@@ -125,7 +55,10 @@
     }
 
     .detail {
-        width: 60%
+        width: 100%
+    }
+    .detail h1{
+        font-size:3vh;
     }
 
     .flex-container>div {
@@ -194,7 +127,7 @@
             color:white;
         }
 
-    @@media screen and (max-width: 600px) {
+    @@media screen and (max-width: 700px) {
         form{
             margin-top: 1vh;
         }
@@ -257,29 +190,14 @@
 </style>
 <body>
     @*---------------------- Navigation bar ----------------------*@
-    <nav class="navigation">
-        <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
-        <div class="item3">
-        <form style="width: 100%;display:flex;" method="post" asp-controller="Event" asp-action="Search">
-            <input style="width: 60%; margin-right:1%;" type="text" id="word" name="word" placeholder="Country,City" class="search">
-                <button type="submit" style="width: 20%; height:90%;"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
-        </form>
-        </div>
-        <div class="item2">
-            <button class="navitem">
-                <img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0">
-            </button>
-            <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
-            <button class="navitem signup">Sign Up</button>
-            <button class="navitem">
-                <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
-        </div>
-    </nav>
     @*---------------------- End Navigation bar here ----------------------*@
 
     @*---------------------- this is main page ----------------------*@
- @if (ViewContext.HttpContext.Request.Method == "POST")
+    @if (Model == null)
     {
+        <h1 style="display:none">Model null</h1>
+    }
+    else{
             @if (@ViewBag.errormsg == "Can not found")
             {
                 <h1 class="container">Can not found</h1>
@@ -289,14 +207,14 @@
                     <div class="container">
                     <div>
                         <b>Event near</b>
-                        <b>BKK ,TH</b>
+                        <b>@ViewBag.word</b>
                     </div>
                     <div class="main-flex-container">
                         <div id="main">
                             @foreach(var e in Model)
                             {
                                 <hr>
-                                <a asp-action="ShowEvent" asp-controller="Event" style="text-decoration:none;">
+                                <a asp-action="Search" asp-controller="Event" style="text-decoration:none;">
                                 <div class="flex-container" onclick="">
                                     <div class="image">
                                         <img class="image"
@@ -308,14 +226,13 @@
                                         <h1>@e.title</h1>
                                         <p style="display: inline;">Host by : @e.host_by</p><br>
                                         <p style="display: inline;">Location : @e.location</p><br>
-                                        <p style="display: inline;">Info : @e.description</p><br>
                                     </div>
                                     <div class="flex-column">
                                         <div class="timeleft">
                                             <p style="display: inline;">Time left : 5 Days</p>
                                         </div>
                                         <div class="attendees">
-                                            <p style="display: inline;">5 Attendees</p>
+                                            <p style="display: inline;">@e.attendees.Count Attendees</p>
                                         </div>
                                     </div>
                                 </div>
@@ -340,8 +257,8 @@
                         </div>
                     </div>
                 </div>
+          }
     }
-}
     @*---------------------- End main page here ----------------------*@
 </body>
 <script>
