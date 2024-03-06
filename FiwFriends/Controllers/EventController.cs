@@ -1,18 +1,18 @@
 ﻿using Event.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Text.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Event.Controllers
 {
     public class EventController : Controller
     {
-        private string filePath = @"D:\test_webapp\Event\Event\Data\Event.json";
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private string filePath;
         public EventController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
+            filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
         }
         public IActionResult Index()
         {
