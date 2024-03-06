@@ -214,7 +214,7 @@
                             @foreach(var e in Model)
                             {
                                 <hr>
-                                <a asp-action="Search" asp-controller="Event" style="text-decoration:none;">
+                                <a asp-action="ShowEvent" asp-controller="Event" asp-route-title="@e.title" style="text-decoration:none;">
                                 <div class="flex-container" onclick="">
                                     <div class="image">
                                         <img class="image"
