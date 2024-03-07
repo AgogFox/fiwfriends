@@ -1,0 +1,293 @@
+﻿@model FiwFriends.Models.EventOBJ;
+@{
+    ViewData["Title"] = "ShowEvent";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickToCopy</title>
+    <style>
+        .page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .title-group {
+            
+        }
+
+        .title {
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 2vw;
+            font-weight:600;
+            margin-bottom: 0%;
+        }
+        .hosted-by {
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1.2vw;
+        }
+
+        .big-container {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 27.4vw;
+            margin: 0vw 0vw 2vw 0.8vw;
+            width: calc(100% - 0.8vw);
+        }
+
+        .title_picture {
+            border-radius: 2vw;
+            object-fit: cover;
+            width:50%;
+        }
+
+        .group-box {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            height: 100%;
+            row-gap: 1.2vw;
+            width: 24.1vw;
+        }
+
+        .date-time-div {
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            padding: 0.5vw 1.6vw;
+            width: 23.7vw;
+            margin-left: 40%
+        }
+
+        .location-div {
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            padding: 0.5vw 1.6vw;
+            white-space: nowrap;
+            width: 100%;
+            margin-left: 40%
+        }
+
+        .slot-div {
+            align-items: center;
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 0.4vw;
+            padding: 1.1vw 1.6vw;
+            width: calc(100% - 0.4vw);
+            margin-left: 40%
+        }
+        .head-text{
+            color: black;
+            font-size: 1.2vw;
+            font-weight: 400;
+        }
+        .data-text {
+            color: #7e7e7e;
+            font-size: 1vw;
+            font-weight: 400;
+        }
+        #slot {
+            padding-left: 5%;
+            padding-bottom: 1%;
+        }
+        .detail-group {
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin: 0vw 0.9vw 2.1vw 0vw;
+            width: calc(100% - 0.9vw);
+        }
+        .detail-header-text {
+            color: black;
+            font-size: 1.6vw;
+            font-weight: 400;
+        }
+
+        .detail-group-left {
+            flex-shrink: 0;
+            height: 100%;
+            margin-right: 6.5vw;
+            width: 49.8vw;
+        }
+        
+        .description {
+            color: #000000;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1.2vw;
+            font-weight: 400;
+            line-height: 1.495;
+            margin: 0vw 0vw 1.1vw 2.5vw;
+            max-width: 47.3vw;
+        }
+
+        .tag-group {
+            display: flex;
+        }
+
+        .tag-box {
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            font-family: Kanit, 'Source Sans Pro';
+            font-size: 1vw;
+            padding: 0vw 1vw 0vw 1vw;
+            white-space: nowrap;
+            margin-right: 1.5vw;
+        }
+
+        .attendees-profile-group {
+            align-items: center;
+            background-color: #ffffff;
+            border: solid 0.1vw #000000;
+            border-radius: 1vw;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 1.1vw 2.2vw;
+            width: 47.1vw;
+        }
+
+        .attendees-group-box {
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 2.8vw;
+            width: calc(100% - 2.8vw);
+        }
+
+        .inside-attendees-group {
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 2.8vw;
+            width: calc(100% - 2.8vw);
+        }
+
+        .attendees-profile {
+            margin-right: 8vw;
+        }
+
+        .button-group {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 3.8vw;
+            margin-right: 33.4vw;
+            width: calc(100% - 33.4vw);
+        }
+
+        .attend-button {
+            align-items: center;
+            background-color: #fd5c37;
+            border-radius: 1vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: flex;
+            flex-shrink: 0;
+            font-family: Istok Web, 'Source Sans Pro';
+            font-size: 1.5vw;
+            font-weight: 700;
+            height: 70%;
+            justify-content: center;
+            line-height: 1.44;
+            margin-right: 1.3vw;
+            white-space: nowrap;
+            width: 20vw;
+        }
+
+        .not-going-button {
+            align-items: center;
+            background-color: #7f7f7f;
+            border-radius: 1vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: flex;
+            flex-shrink: 0;
+            font-family: Istok Web, 'Source Sans Pro';
+            font-size: 1.5vw;
+            font-weight: 700;
+            height: 70%;
+            justify-content: center;
+            line-height: 1.44;
+            white-space: nowrap;
+            width: 11.9vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="title-group" >
+            <p class="title" >@Model.title</p>
+            <p class="hosted-by">Hosted By : @Model.host_by</p>
+        </div>
+        <div class="big-container">
+            <img class="title_picture" src="@Model.picture_url" />
+            <div class="group-box" >
+                <div class="date-time-div" >
+                    <p class="head-text">Event date and time</p>
+                    <p class="data-text">@Model.date_time</p>
+                </div>
+                <div class="location-div">
+                    <p class="head-text">location</p>
+                    <p class="data-text" >@Model.location</p>
+                </div>
+                <div class="slot-div">
+                    <p class="head-text">Slots left :</p>
+                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots </p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-group">
+            <div class="detail-group-left">
+                <p class="detail-header-text">Details</p>
+                <p class="description">@Model.description</p>
+                <div class="tag-group"> 
+                    @foreach(string tag in Model.tags)
+                    {
+                        <div class="tag-box">@tag</div>
+                    }
+                </div>
+                <p class="detail-header-text" style="margin-top: 1.5vw;">Attendees (@Model.attendees.Count)</p>
+                <div class="attendees-profile-group">
+                    <div class="attendees-group-box" >
+                        <div class="group-23-1pK" >
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="inside-attendees-group">
+                        <p class="attendees-profile">eiei(host)</p>
+                        <p class="attendees-profile" >ei</p>
+                        <p class="attendees-profile" >eie</p>
+                        <p class="attendees-profile" >eieii</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto-group-jyex-1Ub">
+            <div class="rectangle-8-951"></div>
+            <div class="rectangle-9-ovF"></div>
+            <div class="rectangle-10-Jc7"></div>
+        </div>
+    </div>
+    <div class="button-group">
+        <div class="attend-button">Attend</div>
+        <div class="not-going-button" >Not Going</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+[
+  {
+    "title": "test_picv2",
+    "host_by": "test_picv2",
+    "date_time": "2024-03-04T19:07:00",
+    "location": "test_picv2",
+    "picture": null,
+    "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
+    "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "close_form": "2024-03-27T09:21:00",
+    "attendees": [],
+    "tags": [
+      "test_picv2",
+      "eiei",
+      "test_3rd"
+    ],
+    "spots": 23,
+    "is_open": false
+  },
+  {
+    "title": "long",
+    "host_by": "tetae",
+    "date_time": "2024-03-19T19:01:00",
+    "location": "heere",
+    "picture": null,
+    "picture_url": null,
+    "description": "sadfagsss sssssssssssssssssss ssssssssssssssss sssssssssssssssssss ssssssssssssadfagsssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss ssssss sssssssssssss nsadfagssssssssssssssssssssssssssssss ssssssssssssssssss ssssssssssssssssss ssssssssssssssssssa dfagsssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssadfagsssssssssssssssssssssssssss sssssssssssss ssssssssssss ssssssss sssssssssssssssss ssssssssadfagsssssssssssssssssssss sssssssssssssssss sssssssss ssssssssssss sssssssssssss ssssssssssss sadfagsssssssssssssss sssssssssssss ssssssssssssssssssss sssssssssssssssss sssssssssss sssssssssssssssss ssssssssssd",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [
+      "asdf"
+    ],
+    "spots": 3,
+    "is_open": false
+  },
+  {
+    "title": "Introduction to Machine Learning",
+    "host_by": "AI Research Club",
+    "date_time": "2024-03-15T19:00:00",
+    "location": "123 Main Street, Bangkok, Thailand",
+    "picture_url": "https://example.com/event1.jpg",
+    "description": "Learn the basics of machine learning algorithms and applications.",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [ "machine learning", "AI", "beginner" ],
+    "spots": 30,
+    "is_open": false
+  },
+  {
+    "title": "Yoga in the Park",
+    "host_by": "Wellness Collective",
+    "date_time": "2024-03-20T08:00:00",
+    "location": "Lumphini Park, Bangkok, Thailand",
+    "description": "Join us for a morning yoga session in the beautiful Lumphini Park.",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [ "yoga", "wellness", "outdoor" ],
+    "spots": 20,
+    "is_open": false
+
+  },
+  {
+    "title": "Movie Night: Classic Sci-Fi Double Feature",
+    "host_by": "Film Club",
+    "date_time": "2024-04-14T19:00:00",
+    "location": "Community Center Auditorium, Anytown, USA",
+    "description": "Join us for a screening of two classic science fiction films!",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [ "movie night", "sci-fi", "double feature" ],
+    "spots": 50,
+    "is_open": false
+
+  },
+  {
+    "title": "Coding Workshop: Build Your First Website",
+    "host_by": "Tech Academy",
+    "date_time": "2024-04-20T10:00:00",
+    "location": "Tech Hub Co-working Space, London, England",
+    "description": "Learn the basics of web development and build your own website.",
+    "close_form": "2024-03-27T09:03:00",
+    "attendees": [],
+    "tags": [ "coding workshop", "web development", "beginner" ],
+    "spots": 25,
+    "is_open": false
+
+  }
+]
