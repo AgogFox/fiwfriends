@@ -44,10 +44,25 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - FiwFriends - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer">
+        <div>
+            <p>This web application project is a part of "Web Application Development" subject at</p>
+            <p>King Mongkut's Institute of Technology Ladkrabang</p>
+            <p>March 2024</p>
         </div>
+        <div>
+            <p>Made By</p>
+            <ul class="name-list">
+                <li>Name1</li>
+                <li>Name2</li>
+                <li>Name3</li>
+                <li>Name4</li>
+                <li>Name5</li>
+            </ul>
+        </div>
+        <a class="github" href="https://github.com/AgogFox/fiwfriends" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
     </footer>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

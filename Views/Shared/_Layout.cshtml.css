@@ -136,6 +136,31 @@ header {
     }
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bg-600);
+    color: #fff;
+    padding: 1.5rem 15%;
+}
+
+.name-list {
+    position: relative;
+    left: 2rem;
+}
+
+.github {
+    display: inline-block;
+    font-size: 36px;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: #fff;
+}
+
+.github:hover {
+    transform: scale(1.2);
+}
 
 /*
 a.navbar-brand {
