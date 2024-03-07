@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --bg-100: #dce2ef;
+    --bg-200: #C2C8D2;
+    --bg-300: #8E98A8;
+    --bg-400: #6A788E;
+    --bg-500: #505B74;
+    --bg-600: #35425B;
+    --bg-700: #263248;
+    --bg-800: #172337;
+    --bg-900: #0A1628;
+    --brand-100: #F4DBD1;
+    --brand-200: #F09F7C;
+    --brand-300: #F28F64;
+    --brand-400: #F27742;
+    --brand-500: #EF733E;
+    --brand-600: #C64813;
+    --brand-700: #A93808;
+    --brand-800: #832A04;
+    --brand-900: #501902;
+    --green-100: #E2F8D1;
+    --green-200: #C3EAA4;
+    --green-300: #AFEE7D;
+    --green-400: #94E255;
+    --green-500: #86E33B;
+    --green-600: #64C517;
+    --green-700: #4E9C0F;
+    --green-800: #316904;
+    --green-900: #1C3D01;
+    --red-100: #FFD0D0;
+    --red-200: #F69191;
+    --red-300: #EB7070;
+    --red-400: #F65252;
+    --red-500: #E34545;
+    --red-600: #C02424;
+    --red-700: #940707;
+    --red-800: #830404;
+    --red-900: #430202;
+    --blue-100: #C3E4FB;
+    --blue-200: #77C5FD;
+    --blue-300: #57B1F2;
+    --blue-400: #409FE3;
+    --blue-500: #369BE4;
+    --blue-600: #1378C1;
+    --blue-700: #075E9C;
+    --blue-800: #044777;
+    --blue-900: #002B49;
+}
+
+li, a, button {
+    text-decoration: none;
+}
