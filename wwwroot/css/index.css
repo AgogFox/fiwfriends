@@ -1,0 +1,59 @@
+﻿.welcome {
+    margin: 20px 10%;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.event-list {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.event-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid var(--bg-200);
+}
+
+img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 2rem;
+}
+
+.date {
+    text-transform: uppercase;
+    color: var(--bg-400);
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.location {
+    color: var(--bg-400);
+}
+
+.status p {
+    color: var(--bg-400);
+    margin: 1rem 0;
+}
