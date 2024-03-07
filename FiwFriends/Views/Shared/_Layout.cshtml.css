@@ -1,6 +1,4 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-* {
+﻿* {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -130,7 +128,7 @@ a {
 .foot {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 95%;
     padding-left: 5%;
     margin-bottom: 1%;
     padding-top: 1%;

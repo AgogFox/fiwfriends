@@ -1,4 +1,4 @@
-﻿@model FiwFriends.Models.EventOBJ;
+﻿@model EventOBJ;
 @{
     ViewData["Title"] = "AddEvent";
 }
@@ -8,9 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
+        body {
             background-color: #f6f2d2
         }
+
         .big-rectangle {
             background-color: white;
             border-radius: 1vw;
@@ -62,7 +63,6 @@
         .auto-group-btfq-A7R {
             display: flex;
             height: 100%;
-
         }
 
         .auto-group-aaz3-4yV {
@@ -79,6 +79,7 @@
             text-align: right;
             padding: 10% 0;
         }
+
         .submit-button {
             align-items: center;
             background-color: #fd5c37;
@@ -91,6 +92,7 @@
             width: 15.5%;
             margin-top: 2%;
         }
+
         .select-title-picture {
             text-align: center;
         }
@@ -98,24 +100,24 @@
 </head>
 <body>
     <div class="big_rectangle">
-        
+
         <form method="post" enctype="multipart/form-data" asp-controller="Event" asp-action="AddEvent" class="big-rectangle">
             <p class="new-event-aKh" id="13:528">NEW EVENT</p>
-            <div >
+            <div>
                 <label asp-for="host_by"></label>
                 <br />
                 <input type="text" asp-for="host_by" class="rectangle-input" />
-                <span asp-validation-for="host_by" style="color: red"></span> 
+                <span asp-validation-for="host_by" style="color: red"></span>
             </div>
             <div class="auto-group-btfq-A7R" id="DYG4zuU4uZcDbWdiFRBtFq">
                 <div class="auto-group-aaz3-4yV" id="DYG5BQAafP8EMXjpZyaAz3">
-                    <div >
+                    <div>
                         <label asp-for="title"></label>
                         <br />
                         <input type="text" asp-for="title" class="rectangle-input-flex" />
                         <span asp-validation-for="title" style="color: red"></span>
                     </div>
-                    <div >
+                    <div>
                         <label asp-for="date_time"></label>
                         <br />
                         <input type="datetime-local" asp-for="date_time" class="rectangle-input-flex" />
@@ -142,17 +144,17 @@
                 </div>
                 <div class="auto-group-s5r7-pzb" id="DYG5KjG33GeVgpGStPS5r7">
                     <label asp-for="picture" class="select-title-picture">Select a Title picture:</label>
-                    <input type="file" asp-for="picture"> 
+                    <input type="file" asp-for="picture">
                 </div>
             </div>
-            
-            <div >
+
+            <div>
                 <label asp-for="description"></label>
                 <br />
                 <textarea type="text" asp-for="description" class="rectangle-input-descripton" rows="8" cols="50"></textarea>
                 <span asp-validation-for="description" style="color: red"></span>
             </div>
-            
+
             <div>
                 <label asp-for="close_form"></label>
                 <br />

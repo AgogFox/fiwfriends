@@ -9,11 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClickToCopy</title>
     <style>
+        body {
+            padding-left: 5%;
+            padding-bottom: 5%;
+        }
         .page {
             display: flex;
             flex-direction: column;
             width: 100%;
         }
+
         .title-group {
             
         }
@@ -42,6 +47,7 @@
             border-radius: 2vw;
             object-fit: cover;
             width:50%;
+            margin-top: 5%;
         }
 
         .group-box {
@@ -107,7 +113,7 @@
             align-items: flex-start;
             display: flex;
             flex-shrink: 0;
-            margin: 0vw 0.9vw 2.1vw 0vw;
+            margin: 2vw 0.9vw 2.1vw 0vw;
             width: calc(100% - 0.9vw);
         }
         .detail-header-text {
@@ -227,6 +233,7 @@
             white-space: nowrap;
             width: 11.9vw;
         }
+
     </style>
 </head>
 <body>
@@ -236,19 +243,19 @@
             <p class="hosted-by">Hosted By : @Model.host_by</p>
         </div>
         <div class="big-container">
-            <img class="title_picture" src="@Model.picture_url" />
-            <div class="group-box" >
-                <div class="date-time-div" >
+            <img class="title_picture" src="@Model.picture_url"/>
+            <div class="group-box">
+                <div class="date-time-div">
                     <p class="head-text">Event date and time</p>
                     <p class="data-text">@Model.date_time</p>
                 </div>
                 <div class="location-div">
                     <p class="head-text">location</p>
-                    <p class="data-text" >@Model.location</p>
+                    <p class="data-text">@Model.location</p>
                 </div>
                 <div class="slot-div">
                     <p class="head-text">Slots left :</p>
-                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots </p>
+                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots</p>
                 </div>
             </div>
         </div>
@@ -272,9 +279,18 @@
                     </div>
                     <div class="inside-attendees-group">
                         <p class="attendees-profile">eiei(host)</p>
-                        <p class="attendees-profile" >ei</p>
-                        <p class="attendees-profile" >eie</p>
-                        <p class="attendees-profile" >eieii</p>
+                        @if (Model.attendees.Count >= 1)
+                        {
+                            <p class="attendees-profile" >@Model.attendees[1]</p>                     
+                        }
+                        @if (Model.attendees.Count >= 2)
+                        {
+                            <p class="attendees-profile" >@Model.attendees[2]</p>                     
+                        }
+                        @if (Model.attendees.Count >= 3)
+                        {
+                            <p class="attendees-profile">@Model.attendees[3]</p>
+                        }
                     </div>
                 </div>
             </div>
