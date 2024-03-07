@@ -17,6 +17,10 @@ body {
 button {
     border: none;
     background-color: white;
+<<<<<<< HEAD
+=======
+    border-radius: 10px;
+>>>>>>> origin/search-result-page
 }
 
     button:hover {
@@ -28,7 +32,10 @@ button {
     background-color: white;
     width: 100%;
     position: fixed;
+<<<<<<< HEAD
     border: 1px solid black
+=======
+>>>>>>> origin/search-result-page
 }
 
 .item1 {
@@ -41,32 +48,69 @@ button {
         font-weight: bold;
         font-size: 4vh;
         color: #FD5C37;
+<<<<<<< HEAD
         text-shadow: 1px 6px 4px grey;
+=======
+        text-shadow: 1px 1px 4px grey;
+>>>>>>> origin/search-result-page
         padding-left: 5%;
     }
 
 .item2 {
+<<<<<<< HEAD
     width: 40%;
+=======
+    margin-top: 1vh;
+    width: 30%;
+>>>>>>> origin/search-result-page
     display: flex;
 }
 
 .signup {
+<<<<<<< HEAD
     height: 100%;
     padding: 0%;
     font-weight: bold;
+=======
+    padding: 0%;
+    font-weight: bold;
+    background-color: #338ebb;
+    color: white;
+>>>>>>> origin/search-result-page
 }
 
 .item3 {
     padding: 0%;
     display: flex;
+<<<<<<< HEAD
     width: 30%;
+=======
+    width: 40%;
+}
+
+.setting {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    font-size: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+>>>>>>> origin/search-result-page
 }
 
 .navitem {
     width: 100%;
+<<<<<<< HEAD
     padding: 3%;
     text-align: center;
     font-size: 80%;
+=======
+    height: 80%;
+    text-align: center;
+    font-size: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+>>>>>>> origin/search-result-page
 }
 
     .navitem img {
@@ -78,6 +122,17 @@ form {
     margin-top: 0.5vh;
 }
 
+<<<<<<< HEAD
+=======
+    form a {
+        font-weight: bold;
+        font-size: 4vh;
+        color: #FD5C37;
+        text-shadow: 1px 1px 4px grey;
+        padding-left: 5%;
+    }
+
+>>>>>>> origin/search-result-page
 #search {
     padding: 1vh;
     padding-left: 4%;
@@ -106,10 +161,22 @@ a {
     color: #0077cc;
 }
 
+<<<<<<< HEAD
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
+=======
+.foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 5%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    white-space: nowrap;
+    border-top: 1px solid #dadada
+>>>>>>> origin/search-result-page
 }
