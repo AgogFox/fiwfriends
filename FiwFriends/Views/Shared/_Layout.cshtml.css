@@ -129,11 +129,8 @@ a {
 
 .foot {
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding:1.5%;
     padding-left: 5%;
-    margin-bottom: 1%;
-    padding-top: 1%;
     white-space: nowrap;
     border-top: 1px solid #dadada
 }

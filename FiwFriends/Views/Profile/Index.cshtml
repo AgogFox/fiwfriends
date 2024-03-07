@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<FiwFriends.Models.Profile>;
-@inject IHttpContextAccessor HttpContextAccessor
-
+   @*using Microsoft.AspNetCore.Http;*@
 <style>
     * {
         font-family: "Josefin Sans", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
+
     }
 </style>
 @foreach (var user in Model)
 {
-    @if (@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] == null)
+    @if (@user.UserId == 1)
     {
         <div style="display:flex; background-color:#F6F2D2; border-radius:1.5vw ;padding:5vh">
             <div style=" border-right: 2px solid #bfbfbf; padding-right:2vw">
