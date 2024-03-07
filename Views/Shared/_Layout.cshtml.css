@@ -8,7 +8,7 @@ header {
     padding: 15px 4%;
     grid-template-columns: 1fr 2fr 2fr;
     gap: 1rem;
-    border-bottom: 2px solid var(--bg-300);
+    border-bottom: 1px solid var(--bg-300);
 }
 
 .logo {
