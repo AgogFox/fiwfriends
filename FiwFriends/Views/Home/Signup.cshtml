@@ -26,13 +26,13 @@
     body{
         background-color: #F6F2D2;
     }
-
+    }
+    .container{
+        margin-top:4vh;
+    }
     .container .rectangle h1 {
-        font-weight: 700;
-    @*margin-left:15vw;margin-top:10vh;*@position: relative;
-        left: 17vw;
-        top: 5vh;
-
+        font-weight: 700;   
+        margin-left:6vw;
     }
 
     section {
@@ -44,27 +44,30 @@
         width: 80vw;
         height: 70vh;
         background-color: white;
-    @*border:3pxsolid#f32177;*@border-radius: 20px;
+        border-radius: 20px;
         box-shadow: 5px 10px 5px grey;
         position: relative;
     }
 
     .input {
-        margin-top: 10vh;
-        margin-left: 15vw;
+        @*margin-top: 10vh;
+        margin-left: 15vw;*@
+        width:100%;
+        margin-left:12vw;
+        margin-top:10vh;
 
     }
 
     input {
-        margin-bottom: 0vh;
-        width: 60%;
+        margin-bottom: 4vh;
+        width:50%;
         border-radius: 5px;
         padding-top: 1%;
-        padding-bottom: 0%;
+        padding-bottom: 1%;
     }
 
     .button {
-        width: 60%;
+        width: 50%;
         height: 20%;
         text-align: center;
         border: none;
@@ -101,25 +104,29 @@
 
     @@media screen and (max-width: 600px) {
         .container .rectangle h1 {
-            margin-left: 20%;
+            margin-left: 15%;
         }
 
         .input {
-            margin-left: 25vw;
+            margin-left: 20vw;
         }
 
         input {
-            width: 60%;
+            width: 50%;
         }
 
         .button {
             margin-left: 0%;
+            width:50%
         }
         .pic{
             display: none;
         }
         .column{
             width: 100%;
+        }
+        span{
+            
         }
 
     }
@@ -131,19 +138,21 @@
         <div class="rectangle">
             <div class="row">
                 <div class="column">
-                    <h1>Sign up</h1>
                     <form method="POST" asp-controller="Home" asp-action="Signup" class="input">
-                        <label asp-for="Username" >Username :</label><br>
-                        <input type="text" asp-for="Username" id="username"><br>
+                    <h1>Sign up</h1>
+                    <div style="margin-bottom:5vh;">
+                        <label asp-for="Username" >Username :</label><br><br>
+                        <input type="text" asp-for="Username" id="username"> 
                         @if (@ViewBag.duplicate == true)
                         {
                             <span class="text-danger">This username already exists.</span><br>
                         }
                         <span asp-validation-for="Username" class="text-danger"></span><br>
-                        <label asp-for="Password" >Password :</label><br>
-                        <input type="text" id="pwd" asp-for="Password"><br>   
-                        <span asp-validation-for="Password" class="text-danger"></span><br>
-                        <button class="button" type="submit">Register</button>
+                        <label asp-for="Password" >Password :</label><br><br>
+                        <input type="text" id="password" asp-for="Password"><br>   
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                        <button class="button" type="submit">Register</button><br>
+                    </div>
                     </form>
                 </div>
                 <div class="column">

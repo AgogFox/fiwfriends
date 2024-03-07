@@ -3,18 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Event</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - FiwFriends</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FiwFriends.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body style="margin:0">
     <header>
         <nav class="navigation">
             <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
             <div class="item3">
-                <form style="width: 100%;display:flex;" method="get" asp-controller="Event" asp-action="Search">
-                    <input style="width: 60%; margin-right:1%;" type="text" id="word" name="word" placeholder="Country,City" class="search">
+                <form style="width: 100%;display:flex;" asp-controller="Event" asp-action="Search">
+                    <input style="width: 60%; margin-right:1%;" type="text" name="word" placeholder="Country,City" id="search">
                     <button style="width: 20%;"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
                 </form>
             </div>
@@ -22,29 +21,25 @@
                 <button class="navitem">
                     <img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0">
                 </button>
-                <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
-                <button class="navitem signup">Sign Up</button>
-                <button class="navitem">
+                <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
+                <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;font-weight: bold;">Sign Up</a></button>
+                <button class="navitem setting">
                     <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
             </div>
-            </button>
-                        </div>
-                    </nav>
-                </header>
-                <div class="container">
-                    <main role="main" class="pb-3">
-                        @RenderBody()
-                    </main>
-                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="padding: 5%; margin-left: 5%;">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
 
-                <footer class="border-top footer text-muted">
-                    <div class="container">
-                        &copy; 2024 - Event - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </div>
-                </footer>
-                <script src="~/lib/jquery/dist/jquery.min.js"></script>
-                <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-                <script src="~/js/site.js" asp-append-version="true"></script>
-                @await RenderSectionAsync("Scripts", required: false)
-            </body>
+    <footer>
+        <div class="foot">
+            &copy; 2024 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
 </html>
