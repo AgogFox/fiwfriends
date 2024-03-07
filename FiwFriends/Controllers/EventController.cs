@@ -21,7 +21,7 @@ namespace FiwFriends.Controllers
             if (System.IO.File.Exists(filepath))
             {
                 var json = System.IO.File.ReadAllText(filepath);
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventOBJ>>(json);
+                return JsonConvert.DeserializeObject<List<EventOBJ>>(json);
             }
             else
             {
@@ -63,8 +63,24 @@ namespace FiwFriends.Controllers
                 jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
                 System.IO.File.WriteAllText(filePath, jsonData);
                 return RedirectToAction("Index");
-        }        
-            
+        }
+
+        public IActionResult ShowEvent(string? title)
+        {
+            var jsonData = System.IO.File.ReadAllText(filePath);
+            var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
+            EventOBJ obj = new EventOBJ();
+            foreach (EventOBJ e in event_list)
+            {
+                if (e.title == title)
+                {
+                    obj = e;
+                    break;
+                }
+            }
+            return View(obj);
+        }
+
         public IActionResult Search(string word)
         {
             if (word == null)
