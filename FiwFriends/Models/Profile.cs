@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-namespace WebApplication1.Models
+namespace FiwFriends.Models
 {
     public class Profile
     {
@@ -13,8 +13,6 @@ namespace WebApplication1.Models
 
         [Required]
         public string Password { get; set; }
-
-        public bool Islogin { get; set; }
 
         public string Picture { get; set; }
 

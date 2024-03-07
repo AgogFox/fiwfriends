@@ -1,16 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.IO;
-using Newtonsoft.Json;
-using NuGet.DependencyResolver;
-using WebApplication1.Models;
+using FiwFriends.Models;
+using Microsoft.AspNetCore.Hosting;
 
-namespace WebApplication1.Controllers
+namespace FiwFriends.Controllers
 {
     public class ProfileController : Controller
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        private string filePath;
+        public ProfileController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+            filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
+        }
+
         public IActionResult Index()
         {
-            var jsonData = System.IO.File.ReadAllText(@"C:\Users\Mon\Desktop\WebApplication1\WebApplication1\Database\UserDB.json");
+            var jsonData = System.IO.File.ReadAllText(filePath);
             var userlist = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Profile>>(jsonData);
             return View(userlist);
             
