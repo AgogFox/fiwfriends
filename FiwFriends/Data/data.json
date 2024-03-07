@@ -1,22 +1,19 @@
 [
   {
-    "Username": "user1",
+    "Username": "InIn",
     "Password": "password1",
-    "Islogin": false,
     "Picture": "user1.jpg",
-    "Location": {
-      "ValueKind": 1
-    },
+    "Location": null,
     "Event": {
       "ValueKind": 1
     },
-    "About_me": null,
-    "Interest": null
+    "AboutMe": "eiei",
+    "Interest": "eiei",
+    "UserId": 0
   },
   {
     "Username": "user2",
     "Password": "password2",
-    "Islogin": false,
     "Picture": "user2.jpg",
     "Location": {
       "ValueKind": 1
@@ -24,13 +21,13 @@
     "Event": {
       "ValueKind": 1
     },
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "user3",
     "Password": "password3",
-    "Islogin": false,
     "Picture": "user3.jpg",
     "Location": {
       "ValueKind": 1
@@ -38,13 +35,13 @@
     "Event": {
       "ValueKind": 1
     },
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "user4",
     "Password": "password4",
-    "Islogin": false,
     "Picture": "user4.jpg",
     "Location": {
       "ValueKind": 1
@@ -52,13 +49,13 @@
     "Event": {
       "ValueKind": 1
     },
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "user5",
     "Password": "password5",
-    "Islogin": false,
     "Picture": "user5.jpg",
     "Location": {
       "ValueKind": 1
@@ -66,39 +63,40 @@
     "Event": {
       "ValueKind": 1
     },
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "test",
     "Password": "test",
-    "Islogin": true,
     "Picture": "https://cdns-images.dzcdn.net/images/artist/c93e1c3097410a664d3e58e6e3fdcf88/500x500.jpg",
     "Location": {
-      "ValueKind": 3
+      "ValueKind": 1
     },
     "Event": null,
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "eiei",
     "Password": "test",
-    "Islogin": false,
     "Picture": null,
     "Location": null,
     "Event": null,
-    "About_me": null,
-    "Interest": null
+    "AboutMe": null,
+    "Interest": null,
+    "UserId": 0
   },
   {
     "Username": "sad",
     "Password": null,
-    "Islogin": false,
     "Picture": null,
     "Location": null,
     "Event": null,
-    "About_me": "asd",
-    "Interest": "asa"
+    "AboutMe": null,
+    "Interest": "asa",
+    "UserId": 0
   }
 ]
