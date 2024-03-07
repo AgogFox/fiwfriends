@@ -1,14 +1,15 @@
-﻿﻿ /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+body {
+    margin: 0%;
+}
+
 * {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-body {
-    margin: 0%;
-}
 
 .container {
     padding-top: 10vh;
@@ -29,7 +30,6 @@ button {
     background-color: white;
     width: 100%;
     position: fixed;
-    border-bottom: 1px solid black
 }
 
 .item1 {
@@ -57,6 +57,7 @@ button {
     font-weight: bold;
     background-color: #338ebb;
     color: white;
+    text-decoration: none;
 }
 
 .item3 {
@@ -122,17 +123,18 @@ form {
     }
 }
 
+
+
 a {
     color: #0077cc;
 }
 
 .foot {
+    margin-top: 2vh;
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    width: 90%;
+    padding: 1.5%;
     padding-left: 5%;
-    margin-bottom: 1%;
-    padding-top: 1%;
     white-space: nowrap;
     border-top: 1px solid #dadada
 }
