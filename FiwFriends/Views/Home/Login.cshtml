@@ -1,9 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model FiwFriends.Models.Usersystem;
 @{
 }
-@model FiwFriends.Models.Usersystem;
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
@@ -30,8 +26,7 @@
         margin-top:4vh;
     }
     .container .rectangle h1 {
-        font-weight: 700;   
-        margin-left:6vw;
+        font-weight: 700;
     }
 
     section {
@@ -45,7 +40,6 @@
         background-color: white;
         border-radius: 20px;
         box-shadow: 5px 10px 5px grey;
-        position: relative;
     }
 
     .input {
@@ -142,7 +136,7 @@
                         <div style="margin-bottom:5vh;">
                             <label for="username">Username :</label><br><span></span><br>
                             <input type="text" id="username" name="username"><br>
-                            <label for="password">Password :</label><br>
+                            <label for="password">Password :</label><br><br>
                             <input type="password" id="password" name="password" ><br>
                             <button class="button" type="submit">Login</button><br>
                         </div>

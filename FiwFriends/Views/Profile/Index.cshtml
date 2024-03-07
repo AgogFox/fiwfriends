@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<FiwFriends.Models.Profile>;
-   @*using Microsoft.AspNetCore.Http;*@
+@inject IHttpContextAccessor HttpContextAccessor
 <style>
     * {
         font-family: "Josefin Sans", sans-serif;
@@ -10,20 +10,20 @@
 </style>
 @foreach (var user in Model)
 {
-    @if (@user.UserId == 1)
+    @if (@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] == user.Username)
     {
         <div style="display:flex; background-color:#F6F2D2; border-radius:1.5vw ;padding:5vh;margin-left:10vh;margin-right:10vh;">
             <div style=" border-right: 2px solid #bfbfbf; padding-right:2vw">
                 <h1>@user.Username</h1>
                 <img src=@user.Picture style="width : 250px;height :250px;object-fit: cover;border-radius:50%;margin:2vh"></img>
                 <div className="Rectangle" style="border-radius: 1.5vw; padding:1.5vw;background-color : white">
-                    <div className="Username" style="width: 300, height: 20, color: 'black' , fontSize: 14, fontFamily: 'Kanit' , fontWeight: '400' , wordWrap: 'break-word' ">Username : @user.Username</div>
+                    <div className="Username" style="width: 300; height: 20; color: 'black' ; fontSize: 14, fontFamily: 'Kanit' ; fontWeight: '400' ; wordWrap: 'break-word' ">Username : @user.Username</div>
                     <div className="Location" style="display:flex">
                         <div>Location :&nbsp</div>
                         <a href="https://www.google.com/maps/place/{@user.Location}" style="width: 300, height: 20; color: #338ebb; fontSize: 14; fontFamily: Kanit ; fontWeight: 400 ; wordWrap: break-word;">@user.Location</a>
                     </div>
                     @*<div className="Instragram" style={{width: 300, height: 20, color: 'black' , fontSize: 14, fontFamily: 'Kanit' , fontWeight: '400' , wordWrap: 'break-word' }}>instragram</div>*@
-                    <div className="Groups" style={{width: 97, height: 40, color: 'black' , fontSize: 24, fontFamily: 'Kanit' , fontWeight: '400' , wordWrap: 'break-word' }}>Groups : @user.Location+</div>
+                    <div className="Groups" style={{width: 97, height: 40, color: 'black' ; fontSize: 24; fontFamily: 'Kanit' ; fontWeight: '400' ; wordWrap: 'break-word' }}>Groups : @user.Location+</div>
                 </div>
             </div>
         </div>
