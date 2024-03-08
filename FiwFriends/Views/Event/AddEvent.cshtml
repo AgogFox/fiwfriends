@@ -132,8 +132,16 @@
                     <div>
                         <label asp-for="tags"></label>
                         <br />
-                        <input type="text" asp-for="tags" class="rectangle-input-flex" />
-                        <span asp-validation-for="tags" style="color: red"></span>
+                        <select asp-for="tags" multiple>
+                            <option value="javascript">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="java">Java</option>
+                            <option value="golang">Golang</option>
+                            <option value="python">Python</option>
+                            <option value="c#">C#</option>
+                            <option value="C++">C++</option>
+                            <option value="erlang">Erlang</option>
+                        </select>
                     </div>
                 </div>
                 <div class="auto-group-s5r7-pzb" id="DYG5KjG33GeVgpGStPS5r7">

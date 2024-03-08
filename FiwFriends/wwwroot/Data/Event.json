@@ -120,5 +120,24 @@
     ],
     "spots": 3,
     "is_open": false
+  },
+  {
+    "title": "sfad",
+    "host_by": "tae",
+    "date_time": "2024-03-08T14:37:00",
+    "location": "sdf",
+    "picture": null,
+    "picture_url": "/event_pic/picture/d0773851-9837-426c-ac57-b1f84ee753fdScreenshot 2023-12-14 222813.png",
+    "description": "agsdgsdagas sagdsagh sadgasg ",
+    "close_form": "2024-03-30T07:39:00",
+    "attendees": [],
+    "tags": [
+      "javascript",
+      "php",
+      "java",
+      "golang"
+    ],
+    "spots": 234,
+    "is_open": false
   }
 ]
