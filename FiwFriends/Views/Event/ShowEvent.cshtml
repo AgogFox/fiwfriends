@@ -246,7 +246,7 @@
                 </div>
                 <div class="slot-div">
                     <p class="head-text">Slots left :</p>
-                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots </p>
+                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots</p>
                 </div>
             </div>
         </div>
@@ -276,16 +276,13 @@
                     </div>
                 </div>
             </div>
+        </div>    
+        <div class="button-group">
+            <a asp-controller="Event"
+               asp-action="ShowEvent"
+               asp-route-title="@Model.title"><button class="attend-button">Attend</button></a>
+            <div class="not-going-button" >Not Going</div>
         </div>
-        <div class="auto-group-jyex-1Ub">
-            <div class="rectangle-8-951"></div>
-            <div class="rectangle-9-ovF"></div>
-            <div class="rectangle-10-Jc7"></div>
-        </div>
-    </div>
-    <div class="button-group">
-        <div class="attend-button">Attend</div>
-        <div class="not-going-button" >Not Going</div>
     </div>
 </body>
 </html>
