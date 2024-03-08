@@ -194,6 +194,7 @@ namespace FiwFriends.Controllers
                                 if (u.Event[k].title == title)
                                 {
                                     u.Event.RemoveAt(k);
+                                    break;
                                 }
                             }
                             break;
@@ -209,6 +210,42 @@ namespace FiwFriends.Controllers
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
             return RedirectToAction("ShowEvent", new { title = title });
+        }
+
+        public IActionResult Delete(string title)
+        {
+            List<EventOBJ> event_list = GetEvents(filePath);
+            List<Usersystem> user_list = GetUser(filePath_user);
+            int i;
+
+            foreach(Usersystem u in user_list)
+            {
+                i = 0;
+                foreach (var k in u.Event)
+                {
+                    if (k.title == title)
+                    {
+                        u.Event.RemoveAt(i);
+                        break;
+                    }
+                    i++;
+                }
+            }
+            i = 0;
+            foreach(EventOBJ event_obj in event_list)
+            {
+                if (event_obj.title == title)
+                {
+                    event_list.RemoveAt(i);
+                    break;
+                }
+                i++;
+            }
+            var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath, jsonData);
+            jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("Search");
         }
     }
 }

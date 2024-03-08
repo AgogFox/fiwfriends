@@ -280,8 +280,9 @@
             @if (Model.host_by == ViewBag.username)
             {
                 <a class="attend-button" asp-controller="Event"
-                   asp-action="Attend"
-                   asp-route-title="@Model.title">Close</a>
+                   asp-action="Delete"
+                   asp-route-title="@Model.title"
+                   onclick="return confirm('You want to delete this Event ?')">Close</a>
             }
             else
             {

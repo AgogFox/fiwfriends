@@ -5,7 +5,7 @@
     "Password": "secret123",
     "Picture": "profile.jpg",
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": "I am a software engineer."
   },
   {
@@ -14,7 +14,7 @@
     "Password": "password456",
     "Picture": "avatar.png",
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": "I love to travel."
   },
   {
@@ -23,7 +23,7 @@
     "Password": "verysecret",
     "Picture": "default.png",
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": "I am a musician."
   },
   {
@@ -32,7 +32,7 @@
     "Password": "qwerty",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": ""
   },
   {
@@ -41,7 +41,7 @@
     "Password": null,
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -50,7 +50,7 @@
     "Password": "hehe",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -59,7 +59,7 @@
     "Password": "h",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -68,7 +68,7 @@
     "Password": "wewewewew",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -77,7 +77,7 @@
     "Password": "eieiei",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -86,7 +86,7 @@
     "Password": "mon",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -95,7 +95,7 @@
     "Password": "wowo",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -105,20 +105,6 @@
     "Picture": null,
     "Location": null,
     "Event": [
-      {
-        "title": "FiwFriends.Models.EventOBJ",
-        "host_by": null,
-        "date_time": "0001-01-01T00:00:00",
-        "location": null,
-        "picture": null,
-        "picture_url": null,
-        "description": null,
-        "close_form": "0001-01-01T00:00:00",
-        "attendees": [],
-        "tags": null,
-        "spots": 0,
-        "is_open": false
-      },
       {
         "title": "test_picv2",
         "host_by": "test_picv2",
@@ -139,25 +125,6 @@
         ],
         "spots": 23,
         "is_open": false
-      },
-      {
-        "title": "add host to attendee",
-        "host_by": "tae",
-        "date_time": "2024-03-05T13:07:00",
-        "location": "add host to attendee",
-        "picture": null,
-        "picture_url": "/event_pic/picture/a79125d7-de54-4d17-8bba-219fe2122630Screenshot 2023-12-31 222909.png",
-        "description": "add host to attendee",
-        "close_form": "2024-03-05T13:04:00",
-        "attendees": [
-          12,
-          12
-        ],
-        "tags": [
-          "golang"
-        ],
-        "spots": 3,
-        "is_open": false
       }
     ],
     "AboutMe": null
@@ -168,7 +135,7 @@
     "Password": "tae",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -177,7 +144,7 @@
     "Password": "eiei",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -186,7 +153,7 @@
     "Password": "eat1234",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -195,7 +162,7 @@
     "Password": "juujuu",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -213,7 +180,7 @@
     "Password": "test",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -242,25 +209,6 @@
           "test_3rd"
         ],
         "spots": 23,
-        "is_open": false
-      },
-      {
-        "title": "add host to attendee",
-        "host_by": "tae",
-        "date_time": "2024-03-05T13:07:00",
-        "location": "add host to attendee",
-        "picture": null,
-        "picture_url": "/event_pic/picture/a79125d7-de54-4d17-8bba-219fe2122630Screenshot 2023-12-31 222909.png",
-        "description": "add host to attendee",
-        "close_form": "2024-03-05T13:04:00",
-        "attendees": [
-          12,
-          18
-        ],
-        "tags": [
-          "golang"
-        ],
-        "spots": 3,
         "is_open": false
       }
     ],
