@@ -42,27 +42,29 @@ namespace FiwFriends.Controllers
         [HttpPost]
         public async Task<IActionResult> AddEventAsync(EventOBJ obj)
         {
+            string? id = Request.Cookies["UserId"];
+            string? username = Request.Cookies["UserName"];
+            if (obj.picture != null)
+            {
+                string folder = "event_pic/picture/";
+                folder += Guid.NewGuid().ToString() + obj.picture.FileName; 
+                obj.picture_url = "/" + folder;
 
-                if (obj.picture != null)
-                {
-                    string folder = "event_pic/picture/";
-                    folder += obj.picture.FileName;
-                    obj.picture_url = "/" + folder;
-
-                    string server_folder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-                    await obj.picture.CopyToAsync(new FileStream(server_folder, FileMode.Create)); ;
-                }
-                var jsonData = System.IO.File.ReadAllText(filePath);
-                var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
-                obj.picture = null;
-                if (obj.attendees == null)
-                {
-                    obj.attendees = [];
-                }
-                event_list.Add(obj);
-                jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
-                System.IO.File.WriteAllText(filePath, jsonData);
-                return RedirectToAction("Index");
+                string server_folder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await obj.picture.CopyToAsync(new FileStream(server_folder, FileMode.Create)); ;
+            }
+            var jsonData = System.IO.File.ReadAllText(filePath);
+            var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
+            obj.host_by = username;
+            obj.picture = null;
+            if (obj.attendees == null)
+            {
+                obj.attendees = [];
+            }
+            event_list.Add(obj);
+            jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
+            System.IO.File.WriteAllText(filePath, jsonData);
+            return RedirectToAction("Search");
         }
 
         public IActionResult ShowEvent(string? title)
@@ -81,7 +83,7 @@ namespace FiwFriends.Controllers
             return View(obj);
         }
 
-        public IActionResult Search(string word)
+        public IActionResult Search(string? word)
         {
             if (word == null)
             {

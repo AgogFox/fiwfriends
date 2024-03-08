@@ -1,4 +1,5 @@
 ﻿@model FiwFriends.Models.EventOBJ;
+
 @{
     ViewData["Title"] = "AddEvent";
 }
@@ -101,12 +102,7 @@
         
         <form method="post" enctype="multipart/form-data" asp-controller="Event" asp-action="AddEvent" class="big-rectangle">
             <p class="new-event-aKh" id="13:528">NEW EVENT</p>
-            <div >
-                <label asp-for="host_by"></label>
-                <br />
-                <input type="text" asp-for="host_by" class="rectangle-input" />
-                <span asp-validation-for="host_by" style="color: red"></span> 
-            </div>
+    
             <div class="auto-group-btfq-A7R" id="DYG4zuU4uZcDbWdiFRBtFq">
                 <div class="auto-group-aaz3-4yV" id="DYG5BQAafP8EMXjpZyaAz3">
                     <div >
@@ -160,6 +156,7 @@
                 <span asp-validation-for="close_form" style="color: red"></span>
             </div>
             <button type="submit" class="submit-button">Submit</button>
+            
         </form>
     </div>
 </body>
