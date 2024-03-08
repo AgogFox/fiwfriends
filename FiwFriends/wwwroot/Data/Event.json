@@ -142,5 +142,23 @@
     ],
     "spots": 234,
     "is_open": false
+  },
+  {
+    "title": "add host to attendee",
+    "host_by": "tae",
+    "date_time": "2024-03-05T13:07:00",
+    "location": "add host to attendee",
+    "picture": null,
+    "picture_url": "/event_pic/picture/a79125d7-de54-4d17-8bba-219fe2122630Screenshot 2023-12-31 222909.png",
+    "description": "add host to attendee",
+    "close_form": "2024-03-05T13:04:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "golang"
+    ],
+    "spots": 3,
+    "is_open": false
   }
 ]

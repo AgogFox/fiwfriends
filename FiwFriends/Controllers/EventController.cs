@@ -73,6 +73,11 @@ namespace FiwFriends.Controllers
             var jsonData = System.IO.File.ReadAllText(filePath);
             var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
             obj.host_by = username;
+            if (obj.attendees == null)
+            {
+                obj.attendees = [];
+            }
+            obj.attendees.Add(Int32.Parse(id));
             obj.picture = null;
             if (obj.attendees == null)
             {
