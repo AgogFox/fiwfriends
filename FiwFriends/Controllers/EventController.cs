@@ -35,6 +35,7 @@ namespace FiwFriends.Controllers
             return View();
 
         }
+
         public IActionResult AddEvent()
         {
             return View();
