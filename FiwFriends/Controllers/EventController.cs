@@ -10,10 +10,12 @@ namespace FiwFriends.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         private string filePath;
+        private string filePath_user;
         public EventController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
+            filePath_user = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
         }
 
         private List<EventOBJ> GetEvents(string filepath)
@@ -22,6 +24,20 @@ namespace FiwFriends.Controllers
             {
                 var json = System.IO.File.ReadAllText(filepath);
                 return JsonConvert.DeserializeObject<List<EventOBJ>>(json);
+            }
+            else
+            {
+                Console.WriteLine("File does not exist.");
+            }
+            return null;
+        }
+
+        private List<Usersystem> GetUser(string filepath)
+        {
+            if (System.IO.File.Exists(filepath))
+            {
+                var json = System.IO.File.ReadAllText(filepath);
+                return JsonConvert.DeserializeObject<List<Usersystem>>(json);
             }
             else
             {
@@ -107,6 +123,44 @@ namespace FiwFriends.Controllers
             }
             ViewBag.word = word;
             return View(list);
+        }
+
+        public IActionResult Attend(string title)
+        {
+            string? id = Request.Cookies["UserId"];
+
+            List<Usersystem> user_list = GetUser(filePath_user);
+            List<EventOBJ> event_list = GetEvents(filePath);
+            int i = 0;
+            int j = 0;
+            foreach(Usersystem u in user_list)
+            {
+                if (id == u.UserId.ToString())
+                {
+                    if (u.Event == null)
+                    {
+                        user_list[i].Event = [];
+                    }
+                    
+                    foreach (EventOBJ e in event_list)
+                    {
+                        if (e.title == title)
+                        {
+                            event_list[j].attendees.Add(user_list[i].UserId);
+                            user_list[i].Event.Add(event_list[j]);
+                            break;
+                        }
+                        j++;
+                    }
+                    break;
+                }
+                i++;
+            }
+            var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath, jsonData);
+            jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("ShowEvent", new {title = title});
         }
     }
 }

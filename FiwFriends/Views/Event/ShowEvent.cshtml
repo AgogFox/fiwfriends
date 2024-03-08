@@ -265,8 +265,7 @@
                     <div class="attendees-group-box" >
                         <div class="group-23-1pK" >
                             
-                        </div>
-                        
+                        </div>     
                     </div>
                     <div class="inside-attendees-group">
                         <p class="attendees-profile">eiei(host)</p>
@@ -278,9 +277,9 @@
             </div>
         </div>    
         <div class="button-group">
-            <a asp-controller="Event"
-               asp-action="ShowEvent"
-               asp-route-title="@Model.title"><button class="attend-button">Attend</button></a>
+            <a class="attend-button" asp-controller="Event"
+                    asp-action="Attend"
+                    asp-route-title="@Model.title">Attend</a>
             <div class="not-going-button" >Not Going</div>
         </div>
     </div>

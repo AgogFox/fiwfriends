@@ -22,7 +22,7 @@ using System.ComponentModel.DataAnnotations;
             public string description { get; set; }
             [DisplayName("close form at")]
             public DateTime close_form { get; set; }
-            public List<Usersystem> attendees { get; set; }
+            public List<int> attendees { get; set; }
             [Required]
             public List<string> tags { get; set; }
             public int spots { get; set; }
