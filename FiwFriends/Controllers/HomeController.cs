@@ -101,13 +101,6 @@ namespace FiwFriends.Controllers
             return View();
         }
 
-        //public IActionResult Logout()
-        //{
-        //    Response.Cookies.Delete(CookieUserId);
-        //    Response.Cookies.Delete(CookieUserName);
-        //    return RedirectToAction("") ;
-        //}
-
         [HttpPost]
         public IActionResult Login (string? username, string? password)
         {
