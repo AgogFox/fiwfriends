@@ -139,6 +139,25 @@
         ],
         "spots": 23,
         "is_open": false
+      },
+      {
+        "title": "add host to attendee",
+        "host_by": "tae",
+        "date_time": "2024-03-05T13:07:00",
+        "location": "add host to attendee",
+        "picture": null,
+        "picture_url": "/event_pic/picture/a79125d7-de54-4d17-8bba-219fe2122630Screenshot 2023-12-31 222909.png",
+        "description": "add host to attendee",
+        "close_form": "2024-03-05T13:04:00",
+        "attendees": [
+          12,
+          12
+        ],
+        "tags": [
+          "golang"
+        ],
+        "spots": 3,
+        "is_open": false
       }
     ],
     "AboutMe": null
@@ -185,7 +204,7 @@
     "Password": "e",
     "Picture": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -214,6 +233,7 @@
         "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
         "close_form": "2024-03-27T09:21:00",
         "attendees": [
+          12,
           18
         ],
         "tags": [
@@ -222,6 +242,25 @@
           "test_3rd"
         ],
         "spots": 23,
+        "is_open": false
+      },
+      {
+        "title": "add host to attendee",
+        "host_by": "tae",
+        "date_time": "2024-03-05T13:07:00",
+        "location": "add host to attendee",
+        "picture": null,
+        "picture_url": "/event_pic/picture/a79125d7-de54-4d17-8bba-219fe2122630Screenshot 2023-12-31 222909.png",
+        "description": "add host to attendee",
+        "close_form": "2024-03-05T13:04:00",
+        "attendees": [
+          12,
+          18
+        ],
+        "tags": [
+          "golang"
+        ],
+        "spots": 3,
         "is_open": false
       }
     ],

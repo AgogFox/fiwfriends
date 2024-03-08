@@ -102,6 +102,10 @@ namespace FiwFriends.Controllers
                     break;
                 }
             }
+            string? id = Request.Cookies["UserId"];
+            string? username = Request.Cookies["UserName"];
+            ViewBag.id = id;
+            ViewBag.username = username;
             return View(obj);
         }
 
@@ -166,6 +170,45 @@ namespace FiwFriends.Controllers
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
             return RedirectToAction("ShowEvent", new {title = title});
+        }
+
+        public IActionResult Not_going(string title)
+        {
+            string? id = Request.Cookies["UserId"];
+
+            List<Usersystem> user_list = GetUser(filePath_user);
+            List<EventOBJ> event_list = GetEvents(filePath);
+            int i = 0;
+            int j = 0;
+            foreach (Usersystem u in user_list)
+            {
+                if (id == u.UserId.ToString())
+                {
+                    foreach (EventOBJ e in event_list)
+                    {
+                        if (e.title == title)
+                        {
+                            event_list[j].attendees.Remove(user_list[i].UserId);
+                            for (var k = 0; k < u.Event.Count; k++)
+                            {
+                                if (u.Event[k].title == title)
+                                {
+                                    u.Event.RemoveAt(k);
+                                }
+                            }
+                            break;
+                        }
+                        j++;
+                    }
+                    break;
+                }
+                i++;
+            }
+            var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath, jsonData);
+            jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("ShowEvent", new { title = title });
         }
     }
 }

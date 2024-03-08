@@ -277,10 +277,31 @@
             </div>
         </div>    
         <div class="button-group">
-            <a class="attend-button" asp-controller="Event"
-                    asp-action="Attend"
-                    asp-route-title="@Model.title">Attend</a>
-            <div class="not-going-button" >Not Going</div>
+            @if (Model.host_by == ViewBag.username)
+            {
+                <a class="attend-button" asp-controller="Event"
+                   asp-action="Attend"
+                   asp-route-title="@Model.title">Close</a>
+            }
+            else
+            {
+                @for (var i = 0; i < Model.attendees.Count; i++)
+                {
+                    @if (ViewBag.id == Model.attendees[i].ToString())
+                    {
+                        <a class="not-going-button" asp-controller="Event"
+                           asp-action="Not_going"
+                           asp-route-title="@Model.title">Not Going</a>
+                        break;
+                    }
+                    else if (i == Model.attendees.Count - 1)
+                    {
+                        <a class="attend-button" asp-controller="Event"
+                           asp-action="Attend"
+                           asp-route-title="@Model.title">Attend</a>
+                    }
+                }
+            }
         </div>
     </div>
 </body>
