@@ -171,3 +171,4 @@ TODO:
 - [ ] Store data for images
 - [ ] Link user-event data
 - [ ] Login/Signup mechanism
+- [ ] Show/Hide UI base on login state
