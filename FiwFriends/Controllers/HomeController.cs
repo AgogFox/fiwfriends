@@ -117,6 +117,7 @@ namespace FiwFriends.Controllers
                     options.Expires = DateTime.Now.AddDays(7);
                     Response.Cookies.Append(CookieUserId, user.UserId.ToString(), options);
                     Response.Cookies.Append(CookieUserName, user.Username.ToString(), options);
+                    break;
                 }
                 else {
                     usertoModify = null;
