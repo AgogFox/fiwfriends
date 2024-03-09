@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "New User";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login-signup.css" />
+}
+<div class="signup-wrapper">
+    <h1>Sign up</h1>
+    <form asp-action="Create">
+        <fieldset>
+            <label for="Username">Choose Your Username: <input id="Username" type="text" required /></label>
+            <label for="new-password"> Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+            <label for="bio">
+                Provide a bio:
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+            </label>
+        </fieldset>
+        <label for="terms-and-conditions">
+            <input class="inline" id="terms-and-condition" type="checkbox" required name="terms-and-conditions" /> I accept the terms and conditions
+        </label>
+        <input type="submit" value="Sign up" />
+    </form>
+    <img src="~/img/SignupArt.png" class="signup-art"/>
+</div>
