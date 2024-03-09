@@ -245,8 +245,8 @@
                     <p class="data-text" >@Model.location</p>
                 </div>
                 <div class="slot-div">
-                    <p class="head-text">Slots left :</p>
-                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots </p>
+                    <p class="head-text">Slots :</p>
+                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots</p>
                 </div>
             </div>
         </div>
@@ -265,27 +265,64 @@
                     <div class="attendees-group-box" >
                         <div class="group-23-1pK" >
                             
-                        </div>
-                        
+                        </div>     
                     </div>
                     <div class="inside-attendees-group">
-                        <p class="attendees-profile">eiei(host)</p>
-                        <p class="attendees-profile" >ei</p>
-                        <p class="attendees-profile" >eie</p>
-                        <p class="attendees-profile" >eieii</p>
+                        <p class="attendees-profile">@Model.host_by (host)</p>
+                       @if (Model.attendees.Count >= 2)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[0]</p>
+                        }
+                        @if (Model.attendees.Count >= 3)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[1]</p>
+                        }
+                        @if (Model.attendees.Count >= 4)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[2]</p>
+                        }
                     </div>
                 </div>
             </div>
+        </div>    
+        <div class="button-group">
+            @if (Model.host_by == ViewBag.username)
+            {
+                <a class="attend-button" asp-controller="Event"
+                   asp-action="Delete"
+                   asp-route-title="@Model.title"
+                onclick="return confirm('You want to delete this Event ?')">Delete</a>
+                if (Model.is_open)
+                {
+                    <a class="not-going-button" asp-controller="Event"
+                       asp-action="Close"
+                       asp-route-title="@Model.title"
+                    onclick="return confirm('You want to close this Event ?')">Close</a>
+                }
+                else
+                {
+                    <a class="not-going-button" asp-controller="Event"
+                       asp-action="Open"
+                       asp-route-title="@Model.title"
+                       onclick="return confirm('You want to open this Event ?')">Open</a>
+                }
+            }
+            else
+            {
+                if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
+                {
+                    <a class="not-going-button" asp-controller="Event"
+                       asp-action="Not_going"
+                       asp-route-title="@Model.title">Not Going</a>
+                }
+                else if (Model.spots_left() != 0 && Model.time_left() != 0 && Model.is_open == true)
+                {
+                    <a class="attend-button" asp-controller="Event"
+                        asp-action="Attend"
+                        asp-route-title="@Model.title">Attend</a>           
+                }
+            }
         </div>
-        <div class="auto-group-jyex-1Ub">
-            <div class="rectangle-8-951"></div>
-            <div class="rectangle-9-ovF"></div>
-            <div class="rectangle-10-Jc7"></div>
-        </div>
-    </div>
-    <div class="button-group">
-        <div class="attend-button">Attend</div>
-        <div class="not-going-button" >Not Going</div>
     </div>
 </body>
 </html>

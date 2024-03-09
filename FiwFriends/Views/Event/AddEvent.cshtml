@@ -95,6 +95,9 @@
         .select-title-picture {
             text-align: center;
         }
+        .option-value{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -132,8 +135,16 @@
                     <div>
                         <label asp-for="tags"></label>
                         <br />
-                        <input type="text" asp-for="tags" class="rectangle-input-flex" />
-                        <span asp-validation-for="tags" style="color: red"></span>
+                        <select class="rectangle-input-flex" asp-for="tags" size="6" multiple>
+                            <option class="option-value" value="social">social</option>
+                            <option class="option-value" value="buffet">buffet</option>
+                            <option class="option-value" value="sport">sport</option>
+                            <option class="option-value" value="make new friends">make new friends</option>
+                            <option class="option-value" value="art">art</option>
+                            <option class="option-value" value="language">language</option>
+                            <option class="option-value" value="software development">software development</option>
+                            <option class="option-value" value="photography">photography</option>
+                        </select>
                     </div>
                 </div>
                 <div class="auto-group-s5r7-pzb" id="DYG5KjG33GeVgpGStPS5r7">
