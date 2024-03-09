@@ -150,3 +150,24 @@ Bo: Front
 Mon: Front -> Back
 Pearwa: Back -> Font
 In: Back
+
+Pages:
+
+- Login/Signup
+- Landing
+- Search result
+- Event
+- User profile
+- User setting
+
+TODO:
+
+- [ ] Create mock for all page
+- [ ] Link nav bar to those pages
+- [ ] Design those pages
+- [ ] Create Partial view for events list
+- [ ] Store data for event
+- [ ] Store data for user
+- [ ] Store data for images
+- [ ] Link user-event data
+- [ ] Login/Signup mechanism
