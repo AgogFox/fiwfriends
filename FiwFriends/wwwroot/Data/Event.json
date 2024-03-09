@@ -142,5 +142,44 @@
     ],
     "spots": 234,
     "is_open": false
+  },
+  {
+    "title": "i tae",
+    "host_by": "tae",
+    "date_time": "0001-01-01T00:00:00",
+    "location": "asdg",
+    "picture": null,
+    "picture_url": "/event_pic/picture/58c32a7a-7d1e-47b6-b7e7-0b9e1404cd26Screenshot 2023-10-27 124030.png",
+    "description": "asfgdadhf sdfhsd fh",
+    "close_form": "0001-01-01T00:00:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "javascript",
+      "php",
+      "java"
+    ],
+    "spots": 2,
+    "is_open": false
+  },
+  {
+    "title": "test-wa",
+    "host_by": "tae",
+    "date_time": "2024-03-21T17:49:00",
+    "location": "test-wa",
+    "picture": null,
+    "picture_url": "/event_pic/picture/18e953f0-cb7d-4358-9621-c9a236f0df40Screenshot 2023-11-13 073634.png",
+    "description": "test-wa test-wa test-wa",
+    "close_form": "2024-03-20T06:49:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "php",
+      "java"
+    ],
+    "spots": 57,
+    "is_open": false
   }
 ]

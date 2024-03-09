@@ -268,10 +268,19 @@
                         </div>     
                     </div>
                     <div class="inside-attendees-group">
-                        <p class="attendees-profile">eiei(host)</p>
-                        <p class="attendees-profile" >ei</p>
-                        <p class="attendees-profile" >eie</p>
-                        <p class="attendees-profile" >eieii</p>
+                        <p class="attendees-profile">@Model.host_by (host)</p>
+                       @*@if (Model.attendees.Count >= 2)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[1]</p>
+                        }
+                        @if (Model.attendees.Count >= 3)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[2]</p>
+                        }
+                        @if (Model.attendees.Count >= 4)
+                        {
+                            <p class="attendees-profile">@ViewBag.attendees[3]</p>
+                        }*@
                     </div>
                 </div>
             </div>
@@ -282,25 +291,28 @@
                 <a class="attend-button" asp-controller="Event"
                    asp-action="Delete"
                    asp-route-title="@Model.title"
-                   onclick="return confirm('You want to delete this Event ?')">Close</a>
+                onclick="return confirm('You want to delete this Event ?')">Close</a>
             }
             else
             {
-                @for (var i = 0; i < Model.attendees.Count; i++)
+                if (Model.spots_left() != 0)
                 {
-                    @if (ViewBag.id == Model.attendees[i].ToString())
+                    for (var i = 0; i < Model.attendees.Count; i++)
                     {
-                        <a class="not-going-button" asp-controller="Event"
-                           asp-action="Not_going"
-                           asp-route-title="@Model.title">Not Going</a>
-                        break;
-                    }
-                    else if (i == Model.attendees.Count - 1)
-                    {
-                        <a class="attend-button" asp-controller="Event"
-                           asp-action="Attend"
-                           asp-route-title="@Model.title">Attend</a>
-                    }
+                        @if (ViewBag.id == Model.attendees[i].ToString())
+                        {
+                            <a class="not-going-button" asp-controller="Event"
+                               asp-action="Not_going"
+                               asp-route-title="@Model.title">Not Going</a>
+                            break;
+                        }
+                        else if (i == Model.attendees.Count - 1)
+                        {
+                            <a class="attend-button" asp-controller="Event"
+                               asp-action="Attend"
+                               asp-route-title="@Model.title">Attend</a>
+                        }
+                    }            
                 }
             }
         </div>

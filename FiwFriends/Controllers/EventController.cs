@@ -93,6 +93,7 @@ namespace FiwFriends.Controllers
         {
             var jsonData = System.IO.File.ReadAllText(filePath);
             var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
+            var user_list = GetUser(filePath_user);
             EventOBJ obj = new EventOBJ();
             foreach (EventOBJ e in event_list)
             {
@@ -106,6 +107,19 @@ namespace FiwFriends.Controllers
             string? username = Request.Cookies["UserName"];
             ViewBag.id = id;
             ViewBag.username = username;
+            ViewBag.attendees = new List<string>();
+            for(var i = 1;i < obj.attendees.Count && i < 4;i++)
+            {
+                foreach(var j in user_list)
+                {
+                    if (j.UserId == obj.attendees[i])
+                    {
+                        ViewBag.attendees.Add(j.Username);
+                        break;
+                    }
+                }
+             
+            }
             return View(obj);
         }
 
