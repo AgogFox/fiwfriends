@@ -226,6 +226,13 @@
                                         <h1>@e.title</h1>
                                         <p style="display: inline;">Host by : @e.host_by</p><br>
                                         <p style="display: inline;">Location : @e.location</p><br>
+                                        @if (@e.is_open == false)
+                                        {
+                                            <span style="display: inline;color:red">Status: close</span><br>
+                                        }
+                                        else{
+                                            <span style="display: inline;color:limegreen">Status: open</span><br>
+                                        }
                                     </div>
                                     <div class="flex-column">
                                         <div class="timeleft">
