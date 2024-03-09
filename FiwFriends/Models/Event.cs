@@ -32,10 +32,21 @@ using System.ComponentModel.DataAnnotations;
                 DateTime date = close_form.Date;
                 DateTime today = DateTime.Now;
                 TimeSpan differ = date.Subtract(today);
+                if (differ.Days < 0)
+                {
+                    is_open = false;
+                }
             return differ.Days;
             }
             public int spots_left()
-            { return spots - attendees.Count; }
+            {
+                var left = spots - attendees.Count;
+                if (left == 0)
+                {
+                    is_open=false;
+                }
+                return attendees.Count; 
+            }
         }
         public class EventViewModel
         {

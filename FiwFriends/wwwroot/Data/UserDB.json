@@ -180,7 +180,27 @@
     "Password": "test",
     "Picture": null,
     "Location": null,
-    "Event": [],
+    "Event": [
+      {
+        "title": "Test_eiei",
+        "host_by": "E",
+        "date_time": "0001-01-01T00:00:00",
+        "location": "Test_eiei",
+        "picture": null,
+        "picture_url": null,
+        "description": "Test_eiei",
+        "close_form": "2024-03-19T21:05:00",
+        "attendees": [
+          16,
+          17
+        ],
+        "tags": [
+          "golang"
+        ],
+        "spots": 2,
+        "is_open": false
+      }
+    ],
     "AboutMe": null
   },
   {
