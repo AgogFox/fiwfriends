@@ -160,5 +160,14 @@
     "Location": null,
     "Event": null,
     "AboutMe": null
+  },
+  {
+    "UserId": 18,
+    "Username": "juu",
+    "Password": "juu",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
   }
 ]
