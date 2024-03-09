@@ -13,12 +13,13 @@ namespace FiwFriends.Controllers
         const string CookieUserId = "UserId";
         const string CookieUserName = "UserName";
         private readonly IWebHostEnvironment _webHostEnvironment;
-
+        private string filePath_event;
         private string filePath;
         public HomeController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
+            filePath_event = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
         }
 
         private List<Usersystem> GetUsers(string filepath)
@@ -46,10 +47,25 @@ namespace FiwFriends.Controllers
             return false;
         }
 
+        private List<EventOBJ> GetEvents(string filepath_event)
+        {
+            if (System.IO.File.Exists(filepath_event))
+            {
+                var json = System.IO.File.ReadAllText(filepath_event);
+
+                return JsonConvert.DeserializeObject<List<EventOBJ>>(json);
+            }
+            else
+            {
+                Console.WriteLine("File does not exist.");
+                return null;
+            }
+        }
+
         public IActionResult Index()
         {
-            var userdb = GetUsers(filePath);
-            return View(userdb);
+            var events = GetEvents(filePath_event);
+            return View(events);
         }
 
         public IActionResult Privacy()
