@@ -33,8 +33,10 @@
                         </button>
                     </a>
                 </li>
-                <li><a><button class="login">login</button></a></li>
-                <li><a><button class="signup">signup</button></a></li>
+                <li><a asp-controller="User" asp-action="Create"><button class="login">login</button></a></li>
+                <li><a asp-controller="User" asp-action="Create"><button class="signup">signup</button></a></li>
+                <li><a asp-area="" asp-controller="User" asp-action="Index"><button>User</button></a></li>
+                <li><a asp-area="" asp-controller="Event" asp-action="Index"><button>Event</button></a></li>
                 <li><a><button>Profile</button></a></li>
             </ul>
         </nav>
