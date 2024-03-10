@@ -236,7 +236,15 @@
                                     </div>
                                     <div class="flex-column">
                                         <div class="timeleft">
-                                            <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                            @if (@e.time_left() <= 0)
+                                            {
+                                                <p style="display: inline;">Time left : 0 Days</p>
+                                            }
+                                            else
+                                            {
+                                                <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                                
+                                            }
                                         </div>
                                         <div class="attendees">
                                             <p style="display: inline;">@e.attendees.Count Attendees</p>
