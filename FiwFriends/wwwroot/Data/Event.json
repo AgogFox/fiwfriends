@@ -11,7 +11,8 @@
     "attendees": [
       12,
       18,
-      19
+      19,
+      16
     ],
     "tags": [
       "test_picv2",
@@ -181,7 +182,7 @@
       "java"
     ],
     "spots": 57,
-    "is_open": true
+    "is_open": false
   },
   {
     "title": "fxg",

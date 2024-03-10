@@ -44,7 +44,7 @@
         }
 
         .new-event-aKh {
-            font-family: Kanit, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 2vw;
             font-weight: 700;
             height: 5.4%;
@@ -85,7 +85,7 @@
             background-color: #fd5c37;
             border-radius: 1vw;
             color: #ffffff;
-            font-family: Istok Web, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 100%;
             font-weight: 700;
             justify-content: center;
@@ -98,6 +98,7 @@
         .option-value{
             text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -123,7 +124,7 @@
                     <div>
                         <label asp-for="location"></label>
                         <br />
-                        <input type="text" asp-for="location" class="rectangle-input-flex" />
+                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand" />
                         <span asp-validation-for="location" style="color: red"></span>
                     </div>
                     <div>

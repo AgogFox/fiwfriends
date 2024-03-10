@@ -110,7 +110,7 @@ namespace FiwFriends.Controllers
             ViewBag.id = id;
             ViewBag.username = username;
             ViewBag.attendees = new List<string>();
-            for(var i = 1;i < obj.attendees.Count && i < 4;i++)
+            for(var i = 0;i < obj.attendees.Count;i++)
             {
                 foreach(var j in user_list)
                 {

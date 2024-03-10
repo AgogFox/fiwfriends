@@ -13,19 +13,17 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-        }
-        .title-group {
-            
+
         }
 
         .title {
-            font-family: Kanit, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 2vw;
             font-weight:600;
             margin-bottom: 0%;
         }
         .hosted-by {
-            font-family: Kanit, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1.2vw;
         }
 
@@ -53,6 +51,7 @@
 
         .date-time-div {
             background-color: #f6f2d2;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             border-radius: 1.5vw;
             box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
             box-sizing: border-box;
@@ -64,6 +63,7 @@
 
         .location-div {
             background-color: #f6f2d2;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             border-radius: 1.5vw;
             box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
             box-sizing: border-box;
@@ -76,6 +76,7 @@
 
         .slot-div {
             align-items: center;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             background-color: #f6f2d2;
             border-radius: 1.5vw;
             box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
@@ -88,11 +89,13 @@
             margin-left: 40%
         }
         .head-text{
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             color: black;
             font-size: 1.2vw;
             font-weight: 400;
         }
         .data-text {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             color: #7e7e7e;
             font-size: 1.1vw;
             font-weight: 400;
@@ -103,6 +106,7 @@
         }
         .detail-group {
             align-items: flex-start;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             display: flex;
             flex-shrink: 0;
             margin: 0vw 0.9vw 2.1vw 0vw;
@@ -110,11 +114,13 @@
         }
         .detail-header-text {
             color: black;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1.6vw;
             font-weight: 400;
         }
 
         .detail-group-left {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             flex-shrink: 0;
             height: 100%;
             margin-right: 6.5vw;
@@ -123,7 +129,7 @@
         
         .description {
             color: #000000;
-            font-family: Kanit, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1.2vw;
             font-weight: 400;
             line-height: 1.495;
@@ -132,6 +138,7 @@
         }
 
         .tag-group {
+
             display: flex;
         }
 
@@ -141,7 +148,7 @@
             box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
             box-sizing: border-box;
             flex-shrink: 0;
-            font-family: Kanit, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1vw;
             padding: 0vw 1vw 0vw 1vw;
             white-space: nowrap;
@@ -149,6 +156,7 @@
         }
 
         .attendees-profile-group {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             align-items: center;
             background-color: #ffffff;
             border: solid 0.1vw #000000;
@@ -161,6 +169,7 @@
         }
 
         .attendees-group-box {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             align-items: flex-start;
             display: flex;
             flex-shrink: 0;
@@ -169,6 +178,7 @@
         }
 
         .inside-attendees-group {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             align-items: flex-start;
             display: flex;
             flex-shrink: 0;
@@ -197,7 +207,7 @@
             color: #ffffff;
             display: flex;
             flex-shrink: 0;
-            font-family: Istok Web, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1.5vw;
             font-weight: 700;
             height: 70%;
@@ -216,7 +226,7 @@
             color: #ffffff;
             display: flex;
             flex-shrink: 0;
-            font-family: Istok Web, 'Source Sans Pro';
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
             font-size: 1.5vw;
             font-weight: 700;
             height: 70%;
@@ -225,6 +235,95 @@
             white-space: nowrap;
             width: 11.9vw;
         }
+
+        .box {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box a {
+            display: inline-block;
+            background-color: #fff;
+            padding-top: 1vw;
+        }
+
+        .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(106, 104, 106, 0.7);
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .content {
+            position: absolute;
+            background: white;
+            width: 50vw;
+            padding: 1vw ;
+            border-radius: 1vw;
+        }
+
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 1vw;
+            color: #F6F2D2;
+            text-decoration: none;
+            font-size: 2vw;
+        }
+
+        table {
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            box-shadow: 0 2px 15px rgba(64,64,64,.7);
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+        }
+
+        td, th {
+            padding: 1vw 1.5vw;
+            text-align: center;
+        }
+
+        th {
+            background-color: #FD5C37;
+            color: #fafafa;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-weight: 200;
+            text-transform: uppercase;
+        }
+
+        tr {
+            width: 100%;
+            background-color: #fafafa;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+        }
+
+            tr:nth-child(even) {
+                background-color: #eeeeee;
+            }
     </style>
 </head>
 <body>
@@ -271,15 +370,43 @@
                         <p class="attendees-profile">@Model.host_by (host)</p>
                        @if (Model.attendees.Count >= 2)
                         {
-                            <p class="attendees-profile">@ViewBag.attendees[0]</p>
+                            <p class="attendees-profile">@ViewBag.attendees[1]</p>
                         }
                         @if (Model.attendees.Count >= 3)
                         {
-                            <p class="attendees-profile">@ViewBag.attendees[1]</p>
+                            <p class="attendees-profile">@ViewBag.attendees[2]</p>
                         }
                         @if (Model.attendees.Count >= 4)
                         {
-                            <p class="attendees-profile">@ViewBag.attendees[2]</p>
+                            <div class="box">
+                                <a href="#popup-box">
+                                    See all
+                                </a>
+                            </div>
+                            <div id="popup-box" class="modal">
+                                <div class="content">
+                                    <table>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Username</th>
+                                            <th>
+                                                See profile 
+                                                <a href="#" class="box-close">×</a>
+                                            </th>
+                                            
+                                        </tr>
+                                        @for (var i = 0; i < ViewBag.attendees.Count; i++)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@ViewBag.attendees[i]</td>
+                                                <td><a>profile</a></td>
+                                            </tr>
+                                        }
+                                    </table>
+                                    
+                                </div>
+                            </div>
                         }
                     </div>
                 </div>
