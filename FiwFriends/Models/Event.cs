@@ -35,7 +35,10 @@ using System.ComponentModel.DataAnnotations;
             return differ.Days;
             }
             public int spots_left()
-            { return spots - attendees.Count; }
+            {
+                var left = spots - attendees.Count;
+                return attendees.Count; 
+            }
         }
         public class EventViewModel
         {

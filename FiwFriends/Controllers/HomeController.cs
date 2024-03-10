@@ -65,6 +65,15 @@ namespace FiwFriends.Controllers
         public IActionResult Index()
         {
             var events = GetEvents(filePath_event);
+            foreach (var ev in events)
+            {
+                if (ev.time_left() < 0 || ev.spots - ev.attendees.Count == 0)
+                {
+                    ev.is_open = false;
+                }
+            }
+            var jsonData = JsonConvert.SerializeObject(events, Newtonsoft.Json.Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_event, jsonData);
             return View(events);
         }
 

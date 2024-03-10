@@ -56,6 +56,7 @@ namespace FiwFriends.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AddEventAsync(EventOBJ obj)
         {
@@ -73,6 +74,7 @@ namespace FiwFriends.Controllers
             var jsonData = System.IO.File.ReadAllText(filePath);
             var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
             obj.host_by = username;
+            obj.is_open = true;
             if (obj.attendees == null)
             {
                 obj.attendees = [];
@@ -104,11 +106,11 @@ namespace FiwFriends.Controllers
                 }
             }
             string? id = Request.Cookies["UserId"];
-            string? username = Request.Cookies["UserName"];
+            string? username = Request.Cookies["UserName"]; 
             ViewBag.id = id;
             ViewBag.username = username;
             ViewBag.attendees = new List<string>();
-            for(var i = 1;i < obj.attendees.Count && i < 4;i++)
+            for(var i = 0;i < obj.attendees.Count;i++)
             {
                 foreach(var j in user_list)
                 {
@@ -118,7 +120,6 @@ namespace FiwFriends.Controllers
                         break;
                     }
                 }
-             
             }
             return View(obj);
         }
@@ -259,6 +260,40 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("Search");
+        }
+
+        public IActionResult Close(string  title)
+        {
+            List<EventOBJ> event_list = GetEvents(filePath);
+
+            foreach (EventOBJ event_obj in event_list)
+            {
+                if (event_obj.title == title)
+                {
+                    event_obj.is_open = false;
+                    break;
+                }
+            }
+            var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath, jsonData);
+            return RedirectToAction("Search");
+        }
+
+        public IActionResult Open(string title)
+        {
+            List<EventOBJ> event_list = GetEvents(filePath);
+
+            foreach (EventOBJ event_obj in event_list)
+            {
+                if (event_obj.title == title)
+                {
+                    event_obj.is_open = true;
+                    break;
+                }
+            }
+            var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath, jsonData);
             return RedirectToAction("Search");
         }
     }

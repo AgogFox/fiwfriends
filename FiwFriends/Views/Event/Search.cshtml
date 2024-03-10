@@ -226,10 +226,25 @@
                                         <h1>@e.title</h1>
                                         <p style="display: inline;">Host by : @e.host_by</p><br>
                                         <p style="display: inline;">Location : @e.location</p><br>
+                                        @if (@e.is_open == false)
+                                        {
+                                            <span style="display: inline;color:red">Status: close</span><br>
+                                        }
+                                        else{
+                                            <span style="display: inline;color:limegreen">Status: open</span><br>
+                                        }
                                     </div>
                                     <div class="flex-column">
                                         <div class="timeleft">
-                                            <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                            @if (@e.time_left() <= 0)
+                                            {
+                                                <p style="display: inline;">Time left : 0 Days</p>
+                                            }
+                                            else
+                                            {
+                                                <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                                
+                                            }
                                         </div>
                                         <div class="attendees">
                                             <p style="display: inline;">@e.attendees.Count Attendees</p>
