@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Editpage\DeleteProfile.cshtml" />
-    <None Include="Views\Editpage\EditPassword.cshtml" />
-    <None Include="Views\Editpage\EditProfile.cshtml" />
-    <None Include="Views\Editpage\Index.cshtml" />
+    <None Include="Views\Edit\DeleteProfile.cshtml" />
+    <None Include="Views\Edit\EditPassword.cshtml" />
+    <None Include="Views\Edit\EditProfile.cshtml" />
+    <None Include="Views\Edit\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

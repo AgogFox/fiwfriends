@@ -1,0 +1,14 @@
+﻿@model FiwFriends.Models.Usersystem
+
+@{
+    ViewData["Title"] = "Delete profile";
+}
+
+<h1>Delete Profile Confirmation</h1>
+
+<p>Are you sure you want to delete your profile</p>
+
+<form method="post" asp-action="DeleteProfile">
+    <button type="submit" class="btn btn-danger">Yes, delete my profile</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

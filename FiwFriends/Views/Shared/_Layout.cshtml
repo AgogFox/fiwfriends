@@ -1,7 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor;
+@{
+    string Cookieusername = HttpContextAccessor?.HttpContext?.Request.Cookies["UserId"];
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,40 +133,6 @@
     </style>
 </head>
 <body>
-    <nav class="navigation">
-        <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
-        <div class="item3">
-            <form style="width: 100%;display:flex;" action="">
-                <input style="width: 60%; margin-right:1%;" type="text" name="" id="search" placeholder="Country,City">
-                <button style="width: 20%;"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
-            </form>
-        </div>
-        <div class="item2">
-            <button class="navitem">
-                <img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0">
-            </button>
-            <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
-            <button class="navitem signup">Sign Up</button>
-            <button class="navitem">
-                <a asp-controller="Editpage">
-                <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
-                </a>
-        </div>
-        </button>
-        </div>
-    </nav>
-@RenderBody()
-</body>
-</html>
-=======
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Event</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FiwFriends.styles.css" asp-append-version="true" />
-</head>
-<body>
     <header>
         <nav class="navigation">
             <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
@@ -178,8 +148,20 @@
                 </button>
                 <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
                 <button class="navitem signup">Sign Up</button>
-                <button class="navitem">
-                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+
+                @if (string.IsNullOrEmpty(Cookieusername))
+                {
+                    <a class="navitem" asp-controller="Home" asp-action="Login">
+                        <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+                    </a>
+                    
+                }
+                else
+                {
+                    <a class="navitem" asp-controller="Edit" asp-action="Index">
+                        <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+                    </a>
+                }
             </div>
             </button>
                         </div>
@@ -202,4 +184,3 @@
                 @await RenderSectionAsync("Scripts", required: false)
             </body>
 </html>
->>>>>>> origin/search-result-page

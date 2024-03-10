@@ -18,20 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\watsa\OneDrive\Desktop\assignment\Y2S2\WebApplication1\fiwfriends\FiwFriends
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Editpage/DeleteProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRGVsZXRlUHJvZmlsZS5jc2h0bWw=
+[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Edit/DeleteProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxEZWxldGVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Editpage/EditPassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRWRpdFBhc3N3b3JkLmNzaHRtbA==
+[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Edit/EditPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxFZGl0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Editpage/EditProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcRWRpdFByb2ZpbGUuY3NodG1s
+[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Edit/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Editpage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdHBhZ2VcSW5kZXguY3NodG1s
+[C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Edit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/watsa/OneDrive/Desktop/assignment/Y2S2/WebApplication1/fiwfriends/FiwFriends/Views/Event/AddEvent.cshtml]
