@@ -161,7 +161,7 @@
       "java"
     ],
     "spots": 2,
-    "is_open": true
+    "is_open": false
   },
   {
     "title": "test-wa",
@@ -198,7 +198,7 @@
       "java"
     ],
     "spots": 2,
-    "is_open": true
+    "is_open": false
   },
   {
     "title": "test_spots",
@@ -216,7 +216,7 @@
       "php"
     ],
     "spots": 1,
-    "is_open": true
+    "is_open": false
   },
   {
     "title": "Test_eiei",
@@ -235,6 +235,31 @@
       "golang"
     ],
     "spots": 2,
-    "is_open": true
+    "is_open": false
+  },
+  {
+    "title": "test_close",
+    "host_by": "tae",
+    "date_time": "2024-03-13T15:24:00",
+    "location": "test_close",
+    "picture": null,
+    "picture_url": null,
+    "description": "test_close",
+    "close_form": "2024-03-09T14:25:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "social",
+      "buffet",
+      "sport",
+      "make new friends",
+      "art",
+      "language",
+      "software development",
+      "photography"
+    ],
+    "spots": 6,
+    "is_open": false
   }
 ]
