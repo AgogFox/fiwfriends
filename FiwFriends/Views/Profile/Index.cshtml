@@ -22,10 +22,40 @@
                         <div>Location :&nbsp</div>
                         <a href="https://www.google.com/maps/place/{@user.Location}" style="width: 300, height: 20; color: #338ebb; fontSize: 14; fontFamily: Kanit ; fontWeight: 400 ; wordWrap: break-word;">@user.Location</a>
                     </div>
-                    @*<div className="Instragram" style={{width: 300, height: 20, color: 'black' , fontSize: 14, fontFamily: 'Kanit' , fontWeight: '400' , wordWrap: 'break-word' }}>instragram</div>*@
                     <div className="Groups" style={{width: 97, height: 40, color: 'black' ; fontSize: 24; fontFamily: 'Kanit' ; fontWeight: '400' ; wordWrap: 'break-word' }}>Groups : @user.Location+</div>
                 </div>
             </div>
+            <div id="main">
+                @foreach (var e in @user.Event)
+                {
+                    <hr>
+                    <a asp-action="ShowEvent" asp-controller="Event" asp-route-title="@e.title" style="text-decoration:none;">
+                        <div class="flex-container" onclick="">
+                            <div class="image">
+                                <img class="image"
+                                     src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                     alt="event concert">
+                            </div>
+                            <div class="detail">
+                                <p>@e.date_time</p>
+                                <h1>@e.title</h1>
+                                <p style="display: inline;">Host by : @e.host_by</p><br>
+                                <p style="display: inline;">Location : @e.location</p><br>
+                            </div>
+                            <div class="flex-column">
+                                <div class="timeleft">
+                                    <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                </div>
+                                <div class="attendees">
+                                    <p style="display: inline;">@e.attendees.Count Attendees</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <hr>
+                }
+            </div>
+                        <p>@user.Event</p>
         </div>
     }
 

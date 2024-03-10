@@ -22,11 +22,18 @@ using System.ComponentModel.DataAnnotations;
             public string description { get; set; }
             [DisplayName("close form at")]
             public DateTime close_form { get; set; }
-            public List<Client> attendees { get; set; }
+            public List<int> attendees { get; set; }
             [Required]
             public List<string> tags { get; set; }
             public int spots { get; set; }
             public bool is_open { get; set; }
+            public int time_left()
+            { 
+                DateTime date = close_form.Date;
+                DateTime today = DateTime.Now;
+                TimeSpan differ = date.Subtract(today);
+            return differ.Days;
+            }
             public int spots_left()
             { return spots - attendees.Count; }
         }
@@ -34,11 +41,5 @@ using System.ComponentModel.DataAnnotations;
         {
             public List<EventOBJ> Eventsearch { get; set; }
             // Add other properties needed in the next view
-        }
-
-        public class Client
-        {
-            public string username { get; set; }
-            public string profile_pic { get; set; }
         }
 }

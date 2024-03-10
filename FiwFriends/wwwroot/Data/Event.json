@@ -8,7 +8,11 @@
     "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
     "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     "close_form": "2024-03-27T09:21:00",
-    "attendees": [],
+    "attendees": [
+      12,
+      18,
+      19
+    ],
     "tags": [
       "test_picv2",
       "eiei",
@@ -38,11 +42,16 @@
     "host_by": "AI Research Club",
     "date_time": "2024-03-15T19:00:00",
     "location": "123 Main Street, Bangkok, Thailand",
+    "picture": null,
     "picture_url": "https://example.com/event1.jpg",
     "description": "Learn the basics of machine learning algorithms and applications.",
     "close_form": "2024-03-27T09:03:00",
     "attendees": [],
-    "tags": [ "machine learning", "AI", "beginner" ],
+    "tags": [
+      "machine learning",
+      "AI",
+      "beginner"
+    ],
     "spots": 30,
     "is_open": false
   },
@@ -51,38 +60,128 @@
     "host_by": "Wellness Collective",
     "date_time": "2024-03-20T08:00:00",
     "location": "Lumphini Park, Bangkok, Thailand",
+    "picture": null,
+    "picture_url": null,
     "description": "Join us for a morning yoga session in the beautiful Lumphini Park.",
     "close_form": "2024-03-27T09:03:00",
     "attendees": [],
-    "tags": [ "yoga", "wellness", "outdoor" ],
+    "tags": [
+      "yoga",
+      "wellness",
+      "outdoor"
+    ],
     "spots": 20,
     "is_open": false
-
   },
   {
     "title": "Movie Night: Classic Sci-Fi Double Feature",
     "host_by": "Film Club",
     "date_time": "2024-04-14T19:00:00",
     "location": "Community Center Auditorium, Anytown, USA",
+    "picture": null,
+    "picture_url": null,
     "description": "Join us for a screening of two classic science fiction films!",
     "close_form": "2024-03-27T09:03:00",
     "attendees": [],
-    "tags": [ "movie night", "sci-fi", "double feature" ],
+    "tags": [
+      "movie night",
+      "sci-fi",
+      "double feature"
+    ],
     "spots": 50,
     "is_open": false
-
   },
   {
     "title": "Coding Workshop: Build Your First Website",
     "host_by": "Tech Academy",
     "date_time": "2024-04-20T10:00:00",
     "location": "Tech Hub Co-working Space, London, England",
+    "picture": null,
+    "picture_url": null,
     "description": "Learn the basics of web development and build your own website.",
     "close_form": "2024-03-27T09:03:00",
     "attendees": [],
-    "tags": [ "coding workshop", "web development", "beginner" ],
+    "tags": [
+      "coding workshop",
+      "web development",
+      "beginner"
+    ],
     "spots": 25,
     "is_open": false
-
+  },
+  {
+    "title": "test_cookie",
+    "host_by": "pong",
+    "date_time": "2024-03-06T04:52:00",
+    "location": "test_cookie",
+    "picture": null,
+    "picture_url": "/event_pic/picture/4a89101f-e4a7-47c2-903f-ca5e3f70beebingame.png",
+    "description": "test_cookietest_cookie test_cookietest_cookie",
+    "close_form": "2024-03-15T17:53:00",
+    "attendees": [],
+    "tags": [
+      "test_cookie"
+    ],
+    "spots": 3,
+    "is_open": false
+  },
+  {
+    "title": "sfad",
+    "host_by": "tae",
+    "date_time": "2024-03-08T14:37:00",
+    "location": "sdf",
+    "picture": null,
+    "picture_url": "/event_pic/picture/d0773851-9837-426c-ac57-b1f84ee753fdScreenshot 2023-12-14 222813.png",
+    "description": "agsdgsdagas sagdsagh sadgasg ",
+    "close_form": "2024-03-30T07:39:00",
+    "attendees": [],
+    "tags": [
+      "javascript",
+      "php",
+      "java",
+      "golang"
+    ],
+    "spots": 234,
+    "is_open": false
+  },
+  {
+    "title": "i tae",
+    "host_by": "tae",
+    "date_time": "0001-01-01T00:00:00",
+    "location": "asdg",
+    "picture": null,
+    "picture_url": "/event_pic/picture/58c32a7a-7d1e-47b6-b7e7-0b9e1404cd26Screenshot 2023-10-27 124030.png",
+    "description": "asfgdadhf sdfhsd fh",
+    "close_form": "0001-01-01T00:00:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "javascript",
+      "php",
+      "java"
+    ],
+    "spots": 2,
+    "is_open": false
+  },
+  {
+    "title": "test-wa",
+    "host_by": "tae",
+    "date_time": "2024-03-21T17:49:00",
+    "location": "test-wa",
+    "picture": null,
+    "picture_url": "/event_pic/picture/18e953f0-cb7d-4358-9621-c9a236f0df40Screenshot 2023-11-13 073634.png",
+    "description": "test-wa test-wa test-wa",
+    "close_form": "2024-03-20T06:49:00",
+    "attendees": [
+      12,
+      19
+    ],
+    "tags": [
+      "php",
+      "java"
+    ],
+    "spots": 57,
+    "is_open": false
   }
 ]

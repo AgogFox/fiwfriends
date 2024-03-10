@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.Extensions.Logging;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
@@ -18,7 +19,9 @@ namespace FiwFriends.Models
 
         public object Location { get; set; }
 
-        public object Event { get; set; }
+        //public object Event { get; set; }
+
+        public List<EventOBJ> Event { get; set; }
 
         public int UserId { get; set; }
 

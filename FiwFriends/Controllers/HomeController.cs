@@ -13,12 +13,13 @@ namespace FiwFriends.Controllers
         const string CookieUserId = "UserId";
         const string CookieUserName = "UserName";
         private readonly IWebHostEnvironment _webHostEnvironment;
-
+        private string filePath_event;
         private string filePath;
         public HomeController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
+            filePath_event = Path.Combine(_webHostEnvironment.WebRootPath, "Data/Event.json");
         }
 
         private List<Usersystem> GetUsers(string filepath)
@@ -46,10 +47,25 @@ namespace FiwFriends.Controllers
             return false;
         }
 
+        private List<EventOBJ> GetEvents(string filepath_event)
+        {
+            if (System.IO.File.Exists(filepath_event))
+            {
+                var json = System.IO.File.ReadAllText(filepath_event);
+
+                return JsonConvert.DeserializeObject<List<EventOBJ>>(json);
+            }
+            else
+            {
+                Console.WriteLine("File does not exist.");
+                return null;
+            }
+        }
+
         public IActionResult Index()
         {
-            var userdb = GetUsers(filePath);
-            return View(userdb);
+            var events = GetEvents(filePath_event);
+            return View(events);
         }
 
         public IActionResult Privacy()
@@ -62,8 +78,6 @@ namespace FiwFriends.Controllers
         {
             return View(new ErrorViewModel{ RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        //work here
 
 
         public IActionResult Signup()
@@ -101,13 +115,6 @@ namespace FiwFriends.Controllers
             return View();
         }
 
-        //public IActionResult Logout()
-        //{
-        //    Response.Cookies.Delete(CookieUserId);
-        //    Response.Cookies.Delete(CookieUserName);
-        //    return RedirectToAction("") ;
-        //}
-
         [HttpPost]
         public IActionResult Login (string? username, string? password)
         {
@@ -124,6 +131,7 @@ namespace FiwFriends.Controllers
                     options.Expires = DateTime.Now.AddDays(7);
                     Response.Cookies.Append(CookieUserId, user.UserId.ToString(), options);
                     Response.Cookies.Append(CookieUserName, user.Username.ToString(), options);
+                    break;
                 }
                 else {
                     usertoModify = null;
