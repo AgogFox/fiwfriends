@@ -450,7 +450,7 @@
                        asp-action="Not_going"
                        asp-route-title="@Model.title">Not Going</a>
                 }
-                else if (Model.spots_left() != 0 && Model.time_left() != 0 && Model.is_open == true)
+                else if (Model.spots_left() != 0 && Model.time_left() >= 0 && Model.is_open == true)
                 {
                     <a class="attend-button" asp-controller="Event"
                         asp-action="Attend"

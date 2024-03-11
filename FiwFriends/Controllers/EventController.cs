@@ -73,6 +73,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = System.IO.File.ReadAllText(filePath);
             var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
+            var user_list = GetUser(filePath_user);
             obj.host_by = username;
             obj.is_open = true;
             if (obj.attendees == null)
@@ -81,14 +82,19 @@ namespace FiwFriends.Controllers
             }
             obj.attendees.Add(Int32.Parse(id));
             obj.picture = null;
-            if (obj.attendees == null)
+            foreach(var user in user_list)
             {
-                obj.attendees = [];
+                if (id == user.UserId.ToString())
+                {
+                    user.Event.Add(obj);
+                }
             }
             event_list.Add(obj);
             jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult ShowEvent(string? title)

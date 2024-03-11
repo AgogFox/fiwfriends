@@ -68,6 +68,10 @@ button {
     text-decoration: none;
 }
 
+.logout button:hover {
+    color: black;
+}
+
 .item3 {
     padding: 0%;
     display: flex;

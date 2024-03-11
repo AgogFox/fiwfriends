@@ -142,12 +142,10 @@
             .custum-file-upload input {
                 display: none;
             }
-
     </style>
 </head>
 <body>
-    <div class="big_rectangle">
-        
+    <div class="big_rectangle">  
         <form method="post" enctype="multipart/form-data" asp-controller="Event" asp-action="AddEvent" class="big-rectangle">
             <p class="new-event-aKh" id="13:528">NEW EVENT</p>
     
@@ -168,7 +166,7 @@
                     <div>
                         <label asp-for="location"></label>
                         <br />
-                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand" />
+                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand"/>
                         <span asp-validation-for="location" style="color: red"></span>
                     </div>
                     <div>
