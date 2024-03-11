@@ -435,12 +435,16 @@
                     <a class="not-going-button" asp-controller="Event"
                        asp-action="Open"
                        asp-route-title="@Model.title"
-                       onclick="return confirm('You want to open this Event ?')">Open</a>
+                    onclick="return confirm('You want to open this Event ?')">Open</a>
                 }
             }
             else
             {
-                if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
+                if (ViewBag.id == null)
+                {
+                    
+                }
+                else if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
                 {
                     <a class="not-going-button" asp-controller="Event"
                        asp-action="Not_going"
