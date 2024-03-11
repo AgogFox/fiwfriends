@@ -253,17 +253,18 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 106%;
+            height: 100%;
             background: rgba(106, 104, 106, 0.7);
             transition: all 0.4s;
             visibility: hidden;
             opacity: 0;
             border: 2px solid black;
+            z-index: 5;
         }
 
         .content {
@@ -292,7 +293,7 @@
             align-items: center;
             justify-content: center;
             position: absolute;
-            z-index: 2;
+            z-index: 7;
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
@@ -400,9 +401,11 @@
                                         @for (var i = 0; i < ViewBag.attendees.Count; i++)
                                         {
                                             <tr>
-                                                <td>@i</td>
+                                                <td>@(i+1)</td>
                                                 <td>@ViewBag.attendees[i]</td>
-                                                <td><a>profile</a></td>
+                                                <td><a asp-controller="Profile"
+                                                asp-action="mon"
+                                                asp-route-Username=@ViewBag.attendees[i]>profile</a></td>
                                             </tr>
                                         }
                                     </table>

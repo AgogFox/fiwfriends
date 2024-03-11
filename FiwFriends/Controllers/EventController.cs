@@ -165,7 +165,7 @@ namespace FiwFriends.Controllers
                     {
                         user_list[i].Event = [];
                     }
-                    
+                   
                     foreach (EventOBJ e in event_list)
                     {
                         if (e.title == title)
