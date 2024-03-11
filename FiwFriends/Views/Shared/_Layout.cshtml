@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,10 +24,17 @@
                     <a asp-controller="Event" asp-action="AddEvent"><img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0"></a>
                     
                 </button>
-                <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
-                <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;color: white;">Sign Up</a></button>
+                @if (@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] == null)
+                {
+                    <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
+                    <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;color: white;">Sign Up</a></button>
+                }
+                else
+                {
+                    <button class="navitem signup"><a asp-controller="Home" asp-action="Logout" style="text-decoration: none;color: white;">Logout</a></button>
+                }
                 <button class="navitem setting">
-                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0">
+                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0"></button>
             </div>
             </div>
         </nav>
