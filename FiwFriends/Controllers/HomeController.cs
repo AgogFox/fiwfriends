@@ -157,7 +157,7 @@ namespace FiwFriends.Controllers
             {
                 string modifiedJson = JsonConvert.SerializeObject(userdb, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(filePath, modifiedJson);
-                return RedirectToAction("Privacy");
+                return RedirectToAction("Index");
             }
             else
             {

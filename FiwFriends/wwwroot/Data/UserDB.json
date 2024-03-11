@@ -180,27 +180,7 @@
     "Password": "test",
     "Picture": null,
     "Location": null,
-    "Event": [
-      {
-        "title": "Test_eiei",
-        "host_by": "E",
-        "date_time": "0001-01-01T00:00:00",
-        "location": "Test_eiei",
-        "picture": null,
-        "picture_url": null,
-        "description": "Test_eiei",
-        "close_form": "2024-03-19T21:05:00",
-        "attendees": [
-          16,
-          17
-        ],
-        "tags": [
-          "golang"
-        ],
-        "spots": 2,
-        "is_open": false
-      }
-    ],
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -209,29 +189,7 @@
     "Password": "pong",
     "Picture": null,
     "Location": null,
-    "Event": [
-      {
-        "title": "test_picv2",
-        "host_by": "test_picv2",
-        "date_time": "2024-03-04T19:07:00",
-        "location": "test_picv2",
-        "picture": null,
-        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
-        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "close_form": "2024-03-27T09:21:00",
-        "attendees": [
-          12,
-          18
-        ],
-        "tags": [
-          "test_picv2",
-          "eiei",
-          "test_3rd"
-        ],
-        "spots": 23,
-        "is_open": false
-      }
-    ],
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -240,30 +198,7 @@
     "Password": "ei",
     "Picture": null,
     "Location": null,
-    "Event": [
-      {
-        "title": "test_picv2",
-        "host_by": "test_picv2",
-        "date_time": "2024-03-04T19:07:00",
-        "location": "test_picv2",
-        "picture": null,
-        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
-        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "close_form": "2024-03-27T09:21:00",
-        "attendees": [
-          12,
-          18,
-          19
-        ],
-        "tags": [
-          "test_picv2",
-          "eiei",
-          "test_3rd"
-        ],
-        "spots": 23,
-        "is_open": true
-      }
-    ],
+    "Event": [],
     "AboutMe": null
   },
   {
@@ -281,32 +216,61 @@
     "Password": "j",
     "Picture": null,
     "Location": null,
-    "Event": [
-      {
-        "title": "test_picv2",
-        "host_by": "test_picv2",
-        "date_time": "2024-03-04T19:07:00",
-        "location": "test_picv2",
-        "picture": null,
-        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
-        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "close_form": "2024-03-27T09:21:00",
-        "attendees": [
-          12,
-          18,
-          19,
-          16,
-          21
-        ],
-        "tags": [
-          "test_picv2",
-          "eiei",
-          "test_3rd"
-        ],
-        "spots": 23,
-        "is_open": true
-      }
-    ],
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 22,
+    "Username": "MovieClub",
+    "Password": "MovieClub",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 23,
+    "Username": "bonaja",
+    "Password": "bonaja",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 24,
+    "Username": "monnaja",
+    "Password": "monnaja",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 25,
+    "Username": "praewanaja",
+    "Password": "praewanaja",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 26,
+    "Username": "InnovationLab",
+    "Password": "1234",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null
+  },
+  {
+    "UserId": 27,
+    "Username": "inanatidaenaja",
+    "Password": "1234",
+    "Picture": null,
+    "Location": null,
+    "Event": null,
     "AboutMe": null
   }
 ]
