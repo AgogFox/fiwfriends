@@ -2,6 +2,8 @@
 using FiwFriends.Models;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
+using System.Reflection;
+using System.Diagnostics.Tracing;
 
 namespace FiwFriends.Controllers
 {
@@ -11,6 +13,7 @@ namespace FiwFriends.Controllers
 
         private string filePath;
         private string filePath_event;
+        private object userout;
         private List<EventOBJ> GetEvents(string filepath_event)
         {
             if (System.IO.File.Exists(filepath_event))
@@ -31,18 +34,55 @@ namespace FiwFriends.Controllers
             filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+            
+        //    var usercookie = Request.Cookies["Username"];
+        //    if (usercookie == null)
+        //    {
+        //        return RedirectToAction("Login","Home");
+        //    }
+        //    return getprofile(usercookie);
+            
+        //}
+
+
+        public IActionResult Index(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                username = Request.Cookies["Username"]!;
+                if (username == null)
+                {
+                    return RedirectToAction("Login", "Home");
+                }
+                
+            }
+            return getprofile(username);
+
+        }
+
+        private IActionResult getprofile(string username) 
         {
             var jsonData = System.IO.File.ReadAllText(filePath);
+            if (jsonData == null)
+            {
+                return RedirectToAction("Signup", "Home");
+            }
             var userlist = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Profile>>(jsonData);
-            return View(userlist);
-
+            if (userlist == null)
+            {
+                return RedirectToAction("Signup", "Home");
+            }
+            foreach (var user in userlist)
+            {
+                if (username == user.Username)
+                {
+                    return View(user);
+                }
+            }
+            return RedirectToAction("Login", "Home");
         }
-
-        public IActionResult juux()
-        {
-            var events = GetEvents(filePath_event);
-            return View(events);
-        }
+        
     }
 }
