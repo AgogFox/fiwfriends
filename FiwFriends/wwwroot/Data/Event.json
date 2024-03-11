@@ -12,7 +12,6 @@
       12,
       18,
       19,
-      16,
       21
     ],
     "tags": [
@@ -263,6 +262,24 @@
       "photography"
     ],
     "spots": 6,
+    "is_open": false
+  },
+  {
+    "title": "test_picture123",
+    "host_by": "E",
+    "date_time": "0001-01-01T00:00:00",
+    "location": "fas",
+    "picture": null,
+    "picture_url": "/event_pic/picture/6b6cefa0-87fc-4eab-8a1b-b814c250e993Screenshot 2023-10-27 124030.png",
+    "description": "dzsfg",
+    "close_form": "0001-01-01T00:00:00",
+    "attendees": [
+      16
+    ],
+    "tags": [
+      "make new friends"
+    ],
+    "spots": 3,
     "is_open": false
   }
 ]
