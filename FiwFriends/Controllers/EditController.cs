@@ -1,21 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FiwFriends.Models;
-using FiwFriends.Controllers;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using Newtonsoft.Json;
-using System.Xml;
-using System.Reflection;
+using Microsoft.AspNetCore.Hosting;
 
 namespace FiwFriends.Controllers
 {
     public class EditController : Controller
     {
-        private string json_path = "C:\\Users\\watsa\\OneDrive\\Desktop\\assignment\\Y2S2\\WebApplication1\\fiwfriends\\FiwFriends\\wwwroot\\Data\\UserDB.json";
+        private string json_path;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public EditController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+            json_path = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
+        }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Getuser()
+        /*public IActionResult Getuser()
         {
             int? userid = int.Parse(Request.Cookies["UserId"]);
             if (userid == null)
@@ -29,23 +33,34 @@ namespace FiwFriends.Controllers
             {
                 return Unauthorized("User not found.");
             }
+            current_user.Picture = null;
             return Json(current_user);
-        }
+        }*/
         public IActionResult EditProfile()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult EditProfile(Usersystem user)
+        public async Task<IActionResult> EditProfile(Usersystem user)
         {
             string? username = Request.Cookies["UserName"];
+            if (user.Picture != null)
+            {
+                string folder = "Picture/user-picture/";
+                folder += user.Picture.FileName;
+                user.Picture_url = "/" + folder;
+
+                string server_folder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await user.Picture.CopyToAsync(new FileStream(server_folder, FileMode.Create)); ;
+            }
             if (username == null)
             {
                 return RedirectToAction("Login","Home");
             }
             var jsonData = System.IO.File.ReadAllText(json_path);
             List<Usersystem> user_list = JsonSerializer.Deserialize<List<Usersystem>>(jsonData);
-            var current_user = user_list.FirstOrDefault(u => u.Username == username); ;
+            var current_user = user_list.FirstOrDefault(u => u.Username == username);
+            current_user.Picture = null;
             if (current_user != null)
             {
                 current_user.Name = user.Name;
@@ -54,11 +69,6 @@ namespace FiwFriends.Controllers
                 current_user.Interest = user.Interest;
                 string modifiedJson = JsonConvert.SerializeObject(user_list, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(json_path, modifiedJson);
-            }
-            else
-            {
-                // Handle the case where the user is not found (optional)
-                Console.WriteLine($"User '{username}' not found in the JSON file.");
             }
 
             return RedirectToAction("Index", "Home");
@@ -78,7 +88,7 @@ namespace FiwFriends.Controllers
             var jsonData = System.IO.File.ReadAllText(json_path);
             List<Usersystem> user_list = JsonSerializer.Deserialize<List<Usersystem>>(jsonData);
             var current_user = user_list.FirstOrDefault(u => u.UserId == userid); ;
-            if (current_user == null)
+            if (current_user == null && user.Picture.Length > 0)
             {
                 return Unauthorized("User not found.");
             }

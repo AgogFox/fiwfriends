@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace FiwFriends.Models
@@ -12,7 +13,8 @@ namespace FiwFriends.Models
 
         [Required]
         public string Password { get; set; }
-        public string Picture { get; set; }
+        public IFormFile Picture { get; set; }
+        public string Picture_url { get; set; }
         public string Location { get; set; }
         public object Event { get; set; }
         public string AboutMe { get; set; }
