@@ -266,7 +266,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Close(string  title)
@@ -283,7 +283,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Open(string title)
@@ -300,7 +300,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
