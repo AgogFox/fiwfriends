@@ -143,12 +143,34 @@ a {
     color: #0077cc;
 }
 
-.foot {
-    margin-top:2vh;
-    position: absolute;
-    width: 90%;
-    padding: 1.5%;
-    padding-left: 5%;
-    white-space: nowrap;
-    border-top: 1px solid #dadada
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #C2C8D2;
+    color: #fff !important;
+    padding: 1.5rem 15%;
 }
+
+.footer-item {
+    margin: 10px 5px;
+}
+
+.name-list {
+    position: relative;
+    left: 2rem;
+}
+
+.github {
+    display: inline-block;
+    font-size: 36px;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: #fff;
+}
+
+    .github:hover {
+        transform: scale(1.2);
+    }
