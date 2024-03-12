@@ -9,7 +9,8 @@
     "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
     "close_form": "2024-03-28T17:00:00",
     "attendees": [
-      22
+      22,
+      16
     ],
     "tags": [
       "movie",
@@ -28,7 +29,8 @@
     "description": "Discuss a thought-provoking non-fiction book with fellow bookworms.",
     "close_form": "2024-04-05T10:00:00",
     "attendees": [
-      23
+      23,
+      18
     ],
     "tags": [
       "bookclub",

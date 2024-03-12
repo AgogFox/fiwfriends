@@ -290,7 +290,28 @@
     "Password": "e",
     "Picture": null,
     "Location": null,
-    "Event": [],
+    "Event": [
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          16
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
     "AboutMe": null
   },
   {
@@ -327,6 +348,26 @@
           "language"
         ],
         "spots": 20,
+        "is_open": true
+      },
+      {
+        "title": "Book Club: Non-Fiction Discussion",
+        "host_by": "bonaja",
+        "date_time": "2024-04-10T12:00:00",
+        "location": "Lofoten Islands, Norway",
+        "picture": null,
+        "picture_url": "/event_pic/picture/book_club.jpg",
+        "description": "Discuss a thought-provoking non-fiction book with fellow bookworms.",
+        "close_form": "2024-04-05T10:00:00",
+        "attendees": [
+          23,
+          18
+        ],
+        "tags": [
+          "bookclub",
+          "reading"
+        ],
+        "spots": 15,
         "is_open": true
       }
     ],
