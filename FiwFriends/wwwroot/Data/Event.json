@@ -3,13 +3,14 @@
     "title": "Movie Night: Sci-Fi Adventure",
     "host_by": "MovieClub",
     "date_time": "2024-03-30T19:00:00",
-    "location": "Company Auditorium",
+    "location": "Uluwatu, Bali, Indonesia",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
     "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
     "close_form": "2024-03-28T17:00:00",
     "attendees": [
-      22
+      22,
+      16
     ],
     "tags": [
       "movie",
@@ -22,13 +23,14 @@
     "title": "Book Club: Non-Fiction Discussion",
     "host_by": "bonaja",
     "date_time": "2024-04-10T12:00:00",
-    "location": "Library",
+    "location": "Lofoten Islands, Norway",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/book_club.jpg",
     "description": "Discuss a thought-provoking non-fiction book with fellow bookworms.",
     "close_form": "2024-04-05T10:00:00",
     "attendees": [
-      23
+      23,
+      18
     ],
     "tags": [
       "bookclub",
@@ -41,9 +43,9 @@
     "title": "Lunch & Learn: Public Speaking Tips",
     "host_by": "monnaja",
     "date_time": "2024-04-24T13:00:00",
-    "location": "Training Room",
+    "location": "Petra, Jordan",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/lunch-learn-ideas-work-article-1200x800.jpg",
     "description": "Learn valuable tips to conquer your fear and become a confident public speaker.",
     "close_form": "2024-04-19T15:00:00",
     "attendees": [
@@ -60,9 +62,9 @@
     "title": "Volunteer Day: Community Garden",
     "host_by": "praewanaja",
     "date_time": "2024-05-04T09:00:00",
-    "location": "Local Community Garden",
+    "location": "Salar de Uyuni, Bolivia",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/Hort-Vols03.jpg",
     "description": "Give back to the community and help maintain a beautiful local garden.",
     "close_form": "2024-04-27T16:00:00",
     "attendees": [
@@ -79,9 +81,9 @@
     "title": "Design Thinking Workshop",
     "host_by": "InnovationLab",
     "date_time": "2024-05-18T10:00:00",
-    "location": "Innovation Lab",
+    "location": "Banff National Park, Canada",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/design.jpg",
     "description": "Explore the design thinking process to develop creative solutions to problems.",
     "close_form": "2024-05-13T17:00:00",
     "attendees": [
@@ -98,9 +100,9 @@
     "title": "Event_1",
     "host_by": "JohnDoe",
     "date_time": "2024-04-02T10:00:00",
-    "location": "Meeting Room A",
+    "location": "Chefchaouen, Morocco",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/This-is-a-Test-Event_1090x630.jpg",
     "description": "This is a sample event description for Event_1.",
     "close_form": "2024-03-25T18:00:00",
     "attendees": [
@@ -118,9 +120,9 @@
     "title": "Workshop_Back-end Dev",
     "host_by": "JaneSmith",
     "date_time": "2024-05-15T14:00:00",
-    "location": "Tech Center",
+    "location": "The Great Barrier Reef, Australia",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/img01.jpg",
     "description": "This workshop will cover back-end development fundamentals.",
     "close_form": "2024-05-10T09:00:00",
     "attendees": [
@@ -137,9 +139,9 @@
     "title": "Social Gathering",
     "host_by": "inanatidaenaja",
     "date_time": "2024-06-20T18:00:00",
-    "location": "Company Rooftop",
+    "location": "Iceland",
     "picture": null,
-    "picture_url": null,
+    "picture_url": "/event_pic/picture/istockphoto-668221242-612x612.jpg",
     "description": "Join us for an evening of food, drinks, and socializing with colleagues!",
     "close_form": "2024-06-17T12:00:00",
     "attendees": [
@@ -156,9 +158,9 @@
     "title": "topmodule",
     "host_by": "bonaja",
     "date_time": "2024-03-14T09:47:00",
-    "location": "Bangcock",
+    "location": "Ladkrabang, Bangkok",
     "picture": null,
-    "picture_url": "/event_pic/picture/856baa84-864f-4c50-a4e4-932f16b98ae6Screenshot 2023-11-13 071602.png",
+    "picture_url": "/event_pic/picture/856baa84-864f-4c50-a4e4-932f16b98ae6Screenshot.png",
     "description": "69696969696969 696969",
     "close_form": "2024-03-12T21:48:00",
     "attendees": [
@@ -169,6 +171,65 @@
       "make new friends"
     ],
     "spots": 69,
+    "is_open": true
+  },
+  {
+    "title": "nu dessert",
+    "host_by": "tae",
+    "date_time": "2024-03-20T22:00:00",
+    "location": "123 Chonburi,Thailand",
+    "picture": null,
+    "picture_url": "/event_pic/picture/ae6ebfe8-707f-4f0e-adc2-91aac676b94aScreenshot.png",
+    "description": "ของอร่อยๆ",
+    "close_form": "2024-03-18T11:44:00",
+    "attendees": [
+      12
+    ],
+    "tags": [
+      "buffet",
+      "sport"
+    ],
+    "spots": 50,
+    "is_open": true
+  },
+  {
+    "title": "Fiwfans",
+    "host_by": "tae",
+    "date_time": "2024-03-22T01:55:00",
+    "location": "69 69street, Ladkrabang, Thailand",
+    "picture": null,
+    "picture_url": "/event_pic/picture/78430a16-a2b9-41be-bcc1-46626f31ede9ingame.png",
+    "description": "arai kor mai ru eiei",
+    "close_form": "2024-03-14T12:54:00",
+    "attendees": [
+      12,
+      19
+    ],
+    "tags": [
+      "sport",
+      "make new friends"
+    ],
+    "spots": 69,
+    "is_open": true
+  },
+  {
+    "title": "Indian roti",
+    "host_by": "pong",
+    "date_time": "2024-03-20T02:44:00",
+    "location": "a Bang, Roti, India",
+    "picture": null,
+    "picture_url": "/event_pic/picture/041a5d99-7b82-4584-8136-e2fb1afb5033india-uttar-pradesh-varanasi-a-cook-making-tandoori-roti-at-a-food-hotel-MPCJ42.jpg",
+    "description": "โรตี แผ่นหย่ายๆ แช่เอาไว้อยู่ในตู้เย็น ซานฟงก็ผ่านมาเห็น แอบเปิดตู้เย็นกินโรตีดิบ เดี้ยง",
+    "close_form": "2024-03-15T13:45:00",
+    "attendees": [
+      18
+    ],
+    "tags": [
+      "buffet",
+      "make new friends",
+      "language"
+    ],
+    "spots": 20,
     "is_open": true
   }
 ]

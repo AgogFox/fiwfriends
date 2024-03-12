@@ -79,6 +79,7 @@
             box-sizing: border-box;
             margin-top: 2%;
             overflow: hidden;
+            max-height: 258px;
         }
 
 
@@ -142,12 +143,10 @@
             .custum-file-upload input {
                 display: none;
             }
-
     </style>
 </head>
 <body>
-    <div class="big_rectangle">
-        
+    <div class="big_rectangle">  
         <form method="post" enctype="multipart/form-data" asp-controller="Event" asp-action="AddEvent" class="big-rectangle">
             <p class="new-event-aKh" id="13:528">NEW EVENT</p>
     
@@ -159,16 +158,11 @@
                         <input type="text" asp-for="title" class="rectangle-input-flex" />
                         <span asp-validation-for="title" style="color: red"></span>
                     </div>
-                    <div >
-                        <label asp-for="date_time"></label>
-                        <br />
-                        <input type="datetime-local" asp-for="date_time" class="rectangle-input-flex" />
-                        <span asp-validation-for="date_time" style="color: red"></span>
-                    </div>
+                    
                     <div>
                         <label asp-for="location"></label>
                         <br />
-                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand" />
+                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand"/>
                         <span asp-validation-for="location" style="color: red"></span>
                     </div>
                     <div>
@@ -178,8 +172,21 @@
                         <span asp-validation-for="spots" style="color: red"></span>
                     </div>
                     
+                <div>
+                    <label asp-for="tags"></label>
+                    <br />
+                    <select class="rectangle-input" style="width: 56%" asp-for="tags" size="6" multiple>
+                        <option class="option-value" value="social">social</option>
+                        <option class="option-value" value="buffet">buffet</option>
+                        <option class="option-value" value="sport">sport</option>
+                        <option class="option-value" value="make new friends">make new friends</option>
+                        <option class="option-value" value="art">art</option>
+                        <option class="option-value" value="language">language</option>
+                        <option class="option-value" value="software development">software development</option>
+                        <option class="option-value" value="photography">photography</option>
+                    </select>
                 </div>
-
+                </div>
                 <div class="auto-group-s5r7-pzb" id="DYG5KjG33GeVgpGStPS5r7">
                      <img id="eiei" style="display: none"/>
                     <label for="file" asp-for="picture" class="custum-file-upload">
@@ -193,26 +200,19 @@
  
                     </label>
                 </div>
-            </div>
-            <div>
-                <label asp-for="tags"></label>
-                <br />
-                <select class="rectangle-input" asp-for="tags" size="6" multiple>
-                    <option class="option-value" value="social">social</option>
-                    <option class="option-value" value="buffet">buffet</option>
-                    <option class="option-value" value="sport">sport</option>
-                    <option class="option-value" value="make new friends">make new friends</option>
-                    <option class="option-value" value="art">art</option>
-                    <option class="option-value" value="language">language</option>
-                    <option class="option-value" value="software development">software development</option>
-                    <option class="option-value" value="photography">photography</option>
-                </select>
+            
             </div>
             <div >
                 <label asp-for="description"></label>
                 <br />
                 <textarea type="text" asp-for="description" class="rectangle-input-descripton" rows="8" cols="50"></textarea>
                 <span asp-validation-for="description" style="color: red"></span>
+            </div>
+            <div>
+                <label asp-for="date_time"></label>
+                <br />
+                <input type="datetime-local" asp-for="date_time" class="rectangle-input" />
+                <span asp-validation-for="date_time" style="color: red"></span>
             </div>
             <div>
                 <label asp-for="close_form"></label>

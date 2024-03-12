@@ -57,7 +57,8 @@ button {
     font-weight: bold;
     background-color: #338ebb;
     color: white;
-    text-decoration: none;
+    text-decoration:none;
+
 }
 
 .logout {
@@ -66,6 +67,10 @@ button {
     background-color: red;
     color: red;
     text-decoration: none;
+}
+
+.logout button:hover {
+    color: black;
 }
 
 .item3 {
@@ -138,7 +143,7 @@ a {
 }
 
 .foot {
-    margin-top: 2vh;
+    margin-top:2vh;
     position: absolute;
     width: 90%;
     padding: 1.5%;

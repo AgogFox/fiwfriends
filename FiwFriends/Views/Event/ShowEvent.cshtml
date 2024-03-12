@@ -370,14 +370,21 @@
                         </div>     
                     </div>
                     <div class="inside-attendees-group">
-                        <p class="attendees-profile">@Model.host_by (host)</p>
+                        <a class="attendees-profile" asp-controller="Profile"
+                           asp-action="Index"
+                           asp-route-Username=@ViewBag.attendees[0]>@Model.host_by (host)</a>
                        @if (Model.attendees.Count >= 2)
                         {
-                            <p class="attendees-profile">@ViewBag.attendees[1]</p>
+
+                            <a class="attendees-profile" asp-controller="Profile"
+                               asp-action="Index"
+                               asp-route-Username=@ViewBag.attendees[1]>@ViewBag.attendees[1]</a>
                         }
                         @if (Model.attendees.Count >= 3)
                         {
-                            <p class="attendees-profile">@ViewBag.attendees[2]</p>
+                            <a class="attendees-profile" asp-controller="Profile"
+                               asp-action="Index"
+                               asp-route-Username=@ViewBag.attendees[2]>@ViewBag.attendees[2]</a>
                         }
                         @if (Model.attendees.Count >= 4)
                         {
@@ -403,7 +410,7 @@
                                                 <td>@(i+1)</td>
                                                 <td>@ViewBag.attendees[i]</td>
                                                 <td><a asp-controller="Profile"
-                                                asp-action="mon"
+                                                asp-action="Index"
                                                 asp-route-Username=@ViewBag.attendees[i]>profile</a></td>
                                             </tr>
                                         }
@@ -435,18 +442,22 @@
                     <a class="not-going-button" asp-controller="Event"
                        asp-action="Open"
                        asp-route-title="@Model.title"
-                       onclick="return confirm('You want to open this Event ?')">Open</a>
+                    onclick="return confirm('You want to open this Event ?')">Open</a>
                 }
             }
             else
             {
-                if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
+                if (ViewBag.id == null)
+                {
+                    
+                }
+                else if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
                 {
                     <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: inherit">Not Going</a>
 
                     <a id="go-button" class="attend-button" onclick="attendEvent()" style="display: none">Attend</a>
                 }
-                else if (Model.spots_left() != 0 && Model.time_left() != 0 && Model.is_open == true)
+                else if (Model.spots_left() != 0 && Model.time_left() >= 0 && Model.is_open == true)
                 {
                     <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: none">Not Going</a>
 
