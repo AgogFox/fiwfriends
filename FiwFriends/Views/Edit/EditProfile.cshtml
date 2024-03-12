@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        /*function prefill() {
+        function prefill() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -106,7 +106,7 @@
                 <div>
                     <label asp-for="Picture">Profile Picture</label>
                     <input type="file" asp-for="Picture" id="picture" accept="image/*" />
-                    <img id="picturePreview" src="#" alt="Preview" style="display: none; max-width: 200px; margin-top: 10px;/>
+                    <img id="picturePreview" src="@Model.Picture_url" alt="Preview" style="display: none; max-width: 200px; margin-top: 10px;"/>
                 </div>
                 <div>
                     <label asp-for="Name">Name</label>
