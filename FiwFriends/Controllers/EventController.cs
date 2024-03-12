@@ -18,6 +18,17 @@ namespace FiwFriends.Controllers
             filePath_user = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
         }
 
+        private Boolean CheckLocation(EventOBJ e , string? word) {
+            string[] words = e.location.Split(",");
+            foreach (var w in words) {
+                Console.WriteLine(w);
+                if (w.ToLower().Trim() == word.ToLower()) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private List<EventOBJ> GetEvents(string filepath)
         {
             if (System.IO.File.Exists(filepath))
@@ -140,7 +151,7 @@ namespace FiwFriends.Controllers
             var list = new List<EventOBJ>();
             foreach (var e in eventdb)
             {
-                if (e.location.Contains(word) == true)
+                if (CheckLocation(e,word) == true)
                 {
                     list.Add(e);
                 }
