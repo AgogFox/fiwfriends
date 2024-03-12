@@ -442,18 +442,70 @@
             {
                 if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
                 {
-                    <a class="not-going-button" asp-controller="Event"
-                       asp-action="Not_going"
-                       asp-route-title="@Model.title">Not Going</a>
+                    <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: inherit">Not Going</a>
+
+                    <a id="go-button" class="attend-button" onclick="attendEvent()" style="display: none">Attend</a>
                 }
                 else if (Model.spots_left() != 0 && Model.time_left() != 0 && Model.is_open == true)
                 {
-                    <a class="attend-button" asp-controller="Event"
-                        asp-action="Attend"
-                        asp-route-title="@Model.title">Attend</a>           
+                    <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: none">Not Going</a>
+
+                    <a id="go-button" class="attend-button" onclick="attendEvent()" style="display: inherit">Attend</a>           
                 }
             }
         </div>
     </div>
 </body>
+<script>
+    function attendEvent() {
+        var eventName = '@Model.title';
+        var xhr = new XMLHttpRequest();
+
+        // Construct the URL
+        var url = '/Event/Attend?title=' + encodeURIComponent(eventName);
+
+        xhr.open('GET', url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Hide the button upon successful request
+                    document.getElementById('go-button').style.display = 'none';
+                    document.getElementById('notgo-button').style.display = 'inherit';
+                } else {
+                    // Handle error if needed
+                    console.log('Error occurred while sending AJAX request.');
+                }
+            }
+        };
+
+        xhr.send();
+    }
+
+    function notgo() {
+        var eventName = '@Model.title';
+        var xhr = new XMLHttpRequest();
+
+        // Construct the URL
+        var url = '/Event/Not_going?title=' + encodeURIComponent(eventName);
+
+        xhr.open('GET', url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Hide the button upon successful request
+                    document.getElementById('go-button').style.display = 'inherit';
+                    document.getElementById('notgo-button').style.display = 'none';
+                } else {
+                    // Handle error if needed
+                    console.log('Error occurred while sending AJAX request.');
+                }
+            }
+        };
+
+        xhr.send();
+    }
+
+</script>
 </html>

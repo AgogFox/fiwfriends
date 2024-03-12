@@ -184,7 +184,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("ShowEvent", new {title = title});
+            return Json("Going");
         }
 
         public IActionResult Not_going(string title)
@@ -224,7 +224,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("ShowEvent", new { title = title });
+            return Json("Not Going");
         }
 
         public IActionResult Delete(string title)
