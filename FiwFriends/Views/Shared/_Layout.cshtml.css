@@ -38,13 +38,14 @@ button {
     justify-content: center;
 }
 
-    .item1 a {
-        font-weight: bold;
-        font-size: 4vh;
-        color: #FD5C37;
-        text-shadow: 1px 1px 4px grey;
-        padding-left: 5%;
-    }
+.item1 a {
+    font-family: Protest Riot, sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    color: #EF733E;
+    padding-left: 5%;
+    text-decoration: none;
+}
 
 .item2 {
     margin-top: 1vh;
