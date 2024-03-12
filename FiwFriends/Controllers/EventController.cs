@@ -145,7 +145,7 @@ namespace FiwFriends.Controllers
         {
             if (word == null)
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
             var eventdb = GetEvents(filePath);
             var list = new List<EventOBJ>();
