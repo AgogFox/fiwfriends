@@ -234,6 +234,7 @@
             line-height: 1.44;
             white-space: nowrap;
             width: 11.9vw;
+            margin-right: 1rem;
         }
 
         .box {
@@ -426,10 +427,7 @@
         <div class="button-group">
             @if (Model.host_by == ViewBag.username)
             {
-                <a class="attend-button" asp-controller="Event"
-                   asp-action="Delete"
-                   asp-route-title="@Model.title"
-                onclick="return confirm('You want to delete this Event ?')">Delete</a>
+
                 if (Model.is_open)
                 {
                     <a class="not-going-button" asp-controller="Event"
@@ -442,8 +440,14 @@
                     <a class="not-going-button" asp-controller="Event"
                        asp-action="Open"
                        asp-route-title="@Model.title"
+                       style="background-color: #409FE3"
                     onclick="return confirm('You want to open this Event ?')">Open</a>
                 }
+                 <a class="not-going-button" asp-controller="Event"
+                   asp-action="Delete"
+                   asp-route-title="@Model.title"
+                   style="background-color: #F65252"
+                onclick="return confirm('You want to delete this Event ?')">Delete</a>
             }
             else
             {
