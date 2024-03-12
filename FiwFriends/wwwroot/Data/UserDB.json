@@ -532,5 +532,57 @@
       }
     ],
     "AboutMe": null
+  },
+  {
+    "UserId": 19,
+    "Username": "juu",
+    "Password": "juu",
+    "Picture": null,
+    "Location": "Paris,France",
+    "Event": [
+      {
+        "title": "test_picv2",
+        "host_by": "test_picv2",
+        "date_time": "2024-03-04T19:07:00",
+        "location": "test_picv2",
+        "picture": null,
+        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
+        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "close_form": "2024-03-27T09:21:00",
+        "attendees": [
+          12,
+          18,
+          19
+        ],
+        "tags": [
+          "test_picv2",
+          "eiei",
+          "test_3rd"
+        ],
+        "spots": 23,
+        "is_open": false
+      },
+      {
+        "title": "test-wa",
+        "host_by": "tae",
+        "date_time": "2024-03-21T17:49:00",
+        "location": "test-wa",
+        "picture": null,
+        "picture_url": "/event_pic/picture/18e953f0-cb7d-4358-9621-c9a236f0df40Screenshot 2023-11-13 073634.png",
+        "description": "test-wa test-wa test-wa",
+        "close_form": "2024-03-20T06:49:00",
+        "attendees": [
+          12,
+          19
+        ],
+        "tags": [
+          "php",
+          "java"
+        ],
+        "spots": 57,
+        "is_open": false
+      }
+    ],
+    "AboutMe": null
   }
 ]
