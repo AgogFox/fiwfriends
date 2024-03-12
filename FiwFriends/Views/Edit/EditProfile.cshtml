@@ -2,101 +2,138 @@
 @{
     ViewData["Title"] = "Edit profile";
 }
+@{
+}
 <!DOCTYPE html>
-<html lang="en"/>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function prefill() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var user = JSON.parse(xmlhttp.responseText);
+                    document.getElementById("name").value = user.name;
+                    document.getElementById("location").value = user.location;
+                    document.getElementById("aboutme").value = user.aboutMe;
+                    document.getElementById("interest").value = user.interest;
+                }
+            };
+            xmlhttp.open("GET", "/Edit/Getuser");
+            xmlhttp.send();
+        }
+        window.onload = function () {
+            prefill();
+        }
+    </script>
     <style>
-        body 
-        {
-            background-color: #f6f2d2
+        body {
+            background-color: #f6f2d2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .big-rectangle 
-        {
-            background-color: white;
-            border-radius: 1vw;
-            box-shadow: 0 0.4% 0.4% rgba(0, 0, 0, 0.25);
-            box-sizing: border-box;
+        .big-rectangle {
+            margin: auto;
+            width: 50vw;
+            max-width: 600px;
+            height: auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
             display: flex;
             flex-direction: column;
-            flex-shrink: 0;
-            margin: auto;
-            padding: 5% 10% 10% 5%;
-            row-gap: 1.4%;
-            width: 90%;
-        }
-        .image_box{
-            width:40%;
-            border-radius 1vw;
-        }
-        .rectangle-input 
-        {
-            background-color: #f6f2d2;
-            border-radius: 1vw;
-            height: 40%;
-            margin-bottom: 1%;
-            width: 40%;
+            align-items: center;
         }
 
-        .rectangle-input-descripton 
-        {
-            background-color: #f6f2d2;
-            border-radius: 1vw;
-            height: 100%;
-            margin-bottom: 1%;
-            padding-top: 10%;
-            width: 40%;
-            top: 2%;
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center; /* Center label text */
         }
+
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+            select[multiple] {
+                height: 120px; /* Adjust height for multi-select */
+            }
 
         .submit-button {
-            align-items: center;
-            background-color: #fd5c37;
-            border-radius: 1vw;
+            width: 100%;
+            max-width: 200px;
+            padding: 10px;
+            background-color: #FD5C37;
+            border: none;
+            border-radius: 10px;
             color: #ffffff;
-            font-family: Istok Web, 'Source Sans Pro';
-            font-size: 100%;
-            font-weight: 700;
-            justify-content: center;
-            width: 15.5%;
-            margin-top: 2%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+
+            .submit-button:hover {
+                background-color: #ff704d; /* Darker shade on hover */
+            }
     </style>
 </head>
 <body>
     <div class="big-rectangle">
-        <h1 style="font-family: Istok Web, 'Source Sans Pro'">Profile.</h1>
-        <div style="display:flex;justify-content:space-between">
-            <form method="post" enctype="multipart/form-data" asp-controller="Edit" asp-action="EditProfile" class="big-rectangle" style="width:60%;">
-                <div>
-                    <label asp-for="Picture"></label>
-                    <input type="file" asp-for="Picture" />
-                </div>
-                <div>
-                    <label asp-for="Username"></label>
-                    <br />
-                    <input type="text" asp-for="Username" class="rectangle-input"/>
-                </div>
-                <div>
-                    <label asp-for="Location"></label>
-                    <br />
-                    <input type="text" asp-for="Location" class="rectangle-input"/>
-                </div>
-                <div>
-                    <label asp-for="Interest"></label>
-                    <br />
-                    <input type="text" asp-for="Interest" class="rectangle-input"/>
-                </div>
-                <div>
-                    <label asp-for="AboutMe">About me</label>
-                    <br />
-                    <input type="text" asp-for="AboutMe" class="rectangle-input-descripton"/>
-                </div>
-                <button type="submit" class="submit-button">submit</button>
-            </form>
-        </div>
-     </div>
+        <h1>Edit profile</h1>
+        <form method="post" enctype="multipart/form-data" asp-controller="Edit" asp-action="EditProfile">
+            <div>
+                <label asp-for="Picture">Picture</label>
+                <input type="file" asp-for="Picture" />
+            </div>
+            <div>
+                <label asp-for="Name">Name</label>
+                <input type="text" asp-for="Name" id="name" placeholder="Enter your name" />
+            </div>
+            <div>
+                <label asp-for="Location">Location</label>
+                <input type="text" asp-for="Location" id="location" placeholder="Enter your location" />
+            </div>
+            <div>
+                <label asp-for="Interest">Interest</label>
+                <select asp-for="Interest" id="interest" size="5" multiple>
+                    <option value="pets">Pets</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="sport">Sport</option>
+                    <option value="outdoor">Outdoor activities</option>
+                    <option value="art">Art</option>
+                    <option value="language">Language</option>
+                    <option value="software development">Software development</option>
+                    <option value="photography">Photography</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="AboutMe">About me</label>
+                <input type="text" asp-for="AboutMe" id="aboutme" />
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
 </body>
-
+</html>

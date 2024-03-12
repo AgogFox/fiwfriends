@@ -15,6 +15,22 @@ namespace FiwFriends.Controllers
         {
             return View();
         }
+        public IActionResult Getuser()
+        {
+            int? userid = int.Parse(Request.Cookies["UserId"]);
+            if (userid == null)
+            {
+                return RedirectToAction("Login");
+            }
+            var jsonData = System.IO.File.ReadAllText(json_path);
+            List<Usersystem> user_list = JsonSerializer.Deserialize<List<Usersystem>>(jsonData);
+            var current_user = user_list.FirstOrDefault(u => u.UserId == userid);
+            if (current_user == null)
+            {
+                return Unauthorized("User not found.");
+            }
+            return Json(current_user);
+        }
         public IActionResult EditProfile()
         {
             return View();
@@ -32,7 +48,7 @@ namespace FiwFriends.Controllers
             var current_user = user_list.FirstOrDefault(u => u.Username == username); ;
             if (current_user != null)
             {
-                current_user.Username = user.Username;
+                current_user.Name = user.Name;
                 current_user.AboutMe = user.AboutMe;
                 current_user.Location = user.Location;
                 current_user.Interest = user.Interest;
