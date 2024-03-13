@@ -16,7 +16,7 @@ namespace FiwFriends.Models
         public IFormFile Picture { get; set; }
         public string Picture_url { get; set; }
         public string Location { get; set; }
-        public object Event { get; set; }
+        public List<EventOBJ> Event { get; set; }
         public string AboutMe { get; set; }
         public string Interest { get; set; }
 
