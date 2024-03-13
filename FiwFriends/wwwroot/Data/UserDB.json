@@ -4,7 +4,7 @@
     "Username": "JohnDoe",
     "Name": null,
     "Password": "secret123",
-    "Picture": "profile.jpg",
+    "Picture": null,
     "Picture_url": null,
     "Location": null,
     "Event": [
@@ -29,14 +29,15 @@
         "is_open": true
       }
     ],
-    "AboutMe": "I am a software engineer."
+    "AboutMe": "I am a software engineer.",
+    "Interest": null
   },
   {
     "UserId": 2,
     "Username": "JaneSmith",
     "Name": null,
     "Password": "password456",
-    "Picture": "avatar.png",
+    "Picture": null,
     "Picture_url": null,
     "Location": null,
     "Event": [
@@ -80,18 +81,20 @@
         "is_open": true
       }
     ],
-    "AboutMe": "I love to travel."
+    "AboutMe": "I love to travel.",
+    "Interest": null
   },
   {
     "UserId": 3,
     "Username": null,
     "Name": null,
     "Password": "verysecret",
-    "Picture": "default.png",
+    "Picture": null,
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": "I am a musician."
+    "AboutMe": "I am a musician.",
+    "Interest": null
   },
   {
     "UserId": 4,
@@ -102,7 +105,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": ""
+    "AboutMe": "",
+    "Interest": null
   },
   {
     "UserId": 5,
@@ -113,7 +117,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 6,
@@ -124,7 +129,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 7,
@@ -135,7 +141,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 8,
@@ -146,7 +153,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 9,
@@ -157,7 +165,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 10,
@@ -168,7 +177,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 11,
@@ -179,7 +189,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 12,
@@ -253,7 +264,8 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 12,
@@ -303,7 +315,8 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 13,
@@ -314,7 +327,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 14,
@@ -325,7 +339,8 @@
     "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 15,
@@ -341,20 +356,11 @@
   },
   {
     "UserId": 16,
-    "Username": "Ineiei",
-    "Name": null,
-    "Password": "123456",
-    "Picture": null,
-    "Picture_url": null,
-    "Location": null,
-    "Event": [],
-    "AboutMe": null
-  },
-  {
-    "UserId": 16,
     "Username": "E",
+    "Name": null,
     "Password": "e",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -400,22 +406,28 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 17,
     "Username": "test",
+    "Name": null,
     "Password": "test",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 18,
     "Username": "pong",
+    "Name": null,
     "Password": "pong",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -480,13 +492,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 19,
     "Username": "ei",
+    "Name": null,
     "Password": "ei",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -538,31 +553,40 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 20,
     "Username": "wa",
+    "Name": null,
     "Password": "wa",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 21,
     "Username": "่่j",
+    "Name": null,
     "Password": "j",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 22,
     "Username": "MovieClub",
+    "Name": null,
     "Password": "MovieClub",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -585,13 +609,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 23,
     "Username": "bonaja",
+    "Name": null,
     "Password": "bonaja",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -614,13 +641,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 24,
     "Username": "monnaja",
+    "Name": null,
     "Password": "monnaja",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -643,13 +673,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 25,
     "Username": "praewanaja",
+    "Name": null,
     "Password": "praewanaja",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -672,13 +705,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 26,
     "Username": "InnovationLab",
+    "Name": null,
     "Password": "1234",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -701,13 +737,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 27,
     "Username": "inanatidaenaja",
+    "Name": null,
     "Password": "1234",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -730,13 +769,16 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 19,
     "Username": "juu",
+    "Name": null,
     "Password": "juu",
     "Picture": null,
+    "Picture_url": null,
     "Location": "Paris,France",
     "Event": [
       {
@@ -782,13 +824,16 @@
         "is_open": false
       }
     ],
-    "AboutMe": null
+    "AboutMe": null,
+    "Interest": null
   },
   {
     "UserId": 29,
     "Username": "hee",
+    "Name": null,
     "Password": "hee",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -817,6 +862,19 @@
         "is_open": true
       }
     ],
-    "AboutMe": null
-  }
+    "AboutMe": null,
+    "Interest": null
+  },
+  {
+    "UserId": 30,
+    "Username": "SanFong",
+    "Name": "SanFong",
+    "Password": "SanFong12345",
+    "Picture": null,
+    "Picture_url": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null,
+    "Interest": null
+  } 
 ]
