@@ -129,14 +129,21 @@ namespace FiwFriends.Controllers
             ViewBag.attendees = new List<string>();
             for(var i = 0;i < obj.attendees.Count;i++)
             {
+                bool isFound = false;
                 foreach(var j in user_list)
                 {
                     if (j.UserId == obj.attendees[i])
                     {
                         ViewBag.attendees.Add(j.Username);
+                        isFound = true;
                         break;
                     }
                 }
+                if (!isFound)
+                {
+                    obj.attendees.RemoveAt(i);
+                }
+
             }
             return View(obj);
         }

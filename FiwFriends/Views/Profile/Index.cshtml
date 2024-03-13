@@ -171,33 +171,35 @@
         </div>
         </div>
         <div id="main">
-            @foreach (var e in @Model.Event)
-            {
-                <hr>
-                <a asp-action="ShowEvent" asp-controller="Event" asp-route-title="@e.title" style="text-decoration:none;">
-                    <div class="flex-container" onclick="">
-                        <div class="image">
-                            <img class="image"
-                                    src="@e.picture_url"
-                                    alt="event concert">
-                        </div>
-                        <div class="detail">
-                            <p>@e.date_time</p>
-                            <h1>@e.title</h1>
-                            <p style="display: inline;">Host by : @e.host_by</p><br>
-                            <p style="display: inline;">Location : @e.location</p><br>
-                        </div>
-                        <div class="flex-column">
-                            <div class="timeleft">
-                                <p style="display: inline;">Time left : @e.time_left() Days</p>
+            @if(Model.Event!=null){
+                @foreach (var e in @Model.Event)
+                {
+                    <hr>
+                    <a asp-action="ShowEvent" asp-controller="Event" asp-route-title="@e.title" style="text-decoration:none;">
+                        <div class="flex-container" onclick="">
+                            <div class="image">
+                                <img class="image"
+                                        src="@e.picture_url"
+                                        alt="event concert">
                             </div>
-                            <div class="attendees">
-                                <p style="display: inline;">@e.attendees.Count Attendees</p>
+                            <div class="detail">
+                                <p>@e.date_time</p>
+                                <h1>@e.title</h1>
+                                <p style="display: inline;">Host by : @e.host_by</p><br>
+                                <p style="display: inline;">Location : @e.location</p><br>
+                            </div>
+                            <div class="flex-column">
+                                <div class="timeleft">
+                                    <p style="display: inline;">Time left : @e.time_left() Days</p>
+                                </div>
+                                <div class="attendees">
+                                    <p style="display: inline;">@e.attendees.Count Attendees</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <hr>
+                    </a>
+                    <hr>
+                }
             }
         </div>
     </div>

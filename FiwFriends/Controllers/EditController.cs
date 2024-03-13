@@ -79,7 +79,7 @@ namespace FiwFriends.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult DeleteProfile(Usersystem user)
+        public IActionResult DeleteProfile(int attendees)
         {
             int? userid = int.Parse(Request.Cookies["UserId"]);
             if (userid == null)
@@ -87,9 +87,10 @@ namespace FiwFriends.Controllers
                 return RedirectToAction("Login");
             }
             var jsonData = System.IO.File.ReadAllText(json_path);
+            
             List<Usersystem> user_list = JsonSerializer.Deserialize<List<Usersystem>>(jsonData);
             var current_user = user_list.FirstOrDefault(u => u.UserId == userid); ;
-            if (current_user == null && user.Picture.Length > 0)
+            if (current_user == null)
             {
                 return Unauthorized("User not found.");
             }
@@ -114,21 +115,30 @@ namespace FiwFriends.Controllers
             }
             var jsonData = System.IO.File.ReadAllText(json_path);
             List<Usersystem> user_list = JsonSerializer.Deserialize<List<Usersystem>>(jsonData);
-            var current_user = user_list.FirstOrDefault(u => u.UserId == userid); ;
+            var current_user = user_list.FirstOrDefault(u => u.UserId == userid);
             if (current_user == null)
             {
                 return Unauthorized("User not found.");
             }
             if (current_user.Password != model.OldPassword)
             {
-                return BadRequest("Incorrect password");
+                return ViewBag("Incorrect password");
             }
-            current_user.Password = model.NewPassword;
+            foreach(var user in user_list)
+            {
+                if(user.UserId == current_user.UserId)
+                {
+                    user.Password = model.NewPassword;
+                    break;
+                }
+            }
             string modifiedJson = JsonConvert.SerializeObject(user_list, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText(json_path, modifiedJson);
 
 
             return RedirectToAction("Index","Home");
+            return View();
         }
+        
     }
 }

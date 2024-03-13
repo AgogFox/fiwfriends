@@ -107,8 +107,8 @@ namespace FiwFriends.Controllers
                     ViewBag.duplicate = true;
                     return View();
                 }
-                else { 
-                    obj.UserId = userlist.Count();
+                else {
+                    obj.UserId = userlist[userlist.Count()-1].UserId + 1;
                     obj.Name = obj.Username;
                     userlist.Add(obj);
                     jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(userlist, Newtonsoft.Json.Formatting.Indented);
@@ -128,7 +128,7 @@ namespace FiwFriends.Controllers
         public IActionResult Logout() {
             Response.Cookies.Delete(CookieUserId);
             Response.Cookies.Delete(CookieUserName);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
 
         }
 

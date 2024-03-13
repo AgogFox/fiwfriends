@@ -71,7 +71,7 @@
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         alert("Profile deleted successfully.");
-                        window.location.reload();
+                        window.location.href("/Home/Logout");
                     } else {
                         alert("Failed to delete profile. Please try again later.");
                     }
