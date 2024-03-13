@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@inject IHttpContextAccessor HttpContextAccessor;
+
 <style>
     /* Start of Navigation bar */
     * {
@@ -182,8 +184,11 @@
 
 
 <div class="welcome">
-    <h1>Welcome, Username 👋</h1>
-    <h2>Events from your groups</h2>
+    @if(@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] != null){
+    
+        <h1>Welcome, @HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] 👋</h1>
+    }
+    <h2>Events</h2>
 </div>
 
 <div class="menu"></div>

@@ -58,8 +58,8 @@ namespace FiwFriends.Controllers
             else
             {
                 Console.WriteLine("File does not exist.");
-                return null;
             }
+            return null;
         }
 
         public IActionResult Index()
