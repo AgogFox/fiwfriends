@@ -314,6 +314,26 @@
     "Location": null,
     "Event": [
       {
+        "title": "Design Thinking Workshop",
+        "host_by": "InnovationLab",
+        "date_time": "2024-05-18T10:00:00",
+        "location": "Banff National Park, Canada",
+        "picture": null,
+        "picture_url": "/event_pic/picture/design.jpg",
+        "description": "Explore the design thinking process to develop creative solutions to problems.",
+        "close_form": "2024-05-13T17:00:00",
+        "attendees": [
+          26,
+          16
+        ],
+        "tags": [
+          "design",
+          "workshop"
+        ],
+        "spots": 12,
+        "is_open": true
+      },
+      {
         "title": "Movie Night: Sci-Fi Adventure",
         "host_by": "MovieClub",
         "date_time": "2024-03-30T19:00:00",
@@ -324,6 +344,8 @@
         "close_form": "2024-03-28T17:00:00",
         "attendees": [
           22,
+          18,
+          12,
           16
         ],
         "tags": [
