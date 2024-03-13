@@ -10,9 +10,9 @@
     "close_form": "2024-03-28T17:00:00",
     "attendees": [
       22,
-      16,
       18,
-      12
+      12,
+      16
     ],
     "tags": [
       "movie",
@@ -89,7 +89,8 @@
     "description": "Explore the design thinking process to develop creative solutions to problems.",
     "close_form": "2024-05-13T17:00:00",
     "attendees": [
-      26
+      26,
+      16
     ],
     "tags": [
       "design",
