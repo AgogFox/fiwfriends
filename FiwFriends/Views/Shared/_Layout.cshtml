@@ -1,3 +1,5 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +7,18 @@
     <title>@ViewData["Title"] - FiwFriends</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/FiwFriends.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/2854511dd6.js" crossorigin="anonymous"></script>
 </head>
 <body style=" margin:0">
     <header>
         <nav class="navigation">
-            <div class="item1"><a href="" style="text-decoration: none;">Home</a></div>
+            <div class="item1"><a class="logo" href="/">FiwFriends</a></div>
             <div class="item3">
-                <form style="width: 100%;display:flex;" action="">
-                    <input style="width: 60%; margin-right:1%;" type="text" name="" id="search" placeholder="Country,City">
-                    <button style="width: 20%;"><img width="50%" src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
+                <form style="width: 100%;display:flex;" asp-controller="Event" asp-action="Search" method="get">
+                    <input style="width: 60%; margin-right:1%;" type="text" name="word" id="search" placeholder="Country,City">
+                    <button style="width: 20%;"><img width=" 50% " src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
                 </form>
             </div>
             <div class="item2">
@@ -22,10 +26,17 @@
                     <a asp-controller="Event" asp-action="AddEvent"><img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0"></a>
                     
                 </button>
-                <button class="navitem"><a style="text-decoration: none;font-weight: bold;">Login</a></button>
-                <button class="navitem signup">Sign Up</button>
+                @if (@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] == null)
+                {
+                    <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
+                    <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;color: white;">Sign Up</a></button>
+                }
+                else
+                {
+                    <button class="navitem logout"><a asp-controller="Home" asp-action="Logout" onclick="return confirm('Are you sure you want to log out?')" style="text-decoration: none;color: white;">Logout</a></button>
+                }
                 <button class="navitem setting">
-                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0" >
+                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0"></button>
             </div>
             </div>
         </nav>
@@ -36,9 +47,26 @@
         </main>
     </div>
 
-    <footer>
-        <div class="foot">
-            &copy; 2024 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer">
+        <div class="foot-item">
+            <p>This web application project is a part of "Web Application Development" subject at</p>
+            <p>King Mongkut's Institute of Technology Ladkrabang</p>
+            <p>March 2024</p>
+        </div>
+        <div class="footer-item">
+            <p>Made By</p>
+            <ul class="name-list">
+                <li>พงศกร หงส์ไพฑูรย์</li>
+                <li>แพรวา ทัศนภูมิ</li>
+                <li>วิชญ์วิสิฐ โชติกิจสมบูรณ์</li>
+                <li>ภวัต ประกายทิพย์</li>
+                <li>วัศพล สัมฤทธิ์</li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <a class="github" href="https://github.com/AgogFox/fiwfriends" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
         </div>
     </footer>
     @await RenderSectionAsync("Scripts", required: false)

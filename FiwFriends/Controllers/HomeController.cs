@@ -58,8 +58,8 @@ namespace FiwFriends.Controllers
             else
             {
                 Console.WriteLine("File does not exist.");
-                return null;
             }
+            return null;
         }
 
         public IActionResult Index()
@@ -124,6 +124,13 @@ namespace FiwFriends.Controllers
             return View();
         }
 
+        public IActionResult Logout() {
+            Response.Cookies.Delete(CookieUserId);
+            Response.Cookies.Delete(CookieUserName);
+            return RedirectToAction("Index");
+
+        }
+
         [HttpPost]
         public IActionResult Login (string? username, string? password)
         {
@@ -150,7 +157,7 @@ namespace FiwFriends.Controllers
             {
                 string modifiedJson = JsonConvert.SerializeObject(userdb, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(filePath, modifiedJson);
-                return RedirectToAction("Privacy");
+                return RedirectToAction("Index");
             }
             else
             {

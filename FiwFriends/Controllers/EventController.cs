@@ -18,6 +18,17 @@ namespace FiwFriends.Controllers
             filePath_user = Path.Combine(_webHostEnvironment.WebRootPath, "Data/UserDB.json");
         }
 
+        private Boolean CheckLocation(EventOBJ e , string? word) {
+            string[] words = e.location.Split(",");
+            foreach (var w in words) {
+                Console.WriteLine(w);
+                if (w.ToLower().Trim() == word.ToLower()) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private List<EventOBJ> GetEvents(string filepath)
         {
             if (System.IO.File.Exists(filepath))
@@ -73,6 +84,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = System.IO.File.ReadAllText(filePath);
             var event_list = JsonSerializer.Deserialize<List<EventOBJ>>(jsonData);
+            var user_list = GetUser(filePath_user);
             obj.host_by = username;
             obj.is_open = true;
             if (obj.attendees == null)
@@ -81,14 +93,19 @@ namespace FiwFriends.Controllers
             }
             obj.attendees.Add(Int32.Parse(id));
             obj.picture = null;
-            if (obj.attendees == null)
+            foreach(var user in user_list)
             {
-                obj.attendees = [];
+                if (id == user.UserId.ToString())
+                {
+                    user.Event.Add(obj);
+                }
             }
             event_list.Add(obj);
             jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented); 
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
+            System.IO.File.WriteAllText(filePath_user, jsonData);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult ShowEvent(string? title)
@@ -128,13 +145,13 @@ namespace FiwFriends.Controllers
         {
             if (word == null)
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
             var eventdb = GetEvents(filePath);
             var list = new List<EventOBJ>();
             foreach (var e in eventdb)
             {
-                if (e.location.Contains(word) == true)
+                if (CheckLocation(e,word) == true)
                 {
                     list.Add(e);
                 }
@@ -165,7 +182,7 @@ namespace FiwFriends.Controllers
                     {
                         user_list[i].Event = [];
                     }
-                    
+                   
                     foreach (EventOBJ e in event_list)
                     {
                         if (e.title == title)
@@ -184,7 +201,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("ShowEvent", new {title = title});
+            return Json("Going");
         }
 
         public IActionResult Not_going(string title)
@@ -224,7 +241,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("ShowEvent", new { title = title });
+            return Json("Not Going");
         }
 
         public IActionResult Delete(string title)
@@ -260,7 +277,7 @@ namespace FiwFriends.Controllers
             System.IO.File.WriteAllText(filePath, jsonData);
             jsonData = JsonConvert.SerializeObject(user_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath_user, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Close(string  title)
@@ -277,7 +294,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Open(string title)
@@ -294,7 +311,7 @@ namespace FiwFriends.Controllers
             }
             var jsonData = JsonConvert.SerializeObject(event_list, Formatting.Indented);
             System.IO.File.WriteAllText(filePath, jsonData);
-            return RedirectToAction("Search");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

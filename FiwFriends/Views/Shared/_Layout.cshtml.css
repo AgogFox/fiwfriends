@@ -10,7 +10,6 @@ body {
     font-style: normal;
 }
 
-
 .container {
     padding-top: 10vh;
 }
@@ -19,6 +18,7 @@ button {
     border: none;
     background-color: white;
     border-radius: 10px;
+    text-decoration: none;
 }
 
     button:hover {
@@ -38,13 +38,14 @@ button {
     justify-content: center;
 }
 
-    .item1 a {
-        font-weight: bold;
-        font-size: 4vh;
-        color: #FD5C37;
-        text-shadow: 1px 1px 4px grey;
-        padding-left: 5%;
-    }
+.item1 a {
+    font-family: Protest Riot, sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    color: #EF733E;
+    padding-left: 5%;
+    text-decoration: none;
+}
 
 .item2 {
     margin-top: 1vh;
@@ -59,6 +60,22 @@ button {
     color: white;
     text-decoration: none;
 }
+
+    .signup:hover {
+        background-color: #67b8db;
+    }
+
+
+.logout {
+    padding: 0%;
+    font-weight: bold;
+    background-color: red;
+    text-decoration: none;
+}
+
+    .logout:hover {
+        background-color: #fa6464;
+    }
 
 .item3 {
     padding: 0%;
@@ -129,12 +146,33 @@ a {
     color: #0077cc;
 }
 
-.foot {
-    margin-top: 2vh;
-    position: absolute;
-    width: 90%;
-    padding: 1.5%;
-    padding-left: 5%;
-    white-space: nowrap;
-    border-top: 1px solid #dadada
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #C2C8D2;
+    padding: 1.5rem 15%;
 }
+
+.footer-item {
+    margin: 10px 5px;
+}
+
+.name-list {
+    position: relative;
+    left: 2rem;
+}
+
+.github {
+    display: inline-block;
+    font-size: 36px;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: #000;
+}
+
+    .github:hover {
+        transform: scale(1.2);
+    }

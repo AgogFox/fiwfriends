@@ -10,16 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
-            background-color: #f6f2d2
+            background-color: white;
         }
         .big-rectangle {
-            background-color: white;
+            background-color: linen;
             border-radius: 1vw;
             box-shadow: 0 0.4% 0.4% rgba(0, 0, 0, 0.25);
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            flex-shrink: 0;
             margin-right: 1vw;
             padding: 0% 10% 10% 5%;
             row-gap: 1.4%;
@@ -27,15 +26,17 @@
         }
 
         .rectangle-input {
-            background-color: #f6f2d2;
+            background-color: whitesmoke;
             border-radius: 1vw;
-            height: 40%;
+            height: 100%;
             margin-bottom: 1%;
             width: 40%;
+            padding: 0.5rem 0;
+            padding-left: 0.5rem;
         }
 
         .rectangle-input-descripton {
-            background-color: #f6f2d2;
+            background-color: whitesmoke;
             border-radius: 1vw;
             height: 100%;
             margin-bottom: 1%;
@@ -53,11 +54,12 @@
         }
 
         .rectangle-input-flex {
-            background-color: #f6f2d2;
+            background-color: whitesmoke;
             border-radius: 1vw;
             height: 40%;
             margin-bottom: 1%;
             width: 80%;
+            padding: 0.5rem 0.5rem;
         }
 
         .auto-group-btfq-A7R {
@@ -71,15 +73,16 @@
             flex: 1;
         }
 
-        .auto-group-s5r7-pzb {
-            background: linear-gradient(180deg, #fd5c37 -0%, rgba(246, 242, 210, 0.4600000083) 100%);
-            border-radius: 2vw;
+        .picture-upload {
+            background: #f28f64;
+            border-radius: 10px;
             box-sizing: border-box;
             margin-top: 2%;
-            flex: 1;
-            text-align: right;
-            padding: 10% 0;
+            overflow: hidden;
+            max-height: 258px;
         }
+
+
         .submit-button {
             align-items: center;
             background-color: #fd5c37;
@@ -99,11 +102,51 @@
             text-align: center;
         }
 
+        .custum-file-upload {
+            height: 200px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            gap: 20px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border: 5px dashed #e8e8e8;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0px 48px 35px -48px #e8e8e8;
+        }
+
+            .custum-file-upload .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .custum-file-upload .icon svg {
+                    height: 80px;
+                    fill: #e8e8e8;
+                }
+
+            .custum-file-upload .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .custum-file-upload .text span {
+                    font-weight: 400;
+                    color: #e8e8e8;
+                }
+
+            .custum-file-upload input {
+                display: none;
+            }
     </style>
 </head>
 <body>
-    <div class="big_rectangle">
-        
+    <div class="big_rectangle">  
         <form method="post" enctype="multipart/form-data" asp-controller="Event" asp-action="AddEvent" class="big-rectangle">
             <p class="new-event-aKh" id="13:528">NEW EVENT</p>
     
@@ -115,16 +158,11 @@
                         <input type="text" asp-for="title" class="rectangle-input-flex" />
                         <span asp-validation-for="title" style="color: red"></span>
                     </div>
-                    <div >
-                        <label asp-for="date_time"></label>
-                        <br />
-                        <input type="datetime-local" asp-for="date_time" class="rectangle-input-flex" />
-                        <span asp-validation-for="date_time" style="color: red"></span>
-                    </div>
+                    
                     <div>
                         <label asp-for="location"></label>
                         <br />
-                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand" />
+                        <input type="text" asp-for="location" class="rectangle-input-flex" placeholder="123 Main Street, Bangkok, Thailand"/>
                         <span asp-validation-for="location" style="color: red"></span>
                     </div>
                     <div>
@@ -133,34 +171,49 @@
                         <input type="number" asp-for="spots" class="rectangle-input-flex" />
                         <span asp-validation-for="spots" style="color: red"></span>
                     </div>
-                    <div>
-                        <label asp-for="tags"></label>
-                        <br />
-                        <select class="rectangle-input-flex" asp-for="tags" size="6" multiple>
-                            <option class="option-value" value="social">social</option>
-                            <option class="option-value" value="buffet">buffet</option>
-                            <option class="option-value" value="sport">sport</option>
-                            <option class="option-value" value="make new friends">make new friends</option>
-                            <option class="option-value" value="art">art</option>
-                            <option class="option-value" value="language">language</option>
-                            <option class="option-value" value="software development">software development</option>
-                            <option class="option-value" value="photography">photography</option>
-                        </select>
-                    </div>
+                    
+                <div>
+                    <label asp-for="tags"></label>
+                    <br />
+                    <select class="rectangle-input" style="width: 56%" asp-for="tags" size="6" multiple>
+                        <option class="option-value" value="social">social</option>
+                        <option class="option-value" value="buffet">buffet</option>
+                        <option class="option-value" value="sport">sport</option>
+                        <option class="option-value" value="make new friends">make new friends</option>
+                        <option class="option-value" value="art">art</option>
+                        <option class="option-value" value="language">language</option>
+                        <option class="option-value" value="software development">software development</option>
+                        <option class="option-value" value="photography">photography</option>
+                    </select>
                 </div>
-                <div class="auto-group-s5r7-pzb" id="DYG5KjG33GeVgpGStPS5r7">
-                    <label asp-for="picture" class="select-title-picture">Select a Title picture:</label>
-                    <input type="file" asp-for="picture"> 
                 </div>
-            </div>
+                <div class="picture-upload" id="upload-group">
+                     <img id="eiei" style="display: none"/>
+                    <label for="file" asp-for="picture" class="custum-file-upload">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" fill=""></path> </g></svg>
+                        </div>
+                        <div class="text">
+                            <span>Click to upload image</span>
+                        </div>
+                        <input id="file" type="file" asp-for="picture">
+ 
+                    </label>
+                </div>
             
+            </div>
             <div >
                 <label asp-for="description"></label>
                 <br />
                 <textarea type="text" asp-for="description" class="rectangle-input-descripton" rows="8" cols="50"></textarea>
                 <span asp-validation-for="description" style="color: red"></span>
             </div>
-            
+            <div>
+                <label asp-for="date_time"></label>
+                <br />
+                <input type="datetime-local" asp-for="date_time" class="rectangle-input" />
+                <span asp-validation-for="date_time" style="color: red"></span>
+            </div>
             <div>
                 <label asp-for="close_form"></label>
                 <br />
@@ -168,7 +221,26 @@
                 <span asp-validation-for="close_form" style="color: red"></span>
             </div>
             <button type="submit" class="submit-button">Submit</button>
-            
         </form>
     </div>
+    <script>
+        let img_input = document.querySelector('#file');
+        let preview_img = document.querySelector('#upload-group');
+
+
+        img_input.onchange = evt => {
+            const [file] = img_input.files;
+            if (file){
+                preview_img.style.width = 'min-content';
+                const image_tag = document.querySelector('#eiei');
+                image_tag.src = URL.createObjectURL(file);
+                image_tag.style.objectFit = 'cover';
+                image_tag.style.width = "30vw";
+                image_tag.style.display = "block";
+                document.querySelector(".custum-file-upload").style.display = "none";
+                preview_img.appendChild(image_tag);
+                console.log(preview_img);
+            }
+        }
+    </script>
 </body>
