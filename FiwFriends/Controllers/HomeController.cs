@@ -109,6 +109,7 @@ namespace FiwFriends.Controllers
                 }
                 else { 
                     obj.UserId = userlist.Count();
+                    obj.Name = obj.Username;
                     userlist.Add(obj);
                     jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(userlist, Newtonsoft.Json.Formatting.Indented);
                     System.IO.File.WriteAllText(filePath, jsonData);
