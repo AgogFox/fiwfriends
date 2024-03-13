@@ -150,7 +150,6 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     background-color: #C2C8D2;
-    color: #fff !important;
     padding: 1.5rem 15%;
 }
 
@@ -168,7 +167,7 @@ a {
     font-size: 36px;
     transition: all 0.3s ease;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
     .github:hover {
