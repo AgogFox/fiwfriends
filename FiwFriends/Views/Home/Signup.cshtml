@@ -100,6 +100,11 @@
         object-fit: scale-down;
     }
 
+    span{
+        display: block;
+        color: #E34545;
+    }
+
     @@media screen and (max-width: 600px) {
         .container .rectangle h1 {
             margin-left: 15%;
@@ -123,10 +128,6 @@
         .column{
             width: 100%;
         }
-        span{
-            
-        }
-
     }
 </style>
 
@@ -140,14 +141,14 @@
                     <h1>Sign up</h1>
                     <div style="margin-bottom:5vh;">
                         <label asp-for="Username" >Username :</label><br><br>
-                        <input type="text" asp-for="Username" id="username"> 
+                        <input type="text" asp-for="Username" id="username">
                         @if (@ViewBag.duplicate == true)
                         {
                             <span class="text-danger">This username already exists.</span><br>
                         }
                         <span asp-validation-for="Username" class="text-danger"></span><br>
                         <label asp-for="Password" >Password :</label><br><br>
-                        <input type="text" id="password" asp-for="Password"><br>   
+                        <input type="text" id="password" asp-for="Password"><br>
                         <span asp-validation-for="Password" class="text-danger"></span>
                         <button class="button" type="submit">Register</button><br>
                     </div>
