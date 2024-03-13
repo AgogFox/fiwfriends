@@ -14,9 +14,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Event\AddEvent.cshtml" />
-    <None Include="Views\Event\Index.cshtml" />
-    <None Include="Views\Event\ShowEvent.cshtml" />
+    <Folder Include="Picture-storage\" />
+    <Folder Include="wwwroot\Picture\user-picture\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Edit\DeleteProfile.cshtml" />
+    <None Include="Views\Edit\EditPassword.cshtml" />
+    <None Include="Views\Edit\EditProfile.cshtml" />
+    <None Include="Views\Edit\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

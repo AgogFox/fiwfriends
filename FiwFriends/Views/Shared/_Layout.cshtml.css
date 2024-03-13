@@ -17,6 +17,8 @@ body {
 button {
     border: none;
     background-color: white;
+<<<<<<< HEAD
+=======
     border-radius: 10px;
     text-decoration: none;
 }
@@ -30,6 +32,10 @@ button {
     background-color: white;
     width: 100%;
     position: fixed;
+<<<<<<< HEAD
+    border: 1px solid black
+=======
+>>>>>>> origin/search-result-page
 }
 
 .item1 {
@@ -48,6 +54,9 @@ button {
     }
 
 .item2 {
+<<<<<<< HEAD
+    width: 40%;
+=======
     margin-top: 1vh;
     margin-left:5%;
     width: 25%;
@@ -66,6 +75,11 @@ button {
 }
 
 .signup {
+<<<<<<< HEAD
+    height: 100%;
+    padding: 0%;
+    font-weight: bold;
+=======
     padding: 0%;
     font-weight: bold;
     background-color: #338ebb;
@@ -92,6 +106,9 @@ button {
 .item3 {
     padding: 0%;
     display: flex;
+<<<<<<< HEAD
+    width: 30%;
+=======
     width: 40%;
 }
 
@@ -128,6 +145,8 @@ form {
     margin-top: 0.5vh;
 }
 
+<<<<<<< HEAD
+=======
     form a {
         font-weight: bold;
         font-size: 4vh;
@@ -136,6 +155,7 @@ form {
         padding-left: 5%;
     }
 
+>>>>>>> origin/search-result-page
 #search {
     padding: 1vh;
     padding-left: 4%;

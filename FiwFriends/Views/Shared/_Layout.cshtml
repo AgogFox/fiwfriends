@@ -1,5 +1,7 @@
 ﻿@inject IHttpContextAccessor HttpContextAccessor;
-
+@{
+    string Cookieusername = HttpContextAccessor?.HttpContext?.Request.Cookies["UserId"];
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -2,8 +2,10 @@
   {
     "UserId": 1,
     "Username": "JohnDoe",
+    "Name": null,
     "Password": "secret123",
     "Picture": "profile.jpg",
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -32,8 +34,10 @@
   {
     "UserId": 2,
     "Username": "JaneSmith",
+    "Name": null,
     "Password": "password456",
     "Picture": "avatar.png",
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -81,8 +85,10 @@
   {
     "UserId": 3,
     "Username": null,
+    "Name": null,
     "Password": "verysecret",
     "Picture": "default.png",
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": "I am a musician."
@@ -90,8 +96,10 @@
   {
     "UserId": 4,
     "Username": "",
+    "Name": null,
     "Password": "qwerty",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": ""
@@ -99,8 +107,10 @@
   {
     "UserId": 5,
     "Username": "Alice",
+    "Name": null,
     "Password": null,
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -108,8 +118,10 @@
   {
     "UserId": 6,
     "Username": "hehe",
+    "Name": null,
     "Password": "hehe",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -117,8 +129,10 @@
   {
     "UserId": 7,
     "Username": "hehe",
+    "Name": null,
     "Password": "h",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -126,8 +140,10 @@
   {
     "UserId": 8,
     "Username": "Fittokung@gmail.com",
+    "Name": null,
     "Password": "wewewewew",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -135,8 +151,10 @@
   {
     "UserId": 9,
     "Username": "heheheh",
+    "Name": null,
     "Password": "eieiei",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -144,8 +162,10 @@
   {
     "UserId": 10,
     "Username": "mon",
+    "Name": null,
     "Password": "mon",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -153,8 +173,10 @@
   {
     "UserId": 11,
     "Username": "ewewwewew",
+    "Name": null,
     "Password": "wowo",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -162,8 +184,10 @@
   {
     "UserId": 12,
     "Username": "pearwa",
+    "Name": null,
     "Password": "eiei",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -234,8 +258,10 @@
   {
     "UserId": 12,
     "Username": "tae",
+    "Name": null,
     "Password": "tae",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [
       {
@@ -282,8 +308,10 @@
   {
     "UserId": 13,
     "Username": "eiei",
+    "Name": null,
     "Password": "eiei",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -291,8 +319,10 @@
   {
     "UserId": 14,
     "Username": "eat1234",
+    "Name": null,
     "Password": "eat1234",
     "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
@@ -300,8 +330,22 @@
   {
     "UserId": 15,
     "Username": "juumontae",
+    "Name": null,
     "Password": "juujuu",
     "Picture": null,
+    "Picture_url": null,
+    "Location": null,
+    "Event": null,
+    "AboutMe": null,
+    "Interest": null
+  },
+  {
+    "UserId": 16,
+    "Username": "Ineiei",
+    "Name": null,
+    "Password": "123456",
+    "Picture": null,
+    "Picture_url": null,
     "Location": null,
     "Event": [],
     "AboutMe": null
