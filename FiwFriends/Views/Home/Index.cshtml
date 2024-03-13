@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@inject IHttpContextAccessor HttpContextAccessor;
+
 <style>
     /* Start of Navigation bar */
     * {
@@ -182,8 +184,11 @@
 
 
 <div class="welcome">
-    <h1>Welcome, Username 👋</h1>
-    <h2>Events from your groups</h2>
+    @if(@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] != null){
+    
+        <h1>Welcome, @HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] 👋</h1>
+    }
+    <h2>Events</h2>
 </div>
 
 <div class="menu"></div>
@@ -195,7 +200,7 @@
         <div class="flex-container" onclick="">
             <div class="image">
                 <img class="image"
-                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="@e.picture_url"
                     alt="event concert">
             </div>
             <div class="detail">

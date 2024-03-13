@@ -182,12 +182,13 @@
             align-items: flex-start;
             display: flex;
             flex-shrink: 0;
-            margin-right: 2.8vw;
+            margin-right: 2vw;
             width: calc(100% - 2.8vw);
         }
 
         .attendees-profile {
             margin-right: 8vw;
+            width: 80%;
         }
 
         .button-group {
@@ -247,8 +248,6 @@
         .box a {
             display: inline-block;
             background-color: #fff;
-
-
         }
 
         .modal {
@@ -390,7 +389,7 @@
                         }
                         @if (Model.attendees.Count >= 4)
                         {
-                            <div class="box">
+                            <div class="attendees-profile">
                                 <a href="#popup-box">
                                     See all
                                 </a>
@@ -417,7 +416,6 @@
                                             </tr>
                                         }
                                     </table>
-                                    
                                 </div>
                             </div>
                         }
@@ -428,7 +426,6 @@
         <div class="button-group">
             @if (Model.host_by == ViewBag.username)
             {
-
                 if (Model.is_open)
                 {
                     <a class="not-going-button" asp-controller="Event"

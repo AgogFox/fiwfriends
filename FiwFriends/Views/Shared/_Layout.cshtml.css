@@ -10,7 +10,6 @@ body {
     font-style: normal;
 }
 
-
 .container {
     padding-top: 10vh;
 }
@@ -19,6 +18,7 @@ button {
     border: none;
     background-color: white;
     border-radius: 10px;
+    text-decoration: none;
 }
 
     button:hover {
@@ -58,21 +58,24 @@ button {
     font-weight: bold;
     background-color: #338ebb;
     color: white;
-    text-decoration:none;
-
+    text-decoration: none;
 }
+
+    .signup:hover {
+        background-color: #67b8db;
+    }
+
 
 .logout {
     padding: 0%;
     font-weight: bold;
     background-color: red;
-    color: red;
     text-decoration: none;
 }
 
-.logout button:hover {
-    color: black;
-}
+    .logout:hover {
+        background-color: #fa6464;
+    }
 
 .item3 {
     padding: 0%;
