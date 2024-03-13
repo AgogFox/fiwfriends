@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Event\AddEvent.cshtml" />
+    <None Include="Views\Event\Index.cshtml" />
+    <None Include="Views\Event\ShowEvent.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 

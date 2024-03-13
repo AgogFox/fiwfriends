@@ -1,0 +1,204 @@
+﻿@model FiwFriends.Models.Profile;
+@inject IHttpContextAccessor HttpContextAccessor
+<style>
+    * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+
+    }
+    b {
+        font-size: 3vh;
+    }
+
+
+
+    .main-flex-container{
+        display:flex;
+    }
+    #main {
+        width: 75%;
+        height: 100%;
+        border: 1px solid white; @*debugg here*@
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-top:7vh;
+    }
+
+    .flex-container {
+        display: flex;
+        background-color: white; 
+        width: 100%;
+    }
+
+    .image {
+        width: 30%
+    }
+
+    .image img {
+        width: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .detail {
+        width: 100%
+    }
+    .detail h1{
+        font-size:3vh;
+    }
+
+    .flex-container>div {
+        background-color: white;
+        margin: 1%;
+        padding: 1%;
+        font-size: 2vh;
+    }
+
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .flex>div {
+        background-color: white;
+        width: 100%;
+        margin: 0%;
+    }
+
+    .flex img {
+        width: 100%;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .flex-column>div {
+        background-color: white;
+        width: 100%;
+        margin: 0%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .timeleft{
+        color: gray;
+        font-weight: bold;
+         font-size: 2vh;
+    }
+    .attendees{
+        font-weight: bold;
+        font-size: 2vh;
+        padding-top: 80%;
+    }
+
+    .close {
+        float: right;
+        margin-left: 100%;
+    }
+    .close:hover{
+            background-color:red;
+            color:white;
+        }
+
+
+        .item1{
+                padding-top: 2%;
+                width: 30%;
+                justify-content: center;
+        }
+        
+        }
+
+        #main {
+            width: 100%;
+            align-items: center;
+            margin-top: 3vh;
+        }
+
+        .flex {
+                display: flex;
+                flex-direction: column;
+                background-color: DodgerBlue;
+            }
+
+            .flex>div {
+                background-color: #f1f1f1;
+                width: 100px;
+                margin: 0%;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+
+        .flex-container {
+                display: flex;
+                background-color: white;
+                width: 100%;
+            }
+
+            .image {
+                width: 40%
+            }
+
+            .image img {
+                width: 100%;
+            }
+
+            .detail {
+                width: 60%
+            }
+</style>
+
+    <div style="display:flex; background-color:#F6F2D2; border-radius:1.5vw ;padding:5vh;margin-right:20vh;margin-bottom:2vh;">
+        <div style=" border-right: 2px solid #bfbfbf; padding-right:2vw">
+            <h1>@Model.Username</h1>
+            <img src=@Model.Picture style="width : 250px;height :250px;object-fit: cover;border-radius:50%;margin:2vh"></img>
+            <div class="Rectangle" style="border-radius: 1.5vw; padding:1.5vw;background-color : white">
+                <div class="Username" style="width: 300; height: 20; color: black ; fontSize: 14, fontFamily: Kanit ; fontWeight: '400' ; wordWrap: 'break-word' ">Username : @Model.Username</div>
+                <div class="Location" style="display:flex">
+                    <div>Location :&nbsp</div>
+                    <a href="https://www.google.com/maps/place/{@Model.Location}" style="width: 300, height: 20; color: #338ebb; fontSize: 14; fontFamily: Kanit ; fontWeight: 400 ; wordWrap: break-word;">@Model.Location</a>
+                </div>
+               
+            </div>
+        </div>
+        <div id="main">
+            @foreach (var e in @Model.Event)
+            {
+                <hr>
+                <a asp-action="ShowEvent" asp-controller="Event" asp-route-title="@e.title" style="text-decoration:none;">
+                    <div class="flex-container" onclick="">
+                        <div class="image">
+                            <img class="image"
+                                    src="@e.picture_url"
+                                    alt="event concert">
+                        </div>
+                        <div class="detail">
+                            <p>@e.date_time</p>
+                            <h1>@e.title</h1>
+                            <p style="display: inline;">Host by : @e.host_by</p><br>
+                            <p style="display: inline;">Location : @e.location</p><br>
+                        </div>
+                        <div class="flex-column">
+                            <div class="timeleft">
+                                <p style="display: inline;">Time left : @e.time_left() Days</p>
+                            </div>
+                            <div class="attendees">
+                                <p style="display: inline;">@e.attendees.Count Attendees</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+            }
+        </div>
+    </div>
+
+

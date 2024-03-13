@@ -1,0 +1,778 @@
+[
+  {
+    "UserId": 1,
+    "Username": "JohnDoe",
+    "Password": "secret123",
+    "Picture": "profile.jpg",
+    "Location": null,
+    "Event": [
+      {
+        "title": "Event_1",
+        "host_by": "JohnDoe",
+        "date_time": "2024-04-02T10:00:00",
+        "location": "Meeting Room A",
+        "picture": null,
+        "picture_url": null,
+        "description": "This is a sample event description for Event_1.",
+        "close_form": "2024-03-25T18:00:00",
+        "attendees": [
+          1,
+          2
+        ],
+        "tags": [
+          "business",
+          "meeting"
+        ],
+        "spots": 5,
+        "is_open": true
+      }
+    ],
+    "AboutMe": "I am a software engineer."
+  },
+  {
+    "UserId": 2,
+    "Username": "JaneSmith",
+    "Password": "password456",
+    "Picture": "avatar.png",
+    "Location": null,
+    "Event": [
+      {
+        "title": "Event_1",
+        "host_by": "JohnDoe",
+        "date_time": "2024-04-02T10:00:00",
+        "location": "Meeting Room A",
+        "picture": null,
+        "picture_url": null,
+        "description": "This is a sample event description for Event_1.",
+        "close_form": "2024-03-25T18:00:00",
+        "attendees": [
+          1,
+          2
+        ],
+        "tags": [
+          "business",
+          "meeting"
+        ],
+        "spots": 5,
+        "is_open": true
+      },
+      {
+        "title": "Workshop_Back-end Dev",
+        "host_by": "JaneSmith",
+        "date_time": "2024-05-15T14:00:00",
+        "location": "Tech Center",
+        "picture": null,
+        "picture_url": null,
+        "description": "This workshop will cover back-end development fundamentals.",
+        "close_form": "2024-05-10T09:00:00",
+        "attendees": [
+          2
+        ],
+        "tags": [
+          "golang",
+          "workshop"
+        ],
+        "spots": 10,
+        "is_open": true
+      }
+    ],
+    "AboutMe": "I love to travel."
+  },
+  {
+    "UserId": 3,
+    "Username": null,
+    "Password": "verysecret",
+    "Picture": "default.png",
+    "Location": null,
+    "Event": [],
+    "AboutMe": "I am a musician."
+  },
+  {
+    "UserId": 4,
+    "Username": "",
+    "Password": "qwerty",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": ""
+  },
+  {
+    "UserId": 5,
+    "Username": "Alice",
+    "Password": null,
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 6,
+    "Username": "hehe",
+    "Password": "hehe",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 7,
+    "Username": "hehe",
+    "Password": "h",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 8,
+    "Username": "Fittokung@gmail.com",
+    "Password": "wewewewew",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 9,
+    "Username": "heheheh",
+    "Password": "eieiei",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 10,
+    "Username": "mon",
+    "Password": "mon",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 11,
+    "Username": "ewewwewew",
+    "Password": "wowo",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 12,
+    "Username": "pearwa",
+    "Password": "eiei",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "test_picv2",
+        "host_by": "test_picv2",
+        "date_time": "2024-03-04T19:07:00",
+        "location": "test_picv2",
+        "picture": null,
+        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
+        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "close_form": "2024-03-27T09:21:00",
+        "attendees": [
+          18,
+          12
+        ],
+        "tags": [
+          "test_picv2",
+          "eiei",
+          "test_3rd"
+        ],
+        "spots": 23,
+        "is_open": false
+      },
+      {
+        "title": "Fiwfans",
+        "host_by": "tae",
+        "date_time": "2024-03-22T01:55:00",
+        "location": "69 69street, Ladkrabang, Thailand",
+        "picture": null,
+        "picture_url": "/event_pic/picture/78430a16-a2b9-41be-bcc1-46626f31ede9ingame.png",
+        "description": "arai kor mai ru eiei",
+        "close_form": "2024-03-14T12:54:00",
+        "attendees": [
+          12
+        ],
+        "tags": [
+          "sport",
+          "make new friends"
+        ],
+        "spots": 69,
+        "is_open": true
+      },
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          16,
+          18,
+          12
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 12,
+    "Username": "tae",
+    "Password": "tae",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Fiwfans",
+        "host_by": "tae",
+        "date_time": "2024-03-22T01:55:00",
+        "location": "69 69street, Ladkrabang, Thailand",
+        "picture": null,
+        "picture_url": "/event_pic/picture/78430a16-a2b9-41be-bcc1-46626f31ede9ingame.png",
+        "description": "arai kor mai ru eiei",
+        "close_form": "2024-03-14T12:54:00",
+        "attendees": [
+          12
+        ],
+        "tags": [
+          "sport",
+          "make new friends"
+        ],
+        "spots": 69,
+        "is_open": true
+      },
+      {
+        "title": "nu dessert",
+        "host_by": "tae",
+        "date_time": "2024-03-20T22:00:00",
+        "location": "123 Chonburi,Thailand",
+        "picture": null,
+        "picture_url": "/event_pic/picture/ae6ebfe8-707f-4f0e-adc2-91aac676b94aScreenshot 2023-12-14 222813.png",
+        "description": "ของอร่อยๆ",
+        "close_form": "2024-03-18T11:44:00",
+        "attendees": [
+          12
+        ],
+        "tags": [
+          "buffet",
+          "sport"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 13,
+    "Username": "eiei",
+    "Password": "eiei",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 14,
+    "Username": "eat1234",
+    "Password": "eat1234",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 15,
+    "Username": "juumontae",
+    "Password": "juujuu",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 16,
+    "Username": "E",
+    "Password": "e",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Design Thinking Workshop",
+        "host_by": "InnovationLab",
+        "date_time": "2024-05-18T10:00:00",
+        "location": "Banff National Park, Canada",
+        "picture": null,
+        "picture_url": "/event_pic/picture/design.jpg",
+        "description": "Explore the design thinking process to develop creative solutions to problems.",
+        "close_form": "2024-05-13T17:00:00",
+        "attendees": [
+          26,
+          16
+        ],
+        "tags": [
+          "design",
+          "workshop"
+        ],
+        "spots": 12,
+        "is_open": true
+      },
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          18,
+          12,
+          16
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 17,
+    "Username": "test",
+    "Password": "test",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 18,
+    "Username": "pong",
+    "Password": "pong",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Indian roti",
+        "host_by": "pong",
+        "date_time": "2024-03-20T02:44:00",
+        "location": "a Bang, Roti, India",
+        "picture": null,
+        "picture_url": "/event_pic/picture/041a5d99-7b82-4584-8136-e2fb1afb5033india-uttar-pradesh-varanasi-a-cook-making-tandoori-roti-at-a-food-hotel-MPCJ42.jpg",
+        "description": "โรตี แผ่นหย่ายๆ แช่เอาไว้อยู่ในตู้เย็น ซานฟงก็ผ่านมาเห็น แอบเปิดตู้เย็นกินโรตีดิบ เดี้ยง",
+        "close_form": "2024-03-15T13:45:00",
+        "attendees": [
+          18
+        ],
+        "tags": [
+          "buffet",
+          "make new friends",
+          "language"
+        ],
+        "spots": 20,
+        "is_open": true
+      },
+      {
+        "title": "Book Club: Non-Fiction Discussion",
+        "host_by": "bonaja",
+        "date_time": "2024-04-10T12:00:00",
+        "location": "Lofoten Islands, Norway",
+        "picture": null,
+        "picture_url": "/event_pic/picture/book_club.jpg",
+        "description": "Discuss a thought-provoking non-fiction book with fellow bookworms.",
+        "close_form": "2024-04-05T10:00:00",
+        "attendees": [
+          23,
+          18
+        ],
+        "tags": [
+          "bookclub",
+          "reading"
+        ],
+        "spots": 15,
+        "is_open": true
+      },
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          16,
+          18
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 19,
+    "Username": "ei",
+    "Password": "ei",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          18,
+          12,
+          16,
+          19,
+          19
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      },
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          18,
+          12,
+          16,
+          19,
+          19
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 20,
+    "Username": "wa",
+    "Password": "wa",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 21,
+    "Username": "่่j",
+    "Password": "j",
+    "Picture": null,
+    "Location": null,
+    "Event": [],
+    "AboutMe": null
+  },
+  {
+    "UserId": 22,
+    "Username": "MovieClub",
+    "Password": "MovieClub",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Company Auditorium",
+        "picture": null,
+        "picture_url": null,
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 23,
+    "Username": "bonaja",
+    "Password": "bonaja",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Book Club: Non-Fiction Discussion",
+        "host_by": "bonaja",
+        "date_time": "2024-04-10T12:00:00",
+        "location": "Library",
+        "picture": null,
+        "picture_url": null,
+        "description": "Discuss a thought-provoking non-fiction book with fellow bookworms.",
+        "close_form": "2024-04-05T10:00:00",
+        "attendees": [
+          23
+        ],
+        "tags": [
+          "bookclub",
+          "reading"
+        ],
+        "spots": 15,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 24,
+    "Username": "monnaja",
+    "Password": "monnaja",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Lunch & Learn: Public Speaking Tips",
+        "host_by": "monnaja",
+        "date_time": "2024-04-24T13:00:00",
+        "location": "Training Room",
+        "picture": null,
+        "picture_url": null,
+        "description": "Learn valuable tips to conquer your fear and become a confident public speaker.",
+        "close_form": "2024-04-19T15:00:00",
+        "attendees": [
+          24
+        ],
+        "tags": [
+          "professional",
+          "development"
+        ],
+        "spots": 20,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 25,
+    "Username": "praewanaja",
+    "Password": "praewanaja",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Volunteer Day: Community Garden",
+        "host_by": "praewanaja",
+        "date_time": "2024-05-04T09:00:00",
+        "location": "Local Community Garden",
+        "picture": null,
+        "picture_url": null,
+        "description": "Give back to the community and help maintain a beautiful local garden.",
+        "close_form": "2024-04-27T16:00:00",
+        "attendees": [
+          25
+        ],
+        "tags": [
+          "volunteering",
+          "community"
+        ],
+        "spots": 25,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 26,
+    "Username": "InnovationLab",
+    "Password": "1234",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Design Thinking Workshop",
+        "host_by": "InnovationLab",
+        "date_time": "2024-05-18T10:00:00",
+        "location": "Innovation Lab",
+        "picture": null,
+        "picture_url": null,
+        "description": "Explore the design thinking process to develop creative solutions to problems.",
+        "close_form": "2024-05-13T17:00:00",
+        "attendees": [
+          26
+        ],
+        "tags": [
+          "design",
+          "workshop"
+        ],
+        "spots": 12,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 27,
+    "Username": "inanatidaenaja",
+    "Password": "1234",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Social Gathering",
+        "host_by": "inanatidaenaja",
+        "date_time": "2024-06-20T18:00:00",
+        "location": "Company Rooftop",
+        "picture": null,
+        "picture_url": null,
+        "description": "Join us for an evening of food, drinks, and socializing with colleagues!",
+        "close_form": "2024-06-17T12:00:00",
+        "attendees": [
+          27
+        ],
+        "tags": [
+          "social",
+          "company"
+        ],
+        "spots": 30,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 19,
+    "Username": "juu",
+    "Password": "juu",
+    "Picture": null,
+    "Location": "Paris,France",
+    "Event": [
+      {
+        "title": "test_picv2",
+        "host_by": "test_picv2",
+        "date_time": "2024-03-04T19:07:00",
+        "location": "test_picv2",
+        "picture": null,
+        "picture_url": "/event_pic/picture/Screenshot 2023-11-09 163252.png",
+        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "close_form": "2024-03-27T09:21:00",
+        "attendees": [
+          12,
+          18,
+          19
+        ],
+        "tags": [
+          "test_picv2",
+          "eiei",
+          "test_3rd"
+        ],
+        "spots": 23,
+        "is_open": false
+      },
+      {
+        "title": "test-wa",
+        "host_by": "tae",
+        "date_time": "2024-03-21T17:49:00",
+        "location": "test-wa",
+        "picture": null,
+        "picture_url": "/event_pic/picture/18e953f0-cb7d-4358-9621-c9a236f0df40Screenshot 2023-11-13 073634.png",
+        "description": "test-wa test-wa test-wa",
+        "close_form": "2024-03-20T06:49:00",
+        "attendees": [
+          12,
+          19
+        ],
+        "tags": [
+          "php",
+          "java"
+        ],
+        "spots": 57,
+        "is_open": false
+      }
+    ],
+    "AboutMe": null
+  },
+  {
+    "UserId": 29,
+    "Username": "hee",
+    "Password": "hee",
+    "Picture": null,
+    "Location": null,
+    "Event": [
+      {
+        "title": "Movie Night: Sci-Fi Adventure",
+        "host_by": "MovieClub",
+        "date_time": "2024-03-30T19:00:00",
+        "location": "Uluwatu, Bali, Indonesia",
+        "picture": null,
+        "picture_url": "/event_pic/picture/BACKYARD-MOVIES2.jpg",
+        "description": "Grab some popcorn and enjoy a thrilling sci-fi adventure on the big screen!",
+        "close_form": "2024-03-28T17:00:00",
+        "attendees": [
+          22,
+          18,
+          12,
+          16,
+          19,
+          19,
+          29
+        ],
+        "tags": [
+          "movie",
+          "entertainment"
+        ],
+        "spots": 50,
+        "is_open": true
+      }
+    ],
+    "AboutMe": null
+  }
+]

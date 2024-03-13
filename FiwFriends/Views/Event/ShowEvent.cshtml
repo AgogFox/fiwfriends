@@ -1,0 +1,524 @@
+﻿@model FiwFriends.Models.EventOBJ;
+@{
+    ViewData["Title"] = "ShowEvent";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickToCopy</title>
+    <style>
+        .page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        .title {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 2vw;
+            font-weight:600;
+            margin-bottom: 0%;
+        }
+        .hosted-by {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1.2vw;
+        }
+
+        .big-container {
+            align-items: center;
+            display: flex;
+            margin: 0vw 0vw 2vw 0.8vw;
+            width: calc(100% - 0.8vw);
+        }
+
+        .title_picture {
+            border-radius: 2vw;
+            object-fit: cover;
+            width:50%;
+        }
+
+        .group-box {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            height: 100%;
+            row-gap: 1.2vw;
+            width: 24.1vw;
+        }
+
+        .date-time-div {
+            background-color: #f6f2d2;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            padding: 0.5vw 1.6vw;
+            width: 23.7vw;
+            margin-left: 40%
+        }
+
+        .location-div {
+            background-color: #f6f2d2;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            padding: 0.5vw 1.6vw;
+            white-space: nowrap;
+            width: 100%;
+            margin-left: 40%
+        }
+
+        .slot-div {
+            align-items: center;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 0.4vw;
+            padding: 1.1vw 1.6vw;
+            width: calc(100% - 0.4vw);
+            margin-left: 40%
+        }
+        .head-text{
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            color: black;
+            font-size: 1.2vw;
+            font-weight: 400;
+        }
+        .data-text {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            color: #7e7e7e;
+            font-size: 1.1vw;
+            font-weight: 400;
+        }
+        #slot {
+            padding-left: 5%;
+            font-size: 1.2vw
+        }
+        .detail-group {
+            align-items: flex-start;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            display: flex;
+            flex-shrink: 0;
+            margin: 0vw 0.9vw 2.1vw 0vw;
+            width: calc(100% - 0.9vw);
+        }
+        .detail-header-text {
+            color: black;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1.6vw;
+            font-weight: 400;
+        }
+
+        .detail-group-left {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            flex-shrink: 0;
+            height: 100%;
+            margin-right: 6.5vw;
+            width: 49.8vw;
+        }
+        
+        .description {
+            color: #000000;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1.2vw;
+            font-weight: 400;
+            line-height: 1.495;
+            margin: 0vw 0vw 1.1vw 2.5vw;
+            max-width: 47.3vw;
+        }
+
+        .tag-group {
+
+            display: flex;
+        }
+
+        .tag-box {
+            background-color: #f6f2d2;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1vw;
+            padding: 0vw 1vw 0vw 1vw;
+            white-space: nowrap;
+            margin-right: 1.5vw;
+        }
+
+        .attendees-profile-group {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            align-items: center;
+            background-color: #ffffff;
+            border: solid 0.1vw #000000;
+            border-radius: 1vw;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 1.1vw 2.2vw;
+            width: 47.1vw;
+        }
+
+        .attendees-group-box {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 2.8vw;
+            width: calc(100% - 2.8vw);
+        }
+
+        .inside-attendees-group {
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            align-items: flex-start;
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 2vw;
+            width: calc(100% - 2.8vw);
+        }
+
+        .attendees-profile {
+            margin-right: 8vw;
+            width: 80%;
+        }
+
+        .button-group {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 3.8vw;
+            margin-right: 33.4vw;
+            width: calc(100% - 33.4vw);
+        }
+
+        .attend-button {
+            align-items: center;
+            background-color: #fd5c37;
+            border-radius: 1vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: flex;
+            flex-shrink: 0;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1.5vw;
+            font-weight: 700;
+            height: 70%;
+            justify-content: center;
+            line-height: 1.44;
+            margin-right: 1.3vw;
+            white-space: nowrap;
+            width: 20vw;
+        }
+
+        .not-going-button {
+            align-items: center;
+            background-color: #7f7f7f;
+            border-radius: 1vw;
+            box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: flex;
+            flex-shrink: 0;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-size: 1.5vw;
+            font-weight: 700;
+            height: 70%;
+            justify-content: center;
+            line-height: 1.44;
+            white-space: nowrap;
+            width: 11.9vw;
+            margin-right: 1rem;
+        }
+
+        .box {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box a {
+            display: inline-block;
+            background-color: #fff;
+        }
+
+        .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: rgba(106, 104, 106, 0.7);
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+            border: 2px solid black;
+            z-index: 5;
+        }
+
+        .content {
+            position: absolute;
+            background: white;
+            width: 50vw;
+            padding: 1vw ;
+            border-radius: 1vw;
+        }
+
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 1vw;
+            color: #F6F2D2;
+            text-decoration: none;
+            font-size: 2vw;
+        }
+
+        table {
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 7;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            box-shadow: 0 2px 15px rgba(64,64,64,.7);
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+        }
+
+        td, th {
+            padding: 1vw 1.5vw;
+            text-align: center;
+        }
+
+        th {
+            background-color: #FD5C37;
+            color: #fafafa;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+            font-weight: 200;
+            text-transform: uppercase;
+        }
+
+        tr {
+            width: 100%;
+            background-color: #fafafa;
+            font-family: https://fonts.google.com/specimen/Josefin+Sans;
+        }
+
+            tr:nth-child(even) {
+                background-color: #eeeeee;
+            }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="title-group" >
+            <p class="title" >@Model.title</p>
+            <p class="hosted-by">Hosted By : @Model.host_by</p>
+        </div>
+        <div class="big-container">
+            <img class="title_picture" src="@Model.picture_url" />
+            <div class="group-box" >
+                <div class="date-time-div" >
+                    <p class="head-text">Event date and time</p>
+                    <p class="data-text">@Model.date_time</p>
+                </div>
+                <div class="location-div">
+                    <p class="head-text">location</p>
+                    <p class="data-text" >@Model.location</p>
+                </div>
+                <div class="slot-div">
+                    <p class="head-text">Slots :</p>
+                    <p class="data-text" id="slot">@Model.spots_left() / @Model.spots</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-group">
+            <div class="detail-group-left">
+                <p class="detail-header-text">Details</p>
+                <p class="description">@Model.description</p>
+                <div class="tag-group"> 
+                    @foreach(string tag in Model.tags)
+                    {
+                        <div class="tag-box">@tag</div>
+                    }
+                </div>
+                <p class="detail-header-text" style="margin-top: 1.5vw;">Attendees (@Model.attendees.Count)</p>
+                <div class="attendees-profile-group">
+                    <div class="attendees-group-box" >
+                        <div class="group-23-1pK" >
+                            
+                        </div>     
+                    </div>
+                    <div class="inside-attendees-group">
+                        <a class="attendees-profile" asp-controller="Profile"
+                           asp-action="Index"
+                           asp-route-Username=@ViewBag.attendees[0]>@Model.host_by (host)</a>
+                       @if (Model.attendees.Count >= 2)
+                        {
+
+                            <a class="attendees-profile" asp-controller="Profile"
+                               asp-action="Index"
+                               asp-route-Username=@ViewBag.attendees[1]>@ViewBag.attendees[1]</a>
+                        }
+                        @if (Model.attendees.Count >= 3)
+                        {
+                            <a class="attendees-profile" asp-controller="Profile"
+                               asp-action="Index"
+                               asp-route-Username=@ViewBag.attendees[2]>@ViewBag.attendees[2]</a>
+                        }
+                        @if (Model.attendees.Count >= 4)
+                        {
+                            <div class="attendees-profile">
+                                <a href="#popup-box">
+                                    See all
+                                </a>
+                            </div>
+                            <div id="popup-box" class="modal">
+                                <div class="content">
+                                    <table>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Username</th>
+                                            <th>
+                                                See profile 
+                                                <a href="#" class="box-close">×</a>
+                                            </th>  
+                                        </tr>
+                                        @for (var i = 0; i < ViewBag.attendees.Count; i++)
+                                        {
+                                            <tr>
+                                                <td>@(i+1)</td>
+                                                <td>@ViewBag.attendees[i]</td>
+                                                <td><a asp-controller="Profile"
+                                                asp-action="Index"
+                                                asp-route-Username=@ViewBag.attendees[i]>profile</a></td>
+                                            </tr>
+                                        }
+                                    </table>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="button-group">
+            @if (Model.host_by == ViewBag.username)
+            {
+                if (Model.is_open)
+                {
+                    <a class="not-going-button" asp-controller="Event"
+                       asp-action="Close"
+                       asp-route-title="@Model.title"
+                    onclick="return confirm('You want to close this Event ?')">Close</a>
+                }
+                else
+                {
+                    <a class="not-going-button" asp-controller="Event"
+                       asp-action="Open"
+                       asp-route-title="@Model.title"
+                       style="background-color: #409FE3"
+                    onclick="return confirm('You want to open this Event ?')">Open</a>
+                }
+                 <a class="not-going-button" asp-controller="Event"
+                   asp-action="Delete"
+                   asp-route-title="@Model.title"
+                   style="background-color: #F65252"
+                onclick="return confirm('You want to delete this Event ?')">Delete</a>
+            }
+            else
+            {
+                if (ViewBag.id == null)
+                {
+                    
+                }
+                else if (Model.attendees.Contains(Int32.Parse(ViewBag.id)) && Model.is_open == true)
+                {
+                    <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: inherit">Not Going</a>
+
+                    <a id="go-button" class="attend-button" onclick="attendEvent()" style="display: none">Attend</a>
+                }
+                else if (Model.spots_left() != 0 && Model.time_left() >= 0 && Model.is_open == true)
+                {
+                    <a id="notgo-button" class="not-going-button" onclick="notgo()" style="display: none">Not Going</a>
+
+                    <a id="go-button" class="attend-button" onclick="attendEvent()" style="display: inherit">Attend</a>           
+                }
+            }
+        </div>
+    </div>
+</body>
+<script>
+    function attendEvent() {
+        var eventName = '@Model.title';
+        var xhr = new XMLHttpRequest();
+
+        // Construct the URL
+        var url = '/Event/Attend?title=' + encodeURIComponent(eventName);
+
+        xhr.open('GET', url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Hide the button upon successful request
+                    document.getElementById('go-button').style.display = 'none';
+                    document.getElementById('notgo-button').style.display = 'inherit';
+                } else {
+                    // Handle error if needed
+                    console.log('Error occurred while sending AJAX request.');
+                }
+            }
+        };
+
+        xhr.send();
+    }
+
+    function notgo() {
+        var eventName = '@Model.title';
+        var xhr = new XMLHttpRequest();
+
+        // Construct the URL
+        var url = '/Event/Not_going?title=' + encodeURIComponent(eventName);
+
+        xhr.open('GET', url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Hide the button upon successful request
+                    document.getElementById('go-button').style.display = 'inherit';
+                    document.getElementById('notgo-button').style.display = 'none';
+                } else {
+                    // Handle error if needed
+                    console.log('Error occurred while sending AJAX request.');
+                }
+            }
+        };
+
+        xhr.send();
+    }
+
+</script>
+</html>
