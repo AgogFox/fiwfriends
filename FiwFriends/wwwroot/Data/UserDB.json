@@ -335,7 +335,7 @@
     "Picture": null,
     "Picture_url": null,
     "Location": null,
-    "Event": null,
+    "Event": [],
     "AboutMe": null,
     "Interest": null
   },
