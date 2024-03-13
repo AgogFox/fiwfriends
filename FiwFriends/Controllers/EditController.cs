@@ -2,7 +2,7 @@
 using FiwFriends.Models;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Hosting;
+
 
 namespace FiwFriends.Controllers
 {
@@ -19,7 +19,7 @@ namespace FiwFriends.Controllers
         {
             return View();
         }
-        /*public IActionResult Getuser()
+        public IActionResult Getuser()
         {
             int? userid = int.Parse(Request.Cookies["UserId"]);
             if (userid == null)
@@ -35,7 +35,7 @@ namespace FiwFriends.Controllers
             }
             current_user.Picture = null;
             return Json(current_user);
-        }*/
+        }
         public IActionResult EditProfile()
         {
             return View();
@@ -47,7 +47,7 @@ namespace FiwFriends.Controllers
             if (user.Picture != null)
             {
                 string folder = "Picture/user-picture/";
-                folder += user.Picture.FileName;
+                folder += Guid.NewGuid().ToString() + user.Picture.FileName;
                 user.Picture_url = "/" + folder;
 
                 string server_folder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
@@ -67,6 +67,7 @@ namespace FiwFriends.Controllers
                 current_user.AboutMe = user.AboutMe;
                 current_user.Location = user.Location;
                 current_user.Interest = user.Interest;
+                current_user.Picture_url = user.Picture_url;
                 string modifiedJson = JsonConvert.SerializeObject(user_list, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(json_path, modifiedJson);
             }

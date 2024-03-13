@@ -156,18 +156,19 @@
             }
 </style>
 
-    <div style="display:flex; background-color:#F6F2D2; border-radius:1.5vw ;padding:5vh;margin-right:20vh;margin-bottom:2vh;">
+    <div style="display:flex; background-color:#F6F2D2; border-radius:1.5vw ;padding:5vh;margin-right:20vh;">
         <div style=" border-right: 2px solid #bfbfbf; padding-right:2vw">
             <h1>@Model.Name</h1>
-            <img src=@Model.Picture style="width : 250px;height :250px;object-fit: cover;border-radius:50%;margin:2vh"></img>
+            <img src=@Model.Picture_url style="width : 250px;height :250px;object-fit: cover;border-radius:50%;margin:2vh"></img>
             <div class="Rectangle" style="border-radius: 1.5vw; padding:1.5vw;background-color : white">
                 <div class="Username" style="width: 300; height: 20; color: black ; fontSize: 14, fontFamily: Kanit ; fontWeight: '400' ; wordWrap: 'break-word' ">Username : @Model.Username</div>
                 <div class="Location" style="display:flex">
                     <div>Location :&nbsp</div>
                     <a href="https://www.google.com/maps/place/{@Model.Location}" style="width: 300, height: 20; color: #338ebb; fontSize: 14; fontFamily: Kanit ; fontWeight: 400 ; wordWrap: break-word;">@Model.Location</a>
                 </div>
-               
-            </div>
+            <div class="aboutme" style="width: 300; height: 20; color: black ; fontSize: 14, fontFamily: Kanit ; fontWeight: '400' ; wordWrap: 'break-word' ">About me : @Model.AboutMe</div>
+            <div class="interest" style="width: 300; height: 20; color: black ; fontSize: 14, fontFamily: Kanit ; fontWeight: '400' ; wordWrap: 'break-word' ">Interest : @Model.Interest</div>
+        </div>
         </div>
         <div id="main">
             @foreach (var e in @Model.Event)

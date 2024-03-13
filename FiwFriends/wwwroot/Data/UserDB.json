@@ -833,7 +833,7 @@
     "Name": null,
     "Password": "hee",
     "Picture": null,
-    "Picture_url": null,
+    "Picture_url": "/Picture/user-picture/1b6e24ad-ef41-4454-99c8-e7fa35cedcab6C258CEB-77E3-4295-9C8D-E51AF676601B.jpg",
     "Location": null,
     "Event": [
       {
@@ -876,5 +876,5 @@
     "Event": null,
     "AboutMe": null,
     "Interest": null
-  } 
+  }
 ]

@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Index";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,9 +44,41 @@
 </head>
 <body>
     <div class="button-container">
-        <a class="button" id="editProfileButton" asp-controller="Edit" asp-action="EditProfile">Edit Profile</a>
-        <a class="button" id="editPasswordButton" asp-controller="Edit" asp-action="EditPassword">Edit Password</a>
-        <a class="button" id="deleteProfileButton" asp-controller="Edit" asp-action="DeleteProfile">Delete Profile</a>
+        <button class="button" id="editProfileButton" asp-controller="Edit" asp-action="EditProfile">Edit Profile</button>
+        <button class="button" id="editPasswordButton" asp-controller="Edit" asp-action="EditPassword">Edit Password</button>
+        <button class="button" id="deleteProfileButton">Delete Profile</button>
     </div>
+
+    <script>
+        document.getElementById("editProfileButton").addEventListener("click", function () {
+            window.location.href = "/Edit/EditProfile";
+        });
+
+        document.getElementById("editPasswordButton").addEventListener("click", function () {
+            window.location.href = "/Edit/EditPassword";
+        });
+
+        document.getElementById("deleteProfileButton").addEventListener("click", function () {
+            if (confirm("Are you sure you want to delete your profile?")) {
+                deleteProfile();
+            }
+        });
+
+        function deleteProfile() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Edit/DeleteProfile", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        alert("Profile deleted successfully.");
+                        window.location.reload();
+                    } else {
+                        alert("Failed to delete profile. Please try again later.");
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </body>
 </html>
