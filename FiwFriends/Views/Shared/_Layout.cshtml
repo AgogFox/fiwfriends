@@ -18,26 +18,34 @@
             <div class="item3">
                 <form style="width: 100%;display:flex;" asp-controller="Event" asp-action="Search" method="get">
                     <input style="width: 60%; margin-right:1%;" type="text" name="word" id="search" placeholder="Country,City">
-                    <button style="width: 20%;"><img width=" 50% " src="https://i.ibb.co/DMpFfcV/search.png" alt="search" border="0"></button>
+                    <button style="width: 20%;"><img width=" 50% " src="https://i.ibb.co/DMpFfcV/search.png" alt="search" ></button>
                 </form>
             </div>
             <div class="item2">
-                <button class="navitem">
+                <div class="item5">
+                <button class="navitem setting">
                     <a asp-controller="Event" asp-action="AddEvent"><img src="https://i.ibb.co/YZ3R5hX/plus.png" alt="plus" border="0"></a>
-                    
                 </button>
+                    </div>
+                    
                 @if (@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"] == null)
                 {
-                    <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
-                    <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;color: white;">Sign Up</a></button>
+                        <button class="navitem"><a asp-controller="Home" asp-action="Login" style="text-decoration: none;font-weight: bold;">Login</a></button>
+                        <button class="navitem signup"><a asp-controller="Home" asp-action="Signup" style="text-decoration: none;color: white;">Sign Up</a></button>
                 }
                 else
                 {
                     <button class="navitem logout"><a asp-controller="Home" asp-action="Logout" onclick="return confirm('Are you sure you want to log out?')" style="text-decoration: none;color: white;">Logout</a></button>
+                <div class="item4">
+                        <button class="navitem profile">
+                            <a asp-controller="Profile" asp-action="Index" style="color:black">
+                                <i class="fa-solid fa-user fa-2x"></i>
+                            </a>
+                        </button>
+                    <button class="navitem setting">
+                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" ></button>
+                </div>
                 }
-                <button class="navitem setting">
-                    <img src="https://i.ibb.co/KqG7Dxj/settings.png" alt="settings" border="0"></button>
-            </div>
             </div>
         </nav>
     </header>
