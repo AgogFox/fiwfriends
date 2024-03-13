@@ -47,7 +47,7 @@ namespace FiwFriends.Controllers
             if (user.Picture != null)
             {
                 string folder = "Picture/user-picture/";
-                folder += user.Picture.FileName;
+                folder += Guid.NewGuid().ToString() + user.Picture.FileName;
                 user.Picture_url = "/" + folder;
 
                 string server_folder = Path.Combine(_webHostEnvironment.WebRootPath, folder);

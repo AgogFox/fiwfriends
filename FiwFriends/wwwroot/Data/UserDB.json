@@ -206,13 +206,13 @@
   {
     "UserId": 17,
     "Username": "In",
-    "Name": "Watsaphon Sumrith",
+    "Name": null,
     "Password": "123456",
     "Picture": null,
-    "Picture_url": "/Picture/user-picture/กินแล้วรวย (1).png",
-    "Location": "bankok,thailand",
+    "Picture_url": null,
+    "Location": null,
     "Event": null,
-    "AboutMe": "I love barbeque",
-    "Interest": "Cat"
+    "AboutMe": null,
+    "Interest": null
   }
 ]
