@@ -236,5 +236,25 @@
     ],
     "spots": 20,
     "is_open": true
+  },
+  {
+    "title": "zetj",
+    "host_by": "hee",
+    "date_time": "0001-01-01T00:00:00",
+    "location": "djg",
+    "picture": null,
+    "picture_url": "/event_pic/picture/c32c775f-7ec4-461a-9d28-a9dcbfe3514c856baa84-864f-4c50-a4e4-932f16b98ae6Screenshot.png",
+    "description": "tjsrtjs",
+    "close_form": "0001-01-01T00:00:00",
+    "attendees": [
+      29
+    ],
+    "tags": [
+      "buffet",
+      "make new friends",
+      "art"
+    ],
+    "spots": 5,
+    "is_open": false
   }
 ]
